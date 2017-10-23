@@ -1,10 +1,10 @@
 <template>
   <div class="app">
-    <ul class="component clearfix">
+    <!--<ul class="component clearfix">
       <li><router-link to="/router-1">路由一号</router-link></li>
       <li><router-link :to="{'name':'Router_2'}">路由二号</router-link></li>
       <li><router-link :to="{'path':'/router-3',query:{'id':'1244','userId':'124235436'}}">路由三号</router-link></li>
-    </ul>
+    </ul> -->
     <router-view></router-view>
   </div>
 </template>

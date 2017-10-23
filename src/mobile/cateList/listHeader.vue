@@ -39,17 +39,17 @@
       }
     },
     methods: {
-        // 显示分类菜单函数
-        chooseCategory(){
-          this.isShow = true;
-        },
+      // 显示分类菜单函数
+      chooseCategory(){
+        this.isShow = true;
+      },
       // 点击Mask消失函数
       onMask(){
         this.isShow = false;
       },
       // 选择商品分类
       onSelect(e) {
-        let that = e.target;
+        var that = e.target;
         this.currenSelect.id = that.getAttribute('data-id');
         this.currenSelect.text = that.innerText;
         this.isShow = false;
@@ -60,9 +60,9 @@
 <style scoped>
   .list_header {
     position: relative;
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
     background-color: #fff;
   }
   .list_header .btn_index {
@@ -70,7 +70,7 @@
     top: 0;
     left: 0;
     display: block;
-    padding: 0 15px;
+    padding: 0 0.5rem;
     text-align: center;
     color: #999;
   }
@@ -85,13 +85,13 @@
     top: -50%;
     left: 50%;
     z-index: 110;
-    width: 240px;
-    height: 320px;
-    padding: 10px 0;
-    margin: -160px 0 0 -120px;
-    border-radius: 3px;
+    width: 10rem;
+    height: 14rem;
+    padding: 0.4rem 0;
+    margin: -7rem 0 0 -5rem;
+    border-radius: 0.1rem;
     background-color: #fff;
-    box-shadow: 0 0 6px #ccc;
+    box-shadow: 0 0 0.2rem #ccc;
     overflow: hidden;
     transition: top .5s ease 0s;
   }
@@ -99,7 +99,7 @@
     top: 50%;
   }
   .list_header .category_box ul{
-    width: 250px;
+    width: 100%;
     height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -107,7 +107,7 @@
   .list_header .category_box ul li{
     text-align: center;
     color: #666;
-    font-size: 14px;
+    font-size: 0.6rem;
   }
   .list_header .category_box ul li.active{
     background-color: #f0f0f0;

@@ -15,7 +15,7 @@
                 {text:'首页',url:'/home'},
                 {text:'分类',url:'/category'},
                 {text:'购物',url:'/cart'},
-                {text:'我的',url:'/'},
+                {text:'我的',url:'/login'},
                 ],
                 isActive:false
             }

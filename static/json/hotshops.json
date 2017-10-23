@@ -29,13 +29,13 @@
     },
     {
       "id":"2",
-      "icon":"http://p1.bqimg.com/587986/acc4b413ce765158.jpg",
+      "icon":"/static/test_hot_product.jpg",
       "name":"光辉岁月",
       "intrduction":"这是一个良心店铺，欢迎多多光临",
       "products":[
         { 
             "id":"1",
-            "src":"http://p1.bqimg.com/587986/c95dc1866eaad1fa.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女3",
             "newPrice": "￥229",
@@ -43,7 +43,7 @@
           },
           {
             "id":"2",
-            "src":"http://p1.bqimg.com/587986/31f027eacdd46ec3.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女4",
             "newPrice": "￥229",
@@ -54,13 +54,13 @@
     },
     {
       "id":"3",
-      "icon":"http://p1.bqimg.com/587986/43c04e26dc246a51.jpg",
+      "icon":"/static/test_hot_product.jpg",
       "name":"冷雨夜",
       "intrduction":"这是一个良心店铺，欢迎多多光临",
       "products":[
         { 
             "id":"1",
-            "src":"http://p1.bqimg.com/587986/e8c1457d2dfdac22.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女5",
             "newPrice": "￥229",
@@ -68,7 +68,7 @@
           },
           {
             "id":"2",
-            "src":"http://p1.bqimg.com/587986/84496a8842156908.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女6",
             "newPrice": "￥229",
@@ -79,13 +79,13 @@
     },
     {
       "id":"4",
-      "icon":"http://p1.bqimg.com/587986/826e4400983f21d1.jpg",
+      "icon":"/static/test_hot_product.jpg",
       "name":"真的爱你",
       "intrduction":"这是一个良心店铺，欢迎多多光临",
       "products":[
         { 
             "id":"1",
-            "src":"http://p1.bqimg.com/587986/2f3845307a383f5e.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女7",
             "newPrice": "￥229",
@@ -93,7 +93,7 @@
           },
           {
             "id":"2",
-            "src":"http://p1.bqimg.com/587986/23f351e5e9cc924f.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女8",
             "newPrice": "￥229",
@@ -104,13 +104,13 @@
     },
     {
       "id":"5",
-      "icon":"http://p1.bqimg.com/587986/cd9ff4207454592f.jpg",
+      "icon":"/static/test_hot_product.jpg",
       "name":"喜欢你",
       "intrduction":"这是一个良心店铺，欢迎多多光临",
       "products":[
         { 
             "id":"1",
-            "src":"http://p1.bqimg.com/587986/93d622d10ac88119.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女9",
             "newPrice": "￥229",
@@ -118,7 +118,7 @@
           },
           {
             "id":"2",
-            "src":"http://p1.bqimg.com/587986/007afb3968076937.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女10",
             "newPrice": "￥229",
@@ -129,13 +129,13 @@
     },
     {
       "id":"6",
-      "icon":"http://p1.bqimg.com/587986/acc4b413ce765158.jpg",
+      "icon":"/static/test_hot_product.jpg",
       "name":"大地",
       "intrduction":"这是一个良心店铺，欢迎多多光临",
       "products":[
         { 
             "id":"1",
-            "src":"http://p1.bqimg.com/587986/7b8b851d59ebc854.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女12",
             "newPrice": "￥229",
@@ -143,7 +143,7 @@
           },
           {
             "id":"2",
-            "src":"http://p1.bqimg.com/587986/0c1a7ed8e7411faa.jpg",
+            "src":"/static/test_hot_product.jpg",
             "url":"#/detail",
             "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女13",
             "newPrice": "￥229",

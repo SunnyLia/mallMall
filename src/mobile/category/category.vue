@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import Headers from '../../components/Header.vue'
+  import Headers from '../../components/Header.vue'
   import Navs from '../../components/Nav.vue'
   export default{
     data(){

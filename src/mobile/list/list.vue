@@ -5,6 +5,7 @@
         <div class="pdt_item">
           <a :href="product.url+'/'+product.id" class="pdt_img">
             <img :src="product.src" height="300" width="300">
+            <i class="fa fa-heart-o" v-on:click="onHeart($event)"></i>
           </a>
           <div class="pdt_detail">
             <h3 class="pdt_title">
@@ -30,18 +31,29 @@
   export default {
     data:function(){
       return{
-        hotProducts:[],
-        busy: false,
-        num: 6,
-        isShowLoadingTips: false,
-        isShowLoadedTips: false
+       flag: true,
+       hotProducts:[],
+       busy: false,
+       num: 6,
+       isShowLoadingTips: false,
+       isShowLoadedTips: false
+     }
+   },
+   methods:{
+    onHeart: function(e){
+      if(this.flag){
+        e.target.className="fa fa-heart";
+        this.flag = false;
+      }else{
+        e.target.className="fa fa-heart-o";
+        this.flag = true;
       }
+      e.preventDefault();
     },
-    methods:{
-      getProducts(){
-        var that = this;
-        this.busy = true;
-        this.isShowLoadingTips=true;
+    getProducts(){
+      var that = this;
+      this.busy = true;
+      this.isShowLoadingTips=true;
         // 用setTimeout的目的就是防止努力加载中看不到
         setTimeout(function(){
           that.$http.get('/static/json/products.json').then((response)=>{
@@ -83,6 +95,7 @@
     display: block;
     width: 100%;
     height: 6rem;
+    position: relative;
   }
   .db_products .pdt_img img{
     max-width: 100%;
@@ -107,5 +120,12 @@
   }
   .db_products .pdt_old_price{
     color: #ccc;
+  }
+  .db_products .pdt_img .fa{
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    color: #e17c72;
+    font-size: 0.7rem;
   }
 </style>

@@ -10,75 +10,37 @@
         <a href="#">喜欢数 <i class="fa fa-arrow-down"></i></a>
       </div>
     </div>
-
-    <div class="db_products" v-infinite-scroll="getProducts" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
-      <ul>
-        <li v-for="product in products">
-          <div class="pdt_item">
-            <a :href="product.url+'/'+product.id" class="pdt_img">
-              <img v-lazy="product.src" height="300" width="300">
-              <i class="fa fa-heart-o" v-on:click="onHeart($event)"></i>
-            </a>
-            <div class="pdt_detail">
-              <h3 class="pdt_title">
-                <a :href="product.url">{{product.title}}</a>
-              </h3>
-              <p class="pdt_price">
-                <span class="pdt_new_price">{{product.newPrice}}</span>
-                <del class="pdt_old_price">{{product.oldPrice}}</del>
-              </p>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <!-- 加载更多，没有数据组件 -->
-      <loading v-show="isShowLoadingTips"></loading>
-      <none v-show="isShowLoadedTips"></none>
-    </div>
+    <List></List>
   </div>
 </template>
 <script type="text/javascript">
-  // import {mapState, mapActions} from 'vuex'
-  import ListHeader from './list_header.vue'
-  import ListNav from './list_nav.vue'
+  import ListHeader from '../cateList/listHeader.vue'
+  import ListNav from '../cateList/listNav.vue'
+  import List from '../list/list.vue'
   import Loading from '../../components/loading.vue'
   import None from '../../components/none.vue'
   import axios from 'axios'
   export default {
     data() {
-     return {
-      flag: true,
-      products:[],
-      busy: false,
-      num: 5,
-      isShowLoadingTips: false,
-      isShowLoadedTips: false
-    }
-  },
-  methods: {
-      // ...mapActions(['getProducts']),
-      onHeart: function(e){
-       if(this.flag){
-        e.target.className="fa fa-heart";
-        this.flag = false;
-      }else{
-        e.target.className="fa fa-heart-o";
-        this.flag = true;
+      return {
+        products:[],
       }
-      e.preventDefault();
+    },
+
+    components: {
+      ListHeader,
+      ListNav,
+      List,
+      Loading,
+      None
     }
-  },
-  components: {
-   ListHeader,
-   ListNav,
- }
-}
+  }
 </script>
 <style scoped>
   .db_list_options {
-    height: 40px;
-    line-height: 40px;
-    padding: 0 15px;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    padding: 0 0.6rem;
   }
   .db_list_options .items{
     width: 100%;
@@ -95,18 +57,12 @@
     -webkit-box-flex: 1;
     text-align: center;
     color: #ccc;
+    font-size: 0.6rem;
   }
   .db_list_options .items a.active{
     color: #f67;
   }
   .db_products .pdt_img{
     position: relative;
-  }
-  .db_products .pdt_img .fa{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #e17c72;
-    font-size: 16px;
   }
 </style>

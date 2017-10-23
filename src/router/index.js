@@ -14,7 +14,9 @@
  import Category from '../mobile/category/category.vue'
  import Home from '../mobile/home/home.vue'
  import Cart from '../mobile/cart/cart.vue'
-
+ import List from '../mobile/cateList/cateList.vue'
+ import Detail from '../mobile/detail/detail.vue'
+ import Login from '../mobile/login/login.vue'
 
  Vue.use(Router)
  export default new Router({
@@ -39,6 +41,21 @@
     path:'/cart',
     name:'Cart',
     component:Cart
+  },
+  {
+    path:'/list/:id',
+    name:'List',
+    component:List
+  },
+  {
+    path:'/detail/:id',
+    name:'Detail',
+    component:Detail
+  },
+  {
+    path:'/login',
+    name:'Login',
+    component:Login
   }
   ]
   // routes: [

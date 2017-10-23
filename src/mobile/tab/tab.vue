@@ -3,8 +3,8 @@
     <!-- 选项卡 -->
     <div class="db_detail_tabs">
       <span @click="toggleTabs('TabOne',$event)" data-id="0" :class="{active:0==isActive}">商品详情</span>
-      <span @click="toggleTabs('TabTwo',$event)" data-id="1" :class="{active:1==isActive}">评价<i>2</i></span>
-      <span @click="toggleTabs('TabThree',$event)" data-id="2" :class="{active:2==isActive}">讨论</span>
+      <span @click="toggleTabs('TabThree',$event)" data-id="1" :class="{active:1==isActive}">评价<i>2</i></span>
+      <span @click="toggleTabs('TabTwo',$event)" data-id="2" :class="{active:2==isActive}">讨论</span>
     </div>
 
     <!-- tabs内容块-->
@@ -44,8 +44,7 @@
     display: -webkit-flex;
     display: box;
     display: flex;
-    height:40px;
-    margin-top: 30px;
+    height:1.8rem;
     border-bottom: 2px solid #e17c72;
   }
   .db_detail_tabs span{
@@ -53,10 +52,10 @@
     -webkit-flex: 1;
     box-flex: 1;
     flex: 1;
-    line-height: 40px;
+    line-height: 1.8rem;
     text-align: center;
     color: #666;
-    font-size: 16px;
+    font-size: 0.6rem;
   }
   .db_detail_tabs span.active{
     color: #e17c72;

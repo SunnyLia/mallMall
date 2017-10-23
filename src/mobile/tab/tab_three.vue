@@ -25,7 +25,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -42,7 +42,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -59,7 +59,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -76,7 +76,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -93,7 +93,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -107,16 +107,16 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="http://p1.bpimg.com/587986/649b4ff9a029dbb3.jpg">
-          <img src="http://p1.bpimg.com/587986/c5d8d2c850c5cc92.jpg">
-          <img src="http://p1.bpimg.com/587986/12e168a53d8b1390.jpg">
-          <img src="http://p1.bpimg.com/587986/4aa678607eb830c0.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
         </div>
       </div>
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -130,16 +130,16 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="http://p1.bpimg.com/587986/649b4ff9a029dbb3.jpg">
-          <img src="http://p1.bpimg.com/587986/c5d8d2c850c5cc92.jpg">
-          <img src="http://p1.bpimg.com/587986/12e168a53d8b1390.jpg">
-          <img src="http://p1.bpimg.com/587986/4aa678607eb830c0.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
         </div>
       </div>
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -153,16 +153,16 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="http://p1.bpimg.com/587986/649b4ff9a029dbb3.jpg">
-          <img src="http://p1.bpimg.com/587986/c5d8d2c850c5cc92.jpg">
-          <img src="http://p1.bpimg.com/587986/12e168a53d8b1390.jpg">
-          <img src="http://p1.bpimg.com/587986/4aa678607eb830c0.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
         </div>
       </div>
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="http://p1.bpimg.com/587986/c7ad269e33e3978f.jpg" class="u_photo">
+          <img src="../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -176,12 +176,16 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="http://p1.bpimg.com/587986/649b4ff9a029dbb3.jpg">
-          <img src="http://p1.bpimg.com/587986/c5d8d2c850c5cc92.jpg">
-          <img src="http://p1.bpimg.com/587986/12e168a53d8b1390.jpg">
-          <img src="http://p1.bpimg.com/587986/4aa678607eb830c0.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../static/test_hot_product.jpg">
         </div>
       </div>
+
+      <div class="comment_item" style="text-align: center;border-bottom:0;">
+      <span class="none">没有更多评价了~</span>
+    </div>
     </div>
   </div>
 </template>
@@ -192,65 +196,24 @@
   }
   .tabs_rated .rated_result{
     text-align: center;
-    padding: 15px 0;
+    padding: 0.4rem 0;
     border-bottom: 1px solid #f0f0f0;
   }
   .tabs_rated .rated_result .overall{
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
   }
   .tabs_rated .rated_result .overall_lt{
     color: #9d9d9d;
   }
   .tabs_rated .rated_result .ruler{
+    font-size: 0.6rem;
     color: #ccc;
   }
   .tabs_rated .rated_result .ruler .red{
-    padding: 0 5px 0 2px;
+    padding: 0 0.4rem 0 0.2rem;
   }
   
   /* 评论列表 */
-  .db_comments {}
-  .db_comments .comment_item {
-    padding: 15px;
-    border-bottom: 1px solid #f0f0f0;
-    box-sizing: border-box;
-  }
-  .db_comments .comment_item .comment_infos{
-    height: 20px;
-    line-height: 20px;
-  }
-  .db_comments .comment_item .u_photo{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    vertical-align: top;
-  }
-  .db_comments .comment_item .u_name{
-    color: #9d9d9d;
-    font-size: 14px;
-  }
-  .db_comments .comment_item .u_time{
-    color: #ccc;
-  }
-  .db_comments .comment_item .comment_text{
-    color: #4a4a4a;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 10px 0 10px 25px;
-    box-sizing: border-box;
-  }
-  .db_comments .comment_item .comment_picture{
-    font-size: 0;
-    padding-left: 25px;
-    box-sizing: border-box;
-  }
-  .db_comments .comment_item .comment_picture img{
-    display:inline-block;
-    width: 48px;
-    height: 48px;
-    margin-right: 10px;
-    border: 1px solid #f0f0f0;
-  }
+
 </style>
