@@ -4,214 +4,43 @@
   "list":[
     { 
       "id":"1",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
+      "src":"/static/imgs/p488979.jpg",
+      "url":"/item/65716/",
+      "title":"赫丽珠宝 Splendour 珍珠耳钉 日本Akoya海水珍珠 18k 白色",
+      "price": "￥206",
+      "market_price": "￥412"
     },
     {
       "id":"2",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
+      "src":"/static/imgs/p1969860.jpg",
+      "url":"/item/206192/",
+      "title":"hanalice夏天来了糖果凉鞋（十五个颜色）",
+      "price": "￥239",
+      "market_price": "￥399"
     },
     {
       "id":"3",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
+      "src":"/static/imgs/p1955767.jpg",
+      "url":"/item/200651/",
+      "title":"三顿半 | 第2代精品冷萃奶萃咖啡套装带滤泡杯",
+      "price": "￥89",
+      "market_price": ""
     },
     {
       "id":"4",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
+      "src":"/static/imgs/p1971660.jpg",
+      "url":"/item/206915/",
+      "title":"macbook支架",
+      "price": "￥149",
+      "market_price": "￥199"
     },
     {
       "id":"5",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"6",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"2",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"3",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"4",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"5",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"6",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
+      "src":"/static/imgs/p449949.jpg",
+      "url":"/item/90190/",
+      "title":"小巨蛋T1便携式茶具礼品套装砂岩釉茶盒版（极客黑）",
+      "price": "￥368",
+      "market_price": "￥736"
     }
-    ,
-    {
-      "id":"2",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"3",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"4",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"5",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"6",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"2",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"3",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"4",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"5",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"6",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    }
-    ,
-    {
-      "id":"2",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"3",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"PISN 高贵冷淡 四色不对称开叉高领百搭针织打底衫加厚套头毛衣女",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"4",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"5",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    },
-    {
-      "id":"6",
-      "src":"/static/test_hot_product.jpg",
-      "url":"#/detail",
-      "title":"今天天气真好",
-      "newPrice": "￥229",
-      "oldPrice": "￥299"
-    }
-    
   ]
 }

@@ -44,7 +44,7 @@
   <style scoped>
     .app{
       width:100%;
-      background-color:#f8f8fe;
+      background-color:#fff;
     }
     ul>li{
       float:left;

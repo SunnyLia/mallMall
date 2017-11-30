@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <Headers></Headers>
-    <Navs></Navs>
-    <Slider></Slider>
-    <Shop></Shop>
-    <List></List>
+    <headers></headers>
+    <navs></navs>
+    <swiper></swiper>
+    <hot-products></hot-products>
+    <hot-shops></hot-shops>
   </div>
 </template>
 
@@ -16,20 +16,20 @@
         * router-link的内容会合router文件夹里面的index.js相关
     写入的组件引用，用于通用组件使用，即所有页面都会引用的组件，例如为header和footer
     */
-    import Headers from '../../components/Header.vue'
-    import Footers from '../../components/Footer.vue'
-    import Navs from '../../components/Nav.vue'
-    import Slider from '../../mobile/slide/slider.vue'
-    import List from '../../mobile/list/list.vue'
-    import Shop from '../../mobile/shop/shop.vue'
+    import Headers from '@/components/header/Header.vue'
+    import Footers from '@/components/footer/Footer.vue'
+    import Navs from '@/components/nav/Nav.vue'
+    import Swiper from '@/mobile/home/swiper/swiper.vue'
+    import HotProducts from '@/mobile/home/hotProducts/hotProducts.vue'
+    import HotShops from '@/mobile/home/hotShops/hotShops.vue'
     export default {
       components: {
         Headers,
         Footers,
         Navs,
-        Slider,
-        List,
-        Shop
+        Swiper,
+        HotProducts,
+        HotShops
       },
       data:function(){
         return{}

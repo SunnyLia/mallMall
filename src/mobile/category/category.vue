@@ -4,31 +4,21 @@
     <Navs></Navs>
     <div class="category_list">
       <ul>
-        <li v-for="cty in categorys">
-          <router-link :to="cty.url" :class="cty.class_name">{{cty.text}}</router-link>
+        <li v-for="(cty,index) in categorys" v-if="index < 9">
+          <router-link :to="{path:cty.url,params:{id:cty.id}}" :class="cty.class_name">{{cty.text}}</router-link>
         </li>
       </ul>
     </div>
   </div>
 </template>
 <script>
-  import Headers from '../../components/Header.vue'
-  import Navs from '../../components/Nav.vue'
+  import {mapState,mapActions} from 'vuex'
+  import Headers from '@/components/header/Header.vue'
+  import Navs from '@/components/nav/Nav.vue'
   export default{
-    data(){
-      return{
-        categorys:[
-        {text:"饮食",url:"/list/1",class_name:"red"},
-        {text:"服装",url:"/list/2",class_name:"blue"},
-        {text:"配饰",url:"/list/3",class_name:"purple"},
-        {text:"包袋",url:"/list/4",class_name:"sky"},
-        {text:"鞋靴",url:"/list/5",class_name:"yellow"},
-        {text:"护肤",url:"/list/6",class_name:"pink"},
-        {text:"家居",url:"/list/7",class_name:"grass"},
-        {text:"时间",url:"/list/8",class_name:"green"},
-        {text:"数码",url:"/list/9",class_name:"red"}
-        ]
-      }
+    computed: mapState(['categorys']),
+    mounted() {
+      this.$store.dispatch('category');
     },
     components:{
       Headers,
@@ -80,6 +70,9 @@
     background-color: #b2ffc5;
   }
   .category_list .green{
-    background-color: #ffb2bb;
+    background-color: #f9b97b;
+  }
+  .category_list .gray{
+    background-color: #b9b8b8;
   }
 </style>

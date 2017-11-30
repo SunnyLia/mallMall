@@ -2,89 +2,59 @@
   <div class="my">
     <header-bar></header-bar>
     <nav-bar></nav-bar>
-    <div class="db_hot_product db_products" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
-      <ul>
-        <li v-for="product in productList">
-          <div class="pdt_item">
-            <a :href="product.url+'/'+product.id" class="pdt_img">
-              <img v-lazy="product.src" height="300" width="300">
-            </a>
-            <div class="pdt_detail">
-              <h3 class="pdt_title">
-                <a :href="product.url">{{product.title}}</a>
-              </h3>
-              <p class="pdt_price">
-                <span class="pdt_new_price">{{product.newPrice}}</span>
-                <del class="pdt_old_price">{{product.oldPrice}}</del>
-              </p>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="none" v-show="tips">已没有更多数据...</div>
+    <div class="db_mine">
+      <div class="mine_info">
+        <img src="../../assets/imgs/user_large.jpg" alt="">
+        <p>张张你大爷</p>
+      </div>
+      <div class="mine_item">
+        <div class="item">
+          <a href="#/order/orderAll" class="clearfix">
+            <p>查看全部订单</p>
+            <i class="fa fa-angle-left"></i>
+          </a>
+        </div>
+        <div class="order">
+          <ul class="clearfix">
+            <li><router-link :to="{name:'OrderObligation'}">待付款</router-link></li>
+            <li><router-link :to="{name:'OrderPendShip'}">待发货</router-link></li>
+            <li><router-link :to="{name:'OrderBeReceive'}">待收货</router-link></li>
+            <li><router-link :to="{name:'ReturnExchange'}">退换货</router-link></li>
+          </ul>
+        </div>
+        <div class="item">
+          <router-link :to="{name:'UnUsed'}" class="clearfix">
+          <p>我的优惠券</p>
+          <i class="fa fa-angle-left"></i>
+        </router-link>
+      </div>
+      <div class="item">
+        <a href="#" class="clearfix">
+          <p>收货地址管理</p>
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </div>
     </div>
-
-    <div class="loading" v-show="loading"></div>
+    <div class="loginOut">
+      <a href="#">退出登录</a>
+    </div>
   </div>
+</div>
 </template>
 
 <script type="text/javascript">
   import Vue from 'vue'
-  import axios from 'axios'
-  import infiniteScroll from 'vue-infinite-scroll'
-  import TEST_IMAGE_SRC from'../../assets/images/test_hot_product.jpg';
-  import HeaderBar from '../../components/header.vue'
-  import NavBar from '../../components/nav.vue'
+  import HeaderBar from '@/components/header/Header.vue'
+  import NavBar from '@/components/nav/Nav.vue'
 
-  Vue.use(infiniteScroll);
   export default {
     data() {
-      return {
-        productList: [],
-        data: [],
-        tips:false,
-        loading:false,
-        num:10,
-          busy: false
+      return {      
       }
     },
-    mounted() {
-      
+    mounted() {  
     },    
     methods: {
-      getData(){
-        axios.get('/mock/products/products.json').then((response)=>{
-          var result = response.data.list.slice(this.num-10,this.num);
-          console.log(result);
-          if(result.length !== 0){
-            this.loading = false;
-            for(let i in result){
-              this.productList.push({
-                id:result[i].id,
-                src:result[i].src,
-                  url:result[i].url,
-                  title:result[i].title,
-                  newPrice: result[i].newPrice,
-                  oldPrice: result[i].oldPrice
-              });
-            }
-            this.busy = false;
-            this.num+=10;
-          }else{
-            this.busy = true;
-            this.tips = true;
-            this.loading = false;
-          } 
-        })
-      },
-        loadMore() {
-            this.busy = true;
-            this.loading = true;
-            setTimeout(() => {
-              this.getData();
-          }, 1000);
-            
-        }
     },
     components: {
       HeaderBar,
@@ -93,20 +63,65 @@
   }
 </script>
 <style scoped>
-  .loading{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 10000;
-    width: 16px;
-    height: 16px;
-    margin: -16px 0 0 -16px;
-    background: url(../../assets/images/loading.gif);
-  }
-  .none{
+  .loginOut {
     text-align: center;
-    padding: 10px 0;
-    color: #999;
-    font-size: 12px;
+    line-height: 3rem;
+    font-size: 0.6rem;
+  }
+  .db_mine .mine_info{
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .db_mine .mine_info img{
+    width: 3.5rem;
+    height: auto;
+    border-radius: 50%;
+  }
+  .db_mine .mine_info p{
+    font-size: 0.6rem;
+    color: #000;
+    margin-top: 0.5rem;
+  }
+  .db_mine .mine_item .order{
+    border-bottom: 1px solid #eaeaea;
+    width: 100%;
+    height: 2.2rem;
+    padding: 0.5rem 0;
+  }
+  .db_mine .mine_item .order ul{
+    height: 100%;
+    width: 100%;
+  }
+  .db_mine .mine_item .order li{
+    float: left;
+    width: 25%;
+    height: 100%;
+    line-height: 0.8rem;
+    text-align: center;
+    border-right: 1px solid #bdbdbd;
+  }
+  .db_mine .mine_item .order li:last-child{
+    border-right: 0;
+  }
+  .db_mine .mine_item .order li a {
+    font-size: 0.6rem;
+  }
+  .db_mine .mine_item .item{
+    padding: 0 0.6rem;
+    border-bottom: 1px solid #eaeaea;
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+  }
+  .db_mine .mine_item .item a p{
+    font-size: 0.6rem;
+    float: left;
+  }
+  .db_mine .mine_item .item a i{
+    float: right;
+    margin-top: 0.55rem;
+    font-size: 0.9rem;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
   }
 </style>
