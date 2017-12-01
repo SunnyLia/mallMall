@@ -8,7 +8,7 @@
   export default {
     data() {
       return {
-        words:'哇哦，还没有领取的优惠券~'       
+        words:'哇哦，这里什么都还没有~'       
       }
     },
     mounted() {  

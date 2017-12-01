@@ -29,16 +29,16 @@
         </router-link>
       </div>
       <div class="item">
-        <a href="#" class="clearfix">
-          <p>收货地址管理</p>
-          <i class="fa fa-angle-left"></i>
-        </a>
-      </div>
-    </div>
-    <div class="loginOut">
-      <a href="#">退出登录</a>
+        <router-link :to="{name:'MyAddress'}" class="clearfix">
+        <p>收货地址管理</p>
+        <i class="fa fa-angle-left"></i>
+      </router-link>
     </div>
   </div>
+  <div class="loginOut">
+    <a href="#">退出登录</a>
+  </div>
+</div>
 </div>
 </template>
 

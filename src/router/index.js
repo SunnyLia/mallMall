@@ -24,6 +24,7 @@
  import UnUsed from '@/mobile/mine/myCupones/cuponesList/unUsed.vue'
  import HasUsed from '@/mobile/mine/myCupones/cuponesList/hasUsed.vue'
  import HasExpire from '@/mobile/mine/myCupones/cuponesList/hasExpire.vue'
+ import MyAddress from '@/mobile/mine/myAddress/myAddress.vue'
  import Register from '../mobile/login/register/register.vue'
 
  Vue.use(Router)
@@ -44,6 +45,11 @@
     path:'/search',
     name:'Search',
     component:Search
+  },
+  {
+    path:'/myAddress',
+    name:'MyAddress',
+    component:MyAddress
   },
   {
     path:'/mine',
