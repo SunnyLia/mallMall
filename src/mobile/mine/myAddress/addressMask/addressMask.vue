@@ -3,7 +3,7 @@
     <div class="mask">
       <div class="title">
         <h4 class="fl">新建地址</h4>
-        <span class="fr">x</span>
+        <span class="fr" @click="close">x</span>
       </div>
       <form class="_2c04j7gQ">
         <div class="Uzk2mMNz _1hXzVb0s required">
@@ -15,42 +15,59 @@
         <div class="Uzk2mMNz _1hXzVb0s noborder flex required">
           <!-- 选择省 -->
           <div class="_2k7DI6oJ">
-            <select class="_14JMJHXz" name="province_id">
+            <select class="_14JMJHXz" name="province_id" @click="checkPro">
               <option value="">选择省</option>
+              <option  v-for="pro in provinces" :data-code="pro.code" :value="pro.id">{{pro.name}}</option>
             </select>
             <i class="_1NsvL34K"></i>
           </div>
           <!-- 选择市 -->
           <div class="_2k7DI6oJ">
-            <select class="_14JMJHXz pending" name="city_id" disabled="">
+            <select class="_14JMJHXz pending" name="city_id">
               <option>选择市</option>
+              <option  data-code="11" value="1">天津市</option>
             </select>
             <i class="_1NsvL34K"></i>
           </div>
           <!-- 选择县 -->
           <div class="_2k7DI6oJ">
-            <select class="_14JMJHXz pending" name="district_id" disabled="">
-              <option>选择地区</option>
+            <select class="_14JMJHXz pending" name="district_id">
+              <option>选择区</option>
+              <option  data-code="11" value="1">天津市</option>
             </select>
             <i class="_1NsvL34K"></i>
           </div>
         </div>
+        <div class="Uzk2mMNz _1hXzVb0s required">
+          <textarea placeholder="请输入详细地址，例街道号码，楼门号" class="_2vqbOM4U" name="detail"></textarea>
+        </div>
+        <div class="_10jnvmFI"><a class="save-btn default">保存</a></div>
       </form>
     </div>
+
   </div>
 </template>
 <script>
+  import {mapState,mapActions} from 'vuex'
   import MineHeader from '@/mobile/mine/mineHeader/mineHeader.vue'
-
   export default {
     data() {
       return {
-
       }
     },
+    computed: {
+      ...mapState(['provinces'])
+    },
     mounted() {  
+
     },    
     methods: {
+      close(){
+        this.$emit("closeMask");
+      },
+      checkPro(){
+        this.$store.dispatch('province');
+      }
     },
     components: {
       MineHeader
@@ -58,6 +75,31 @@
   }
 </script>
 <style scoped>
+
+  input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+    color: #999;
+    font-size: 0.6rem;
+  }
+  ._10jnvmFI .save-btn{
+    display: inline-block;
+    width: 100%;
+    line-height: 1.6rem;
+    height: 1.6rem;
+    margin: 1rem 0;
+    font-size: 0.6rem;
+    background-color: #0aa082;
+    color: #fff;
+    text-align: center;
+  }
+  ._2c04j7gQ ._2vqbOM4U{
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 0.6rem;
+    padding: 0 0.5rem;
+    width: 100%;
+    border: none;
+    color: #000;
+  }
   ._2c04j7gQ ._2k7DI6oJ ._1NsvL34K{
     position: absolute;
     border-top: 0.05rem solid #9b9b9b;
@@ -95,7 +137,9 @@
     margin-right: 0.5rem;
     border:1px solid #e4e4e4;
   }
-
+  ._2c04j7gQ ._2k7DI6oJ:last-child{
+    margin-right: 0;
+  }
   .Uzk2mMNz input[type=text],.Uzk2mMNz input[type=number]{
     background-color: #fff;
     border: none;
@@ -121,6 +165,7 @@
   ._2c04j7gQ ._1hXzVb0s{
     margin-bottom: 0.5rem;
     border:1px solid #e4e4e4;
+    font-size: 0;
   }
   .Uzk2mMNz.flex{
     border: 0;
@@ -132,11 +177,14 @@
     position: relative;
   }
   ._2c04j7gQ{
-    padding-right: 0.5rem;
-    padding-left:1rem;
+    padding: 0 0.8rem;
   }
   .addressMask{
     background-color: #f7f7f7;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
   }
   .addressMask .mask .title{
     height: 2rem;

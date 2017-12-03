@@ -12,6 +12,12 @@ export const USERINFO = 'USERINFO'//用户信息
 
 export const IS_LOGIN = 'IS_LOGIN'//是否登录
 
+export const DISTRICTS = 'DISTRICTS'//区
+
+export const CITYS = 'CITYS'//市
+
+export const PROVINCES = 'PROVINCES'//省
+
 export const IS_FIXED_HEADER = 'IS_FIXED_HEADER'
 
 export const IS_SHOW_SEARCH_BAR = 'IS_SHOW_SEARCH_BAR'

@@ -7,6 +7,9 @@ import {
   CATEGORYS,//分类
   USERINFO,//用户信息
   IS_LOGIN,//是否登录
+  PROVINCES,//省
+  CITYS,//市
+  DISTRICTS,//区
   IS_FIXED_HEADER,
   IS_SHOW_SEARCH_BAR,
   IS_SHOW_MASK,
@@ -39,6 +42,15 @@ export default{
   }, 
   [IS_LOGIN](state,flag){//是否登录
     state.isLogin = flag;
+  },
+  [PROVINCES](state,list){//省
+    state.provinces = list;
+  },
+  [CITYS](state,list){//市
+    state.citys = list;
+  },
+  [DISTRICTS](state,list){//区
+    state.districts = list;
   },
   [IS_FIXED_HEADER](state,flag){
     state.isFixedHeader = flag;

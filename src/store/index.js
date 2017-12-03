@@ -14,6 +14,9 @@ const state = {
   categorys:[],//分类
   userInfo:{},//用户信息
   isLogin:false,//是否登录
+  provinces:[],//省PROVINCES
+  citys:[],//市CITYS
+  districts:[],//区DISTRICTS
   isFixedHeader: false,
   isShowSearchBar: false,
   isShowMask: false,
