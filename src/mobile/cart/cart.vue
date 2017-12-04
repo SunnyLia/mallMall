@@ -2,7 +2,8 @@
   <div class="cart">
     <headers></headers>
     <navs></navs>
-    <cart-enpty></cart-enpty>
+    <!-- <cart-enpty></cart-enpty> -->
+    <cart-list></cart-list>
     
   </div>
 </template>
@@ -11,13 +12,15 @@
 
   import Headers from '@/components/header/Header.vue'
   import Navs from '@/components/nav/Nav.vue'
-  import CartEnpty from './cartEnpty/cartEnpty.vue'
+  // import CartEnpty from './cartEnpty/cartEnpty.vue'
+  import CartList from './cartList/cartList.vue'
 
   export default {
     components: {
       Headers,
       Navs,
-      CartEnpty
+      // CartEnpty,
+      CartList
     }
   }
 </script>
