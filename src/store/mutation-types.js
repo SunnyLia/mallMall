@@ -18,6 +18,8 @@ export const CITYS = 'CITYS'//市
 
 export const PROVINCES = 'PROVINCES'//省
 
+export const CART_lISTS = 'CART_lISTS'//购物车列表
+
 export const IS_FIXED_HEADER = 'IS_FIXED_HEADER'
 
 export const IS_SHOW_SEARCH_BAR = 'IS_SHOW_SEARCH_BAR'

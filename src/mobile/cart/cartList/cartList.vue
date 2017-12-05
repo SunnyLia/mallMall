@@ -1,88 +1,80 @@
 <template>
   <div class="cartList">
     <div class="list">
-      <ul>
-        <li>
-          <div class="listTop clearfix">
-            <div class="fl">
-              <input type="checkbox" name="checkAll" :checked="isCheckAll" id="checkAll" @click="checkAll($event)">
-              <label for="checkAll"></label>
-              <a href="javascript">三顿半</a>
+      <div class="content">
+        <ul v-for="cart in cartLists">
+          <li>
+            <div class="listTop clearfix">
+              <div class="fl">
+                <input type="checkbox" name="checkAll" :checked="isCheckAll" :id="'checkAll'+cart.id" @click="checkAll($event)">
+                <label for="'checkAll'+cart.id"></label>
+                <a href="cart.url">{{cart.name}}</a>
+              </div>
+              <!-- <a href="javascript:;" class="fr">删除</a> -->
             </div>
-            <a href="javascript:;" class="fr">删除</a>
-          </div>
-          <ul>
-            <li class="listBot clearfix">
-              <div class="checkPos">
-                <input type="checkbox" name="checkList" id="checkList1"  @click="checkList($event)">
-                <label for="checkList1"></label>
-              </div>
-              <a href="javascript:;">
-                <img src="../../../assets/imgs/user_large.jpg" alt="">
-              </a>
-              <div class="botWord">
-                <h4>三顿半 | 第2代SENSE LIVING系列  手冲挂耳咖啡大满贯套装</h4>
-                <p class="quality">云崖灰</p>
-                <div class="botPri clearfix">
-                  <p class="fl red">￥198.00</p>
-                  <div class="addSub fr">
-                    <i class="fl" @click="sub">-</i>
-                    <span>{{count}}</span>
-                    <i class="fr" @click="add">+</i>
+            <ul v-for="item in cart.items">
+              <li class="listBot clearfix">
+                <div class="checkPos">
+                  <input type="checkbox" name="checkList" :id="'checkList'+item.id"  @click="checkList($event)">
+                  <label for="'checkList'+item.id"></label>
+                </div>
+                <a href="item.product_sku.url">
+                  <img :src="item.product_sku.master_photo.normal_url" alt="">
+                </a>
+                <div class="botWord">
+                  <h4>{{item.product_sku.title}}</h4>
+                  <p class="quality">{{item.product_sku.color}}</p>
+                  <div class="botPri clearfix">
+                    <p class="fl red">{{item.product_sku.promote_price}}</p>
+                    <div class="addSub fr">
+                      <i class="fl" @click="sub">-</i>
+                      <span>{{item.quantity}}</span>
+                      <i class="fr" @click="add">+</i>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="listBot clearfix">
-              <div class="checkPos">
-                <input type="checkbox" name="checkList" id="checkList2"  @click="checkList($event)">
-                <label for="checkList2"></label>
-              </div>
-              <a href="javascript:;">
-                <img src="../../../assets/imgs/user_large.jpg" alt="">
-              </a>
-              <div class="botWord">
-                <h4>三顿半 | 第2代SENSE LIVING系列  手冲挂耳咖啡大满贯套装</h4>
-                <p class="quality">云崖灰</p>
-                <div class="botPri clearfix">
-                  <p class="fl red">￥198.00</p>
-                  <div class="addSub fr">
-                    <i class="fl" @click="sub">-</i>
-                    <span>{{count}}</span>
-                    <i class="fr" @click="add">+</i>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer">
+        <div class="fl allAll">
+          <input type="checkbox" name="checkAll"  id="allAll"  @click="allAll($event)">
+          <label for="allAll"></label>全选
+        </div>
+        <div class="fr choice">
+          <a href="javascript:;">请选择</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script type="text/javascript">
+import {mapState,mapActions} from 'vuex'
   export default {
     data() {
       return {
-        count:0,
-        isCheckAll:false,
+        count:1,
+        isCheckAll:true,
         checkListNum:0
       }
     },
+    computed: mapState(['cartLists']),
     methods: {
-      add(){
+      add(){//加
         this.count++;
       },
-      sub(){
-        if (this.count > 0) {
+      sub(){//减
+        if (this.count > 1) {
           this.count--;
         }else{
-          this.count = 0;
+          this.count = 1;
         }
       },
-      checkAll(e){
-        if (e.target.checked) {
+      checkAll(e){//全选
+        if (e.target.checked || this.isCheckAll == true) {
           $('.checkPos input').each(function(index, el) {
             el.checked=true;
           });
@@ -91,9 +83,8 @@
             el.checked=false;
           });
         }
-        // this.isCheckAll = !this.isCheckAll
       },
-      checkList(e){
+      checkList(e){//单选
         var listNum = $('.listBot').length;//总的checkbox的数量
         if (e.target.checked) {
           this.checkListNum++;//点击的checkbox的数量
@@ -104,6 +95,17 @@
           this.isCheckAll = false;
           this.checkListNum--;          
         }
+      },
+      allAll(e){//总选
+        if (e.target.checked) {
+          $('.listTop input').each(function(index, el) {
+            el.checked=true;
+          });
+        }else{
+          $('.listTop input').each(function(index, el) {
+            el.checked=false;
+          });
+        }
       }
     },
     components: {
@@ -112,6 +114,29 @@
   }
 </script>
 <style scoped>
+  .cartList .list{
+    margin-bottom: 2.2rem;
+  }
+  .footer .allAll{
+    margin-left: 0.5rem;
+  }
+  .footer .choice a{
+    display: inline-block;;
+    height: 100%;
+    width: 4.5rem;
+    background-color: #9a9a9a;
+    text-align: center;
+    color: #fff;
+  }
+  .footer{
+    background-color: #fff;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.6rem;
+  }
   .listBot .botWord .botPri .red{
     font-size: 0.6rem;
     color: #f05f50;
@@ -190,6 +215,7 @@
   .cartList .list li{
     margin-top: 0.5rem;
     border-bottom: 1px solid #e4e4e4;
+    background-color: #fff;
   }
   .cartList .list li .listTop{
     padding: 0 0.5rem;

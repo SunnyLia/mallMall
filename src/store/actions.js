@@ -104,5 +104,18 @@ export default {
         .catch(function(result) {
             console.log('请求错误了')
         })
+    },
+    //购物车列表
+    cartList({ commit, state },value){
+        axios.get('/static/json/cartList.json')
+        .then(function(result) {
+            if (result.data.data.shops != "") {
+                commit(types.CART_lISTS, result.data.data.shops);
+            }
+        })
+        .catch(function(result) {
+            console.log('请求错误了')
+        })
     }
+
 }

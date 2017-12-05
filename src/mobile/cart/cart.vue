@@ -21,9 +21,14 @@
       Navs,
       // CartEnpty,
       CartList
+    },
+    mounted:function(){
+      this.$store.dispatch('cartList');
     }
   }
 </script>
 <style scoped>
-
+  .cart{
+    background-color: #f4f4f4;
+  }
 </style>

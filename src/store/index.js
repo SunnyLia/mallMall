@@ -17,6 +17,7 @@ const state = {
   provinces:[],//省PROVINCES
   citys:[],//市CITYS
   districts:[],//区DISTRICTS
+  cartLists:[],//购物车列表
   isFixedHeader: false,
   isShowSearchBar: false,
   isShowMask: false,

@@ -13,6 +13,12 @@ export const userInfo = state => state.userInfo //用户信息
 
 export const isLogin = state => state.isLogin //是否登录
 
+export const provinces = state => state.provinces //省PROVINCES
+export const citys = state => state.citys //市CITYS
+export const districts = state => state.districts //区DISTRICTS
+
+export const cartLists = state => state.cartLists //购物车列表
+
 export const isFixedHeader = state => state.isFixedHeader
 
 export const isShowSearchBar = state => state.isShowSearchBar

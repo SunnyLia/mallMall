@@ -10,6 +10,7 @@ import {
   PROVINCES,//省
   CITYS,//市
   DISTRICTS,//区
+  CART_lISTS,//购物车列表
   IS_FIXED_HEADER,
   IS_SHOW_SEARCH_BAR,
   IS_SHOW_MASK,
@@ -51,6 +52,9 @@ export default{
   },
   [DISTRICTS](state,list){//区
     state.districts = list;
+  },
+  [CART_lISTS](state,list){//购物车列表
+    state.cartLists = list;
   },
   [IS_FIXED_HEADER](state,flag){
     state.isFixedHeader = flag;
