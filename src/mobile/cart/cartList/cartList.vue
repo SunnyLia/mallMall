@@ -2,23 +2,23 @@
   <div class="cartList">
     <div class="list">
       <div class="content">
-        <ul v-for="cart in cartLists">
-          <li>
+        <ul>
+          <li v-for="(cart,index) in cartLists.shops">
             <div class="listTop clearfix">
               <div class="fl">
-                <input type="checkbox" name="checkAll" :checked="isCheckAll" :id="'checkAll'+cart.id" @click="checkAll($event)">
-                <label for="'checkAll'+cart.id"></label>
-                <a href="cart.url">{{cart.name}}</a>
+                <input type="checkbox" name="checkAll" :checked="isCheckAll" :id="'checkAll'+cart.id" @click="checkAll($event,index)">
+                <label :for="'checkAll'+cart.id"></label>
+                <a :href="cart.url">{{cart.name}}</a>
               </div>
               <!-- <a href="javascript:;" class="fr">删除</a> -->
             </div>
-            <ul v-for="item in cart.items">
-              <li class="listBot clearfix">
+            <ul>
+              <li class="listBot clearfix" v-for="(item,i) in cart.items">
                 <div class="checkPos">
                   <input type="checkbox" name="checkList" :id="'checkList'+item.id"  @click="checkList($event)">
-                  <label for="'checkList'+item.id"></label>
+                  <label :for="'checkList'+item.id"></label>
                 </div>
-                <a href="item.product_sku.url">
+                <a :href="item.product_sku.url">
                   <img :src="item.product_sku.master_photo.normal_url" alt="">
                 </a>
                 <div class="botWord">
@@ -27,9 +27,9 @@
                   <div class="botPri clearfix">
                     <p class="fl red">{{item.product_sku.promote_price}}</p>
                     <div class="addSub fr">
-                      <i class="fl" @click="sub">-</i>
+                      <i class="fl" @click="sub(index,i)">-</i>
                       <span>{{item.quantity}}</span>
-                      <i class="fr" @click="add">+</i>
+                      <i class="fr" @click="add(index,i)">+</i>
                     </div>
                   </div>
                 </div>
@@ -44,7 +44,7 @@
           <label for="allAll"></label>全选
         </div>
         <div class="fr choice">
-          <a href="javascript:;">请选择</a>
+          <a href="javascript:;" :class="{'choAll':isAllAll}">{{isAllAll?cartLists.total_amount:'请选择'}}</a>
         </div>
       </div>
     </div>
@@ -52,68 +52,81 @@
 </template>
 
 <script type="text/javascript">
-import {mapState,mapActions} from 'vuex'
+  import {mapState,mapActions} from 'vuex'
   export default {
     data() {
       return {
-        count:1,
-        isCheckAll:true,
+        isCheckAll:false,//是否全选
+        isAllAll:false,//是否总选
         checkListNum:0
       }
     },
     computed: mapState(['cartLists']),
     methods: {
-      add(){//加
-        this.count++;
+      add(index,i){//加
+        this.cartLists.shops[index].items[i].quantity++;
       },
-      sub(){//减
-        if (this.count > 1) {
-          this.count--;
+      sub(index,i){//减
+        var count = this.cartLists.shops[index].items[i].quantity;
+        if (count > 1) {
+          count--;
         }else{
-          this.count = 1;
+          count = 1;
         }
+        this.cartLists.shops[index].items[i].quantity = count;
       },
-      checkAll(e){//全选
-        if (e.target.checked || this.isCheckAll == true) {
-          $('.checkPos input').each(function(index, el) {
-            el.checked=true;
-          });
-        }else{
-          $('.checkPos input').each(function(index, el) {
-            el.checked=false;
-          });
-        }
+      checkAll(e,i){//全选
+        console.log(this.cartLists.shops)
       },
-      checkList(e){//单选
-        var listNum = $('.listBot').length;//总的checkbox的数量
-        if (e.target.checked) {
-          this.checkListNum++;//点击的checkbox的数量
-          if (this.checkListNum == listNum) {
-            this.isCheckAll = true;
-          };
-        }else{
-          this.isCheckAll = false;
-          this.checkListNum--;          
-        }
-      },
-      allAll(e){//总选
-        if (e.target.checked) {
-          $('.listTop input').each(function(index, el) {
-            el.checked=true;
-          });
-        }else{
-          $('.listTop input').each(function(index, el) {
-            el.checked=false;
-          });
-        }
-      }
+      // checkList(e){//单选
+      //   var listNum = $('.listBot').length;//总的checkbox的数量
+      //   if (e.target.checked) {
+      //     this.checkListNum++;//点击的checkbox的数量
+      //     if (this.checkListNum == listNum) {
+      //       this.isCheckAll = true;
+      //     };
+      //   }else{
+      //     this.isCheckAll = false;
+      //     this.checkListNum--;          
+      //   }
+      // },
+      // allAll(e){//总选
+      //   if (e.target.checked) {
+      //     $('.listTop input').each(function(index, el) {
+      //       el.checked=true;
+      //     });
+      //   }else{
+      //     $('.listTop input').each(function(index, el) {
+      //       el.checked=false;
+      //     });
+      //   }
+      // }
     },
     components: {
 
+    },
+    mounted:function(){
+      // 首先在每条数据下添加一条checked属性值
+      var that = this;
+      console.log(that.cartLists.shops)
+      $.each(that.cartLists.shops,function(index, el) {
+        $.each(el.items,function(i, e) {
+          e.checked = false;
+        });
+      });
+
+      // this.cartLists.shops.each(function(index, el) {
+      //   el.items.each(function(i, e) {
+      //     e.checked = false;
+      //   });
+      // });
     }
   }
 </script>
 <style scoped>
+  .choAll{
+    background-color: #0aa082!important;
+  }
   .cartList .list{
     margin-bottom: 2.2rem;
   }

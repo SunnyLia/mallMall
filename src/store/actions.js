@@ -109,8 +109,8 @@ export default {
     cartList({ commit, state },value){
         axios.get('/static/json/cartList.json')
         .then(function(result) {
-            if (result.data.data.shops != "") {
-                commit(types.CART_lISTS, result.data.data.shops);
+            if (result.data.data != "") {
+                commit(types.CART_lISTS, result.data.data);
             }
         })
         .catch(function(result) {

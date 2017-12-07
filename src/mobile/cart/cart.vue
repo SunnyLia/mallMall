@@ -23,7 +23,7 @@
       CartList
     },
     mounted:function(){
-      this.$store.dispatch('cartList');
+      this.$store.dispatch('cartList');     
     }
   }
 </script>
