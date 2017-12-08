@@ -3,10 +3,10 @@
     <div class="list">
       <div class="content">
         <ul>
-          <li v-for="(cart,index) in cartLists.shops">
+          <li v-for="(cart,index) in cartLists">
             <div class="listTop clearfix">
               <div class="fl">
-                <input type="checkbox" name="checkAll" :checked="isCheckAll" :id="'checkAll'+cart.id" @click="checkAll($event,index)">
+                <input type="checkbox" name="checkAll" :checked="cart.checked" :id="'checkAll'+cart.id" @click="checkAll(index)">
                 <label :for="'checkAll'+cart.id"></label>
                 <a :href="cart.url">{{cart.name}}</a>
               </div>
@@ -15,7 +15,7 @@
             <ul>
               <li class="listBot clearfix" v-for="(item,i) in cart.items">
                 <div class="checkPos">
-                  <input type="checkbox" name="checkList" :id="'checkList'+item.id"  @click="checkList($event)">
+                  <input type="checkbox" name="checkList" :checked="item.checked" :id="'checkList'+item.id"  @click="checkList(i,index)">
                   <label :for="'checkList'+item.id"></label>
                 </div>
                 <a :href="item.product_sku.url">
@@ -40,7 +40,7 @@
       </div>
       <div class="footer">
         <div class="fl allAll">
-          <input type="checkbox" name="checkAll"  id="allAll"  @click="allAll($event)">
+          <input type="checkbox" name="checkAll" :checked="isAllAll" id="allAll"  @click="allAll()">
           <label for="allAll"></label>全选
         </div>
         <div class="fr choice">
@@ -56,7 +56,6 @@
   export default {
     data() {
       return {
-        isCheckAll:false,//是否全选
         isAllAll:false,//是否总选
         checkListNum:0
       }
@@ -64,64 +63,93 @@
     computed: mapState(['cartLists']),
     methods: {
       add(index,i){//加
-        this.cartLists.shops[index].items[i].quantity++;
+        this.cartLists[index].items[i].quantity++;
       },
       sub(index,i){//减
-        var count = this.cartLists.shops[index].items[i].quantity;
+        var count = this.cartLists[index].items[i].quantity;
         if (count > 1) {
           count--;
         }else{
           count = 1;
         }
-        this.cartLists.shops[index].items[i].quantity = count;
+        this.cartLists[index].items[i].quantity = count;
       },
-      checkAll(e,i){//全选
-        console.log(this.cartLists.shops)
+
+      // 全部总选
+      allAll : function() {
+        var flag = true;
+        if ( this.isAllAll ) {
+          flag = false;
+        }
+        for ( var i = 0, len = this.cartLists.length; i < len; i++ ) {
+          this.cartLists[i]['checked'] = flag;
+          var list = this.cartLists[i]['items'];
+          for ( var j = 0, len1 = list.length; j < len1; j++ ) {
+            list[j]['checked'] = flag;
+          }
+        }
+        this.isAllAll = !this.isAllAll;
       },
-      // checkList(e){//单选
-      //   var listNum = $('.listBot').length;//总的checkbox的数量
-      //   if (e.target.checked) {
-      //     this.checkListNum++;//点击的checkbox的数量
-      //     if (this.checkListNum == listNum) {
-      //       this.isCheckAll = true;
-      //     };
-      //   }else{
-      //     this.isCheckAll = false;
-      //     this.checkListNum--;          
-      //   }
-      // },
-      // allAll(e){//总选
-      //   if (e.target.checked) {
-      //     $('.listTop input').each(function(index, el) {
-      //       el.checked=true;
-      //     });
-      //   }else{
-      //     $('.listTop input').each(function(index, el) {
-      //       el.checked=false;
-      //     });
-      //   }
-      // }
+
+      // 店铺全选
+      checkAll : function( index) {
+        var list = this.cartLists[index]['items'],
+        len = list.length;
+        if ( this.cartLists[index]['checked'] ) {
+          for (var i = 0; i < len; i++ ) {
+            list[i]['checked'] = false;
+          }
+        } else {
+          for (var i = 0; i < len; i++ ) {
+            list[i]['checked'] = true;
+          }
+        }
+        this.cartLists[index]['checked'] = !this.cartLists[index]['checked'];
+        // 判断是否选择所有商品的全选
+        this.isChooseAll();
+      },
+
+      // 单个选择
+      checkList : function( i, index) {
+        var list = this.cartLists[i]['items'],
+        len = list.length;
+        if ( list[index]['checked'] ) {
+          this.cartLists[i]['checked'] = false;
+          this.isAllAll = false;
+          list[index]['checked'] = !list[index]['checked'];
+        } else {
+          list[index]['checked'] = !list[index]['checked'];
+          // 判断是否选择当前店铺的全选
+          var flag = true;
+          for (var i = 0; i < len; i++ ) {
+            if ( list[i]['checked'] == false ) {
+              flag = false;
+              break;
+            }
+          }
+          flag == true ? this.cartLists[i]['checked'] = true : this.cartLists[i]['checked'] = false;
+        }
+        // 判断是否选择所有商品的全选
+        this.isChooseAll();
+      },
+
+      // 判断是否选择所有商品的全选
+      isChooseAll : function() {
+        var flag1 = true;
+        for ( var i = 0, len = this.cartLists.length; i < len; i++ ) {
+          if ( this.cartLists[i]['checked'] == false ) {
+            flag1 = false;
+            break;
+          }
+        }
+        flag1 == true ? this.isAllAll = true : this.isAllAll = false;
+      }
     },
     components: {
 
-    },
-    mounted:function(){
-      // 首先在每条数据下添加一条checked属性值
-      var that = this;
-      console.log(that.cartLists.shops)
-      $.each(that.cartLists.shops,function(index, el) {
-        $.each(el.items,function(i, e) {
-          e.checked = false;
-        });
-      });
-
-      // this.cartLists.shops.each(function(index, el) {
-      //   el.items.each(function(i, e) {
-      //     e.checked = false;
-      //   });
-      // });
     }
   }
+
 </script>
 <style scoped>
   .choAll{

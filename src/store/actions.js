@@ -110,7 +110,15 @@ export default {
         axios.get('/static/json/cartList.json')
         .then(function(result) {
             if (result.data.data != "") {
-                commit(types.CART_lISTS, result.data.data);
+                // 为了方便做购物车全选反选，在每条数据下添加一条checked属性值
+                //在这里写的目的是因为我写在组件里面老是报错，哎
+                $.each(result.data.data.shops,function(index,el){
+                    el.checked = false;
+                    $.each(el.items,function(i,e){
+                        e.checked = false;
+                    })
+                }),
+                commit(types.CART_lISTS, result.data.data.shops)
             }
         })
         .catch(function(result) {

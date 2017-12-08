@@ -21,7 +21,6 @@ import {
   IS_SHOW_LOADING_TIPS,
   IS_SHOW_LOADED_TIPS
 } from './mutation-types.js'
-
 export default{
   [GET_SEARCH_LISTS](state,list){//搜索列表
     state.searchLists = list;
