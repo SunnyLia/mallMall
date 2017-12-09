@@ -17,15 +17,16 @@
       }
     },
     mounted() {  
-    },    
-    methods: {
-    },
-    components: {
-      MineHeader,
-      CuponeNav,
-      OrderNone
-    }
+     this.$store.dispatch('cuponeList'); 
+   },      
+   methods: {
+   },
+   components: {
+    MineHeader,
+    CuponeNav,
+    OrderNone
   }
+}
 </script>
 <style scoped>
 

@@ -2,9 +2,15 @@
   <div class="unUsed">
     <exchange></exchange>
     <ul>
-      <li>
-        <a href="javascript:;">
-          <div class="abc">
+      <li v-for="cupone in cuponeLists" v-if="cupone.status == 1">
+        <a :href="cupone.link">
+        <div class="abc" :class="{'abc_gray':cupone.status!=1}">
+            <div class="abc_e"  v-if="cupone.status == 2">
+              <span><em>已使用</em></span>
+            </div>
+            <div class="abc_e"  v-if="cupone.status == 3">
+              <span><em>已过期</em></span>
+            </div>
             <div class="abc_a">
               <i></i>
               <i></i>
@@ -16,33 +22,17 @@
               <i></i>
             </div>
             <div class="abc_b">
-              <p class="b_top"><i>￥</i><em>50</em></p>
-              <p class="b_bot">满600元可用</p>
+              <p class="b_top"><i>￥</i><em>{{cupone.offset_amount}}</em></p>
+              <p class="b_bot">满{{cupone.min_consumption}}元可用</p>
             </div>
             <div class="abc_c">
-              <p class="c_top">满600减50</p>
-              <p class="c_cen">长闲饭罢必煎茶</p>
+              <p class="c_top">{{cupone.name}}</p>
+              <p class="c_cen">{{cupone.description}}</p>
               <p class="c_bot">
-                <span>有效期：2017.10.16 ~ 2017.12.31</span>
+                <span>有效期：{{cupone.display_expire}}</span>
               </p>
             </div>
             <div class="abc_d">
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-           </div>
-         </div>
-       </a>
-     </li>
-     <li>
-        <a href="javascript:;">
-          <div class="abc">
-            <div class="abc_a">
               <i></i>
               <i></i>
               <i></i>
@@ -52,34 +42,14 @@
               <i></i>
               <i></i>
             </div>
-            <div class="abc_b">
-              <p class="b_top"><i>￥</i><em>20</em></p>
-              <p class="b_bot">满600元可用</p>
-            </div>
-            <div class="abc_c">
-              <p class="c_top">满600减50</p>
-              <p class="c_cen">长闲饭罢必煎茶</p>
-              <p class="c_bot">
-                <span>有效期：2017.10.16 ~ 2017.12.31</span>
-              </p>
-            </div>
-            <div class="abc_d">
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-             <i></i>
-           </div>
-         </div>
-       </a>
-     </li>
-   </ul>
- </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
+  import {mapState,mapActions} from 'vuex'
   import Exchange from './exchange/exchange.vue'
   export default {
     data() {
@@ -87,8 +57,7 @@
         words:'哇哦，还没有领取的优惠券~'       
       }
     },
-    mounted() {  
-    },    
+    computed: mapState(['cuponeLists']),  
     methods: {
     },
     components: {
@@ -97,6 +66,33 @@
   }
 </script>
 <style scoped>
+  .abc_gray{
+    background-color:#bdbdbd;
+  }
+  .abc_e{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    color: #fff;
+    overflow: hidden;
+    width: 3rem;
+    height: 3rem;
+  }
+  .abc_e span{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+    width: 3rem;
+    background-color: #9a9a9a;
+    z-index: 1;
+    position: relative;
+    top: 0;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.16rem;
+    right: -0.5rem;
+  }
   .c_bot span{
     margin-left: 0.37rem;
   }
@@ -223,7 +219,7 @@
   }
   .abc_b:after{
     bottom: -0.17rem;
-     width: 0.35rem;
+    width: 0.35rem;
     height: 0.35rem;
     right: -0.17rem;
     content: "";
