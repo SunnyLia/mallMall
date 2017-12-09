@@ -21,6 +21,8 @@ export const cartLists = state => state.cartLists //购物车列表
 
 export const cuponeLists = state => state.cuponeLists //优惠券列表
 
+export const addressLists = state => state.addressLists //地址列表
+
 export const isFixedHeader = state => state.isFixedHeader
 
 export const isShowSearchBar = state => state.isShowSearchBar

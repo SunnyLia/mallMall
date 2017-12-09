@@ -44,7 +44,6 @@
           <label for="allAll"></label>全选
         </div>
         <div class="fr choice">
-          <!-- <a href="javascript:;" :class="{'choAll':isAllAll}">{{isAllAll?cartLists.total_amount:'请选择'}}</a> -->
           <a href="javascript:;" :class="{'choAll':totalMoney>0}">{{totalMoney>0?totalMoney+".00":"请选择"}}</a>
         </div>
       </div>
@@ -252,7 +251,7 @@
     background:url(../../../assets/imgs/check_uncheck.png) no-repeat;
     background-size: cover;
     display: inline-block;
-    top:0.18rem;
+    top:0.1rem;
   }
   input[type=checkbox]:checked+label{
     background:url(../../../assets/imgs/check_checked.png) no-repeat;

@@ -81,30 +81,6 @@ export default {
             console.log('请求错误了')
         })
     },
-    // 获取省份
-    province({ commit, state }) {
-        axios.get('/api/zoning')
-        .then(function(result) {
-            if (result.data.data != "") {
-                commit(types.PROVINCES, result.data.data);
-            }
-        })
-        .catch(function(result) {
-            console.log('请求错误了')
-        })
-    },
-    // 获取市
-    city({ commit, state },value) {
-        axios.get('/api/zoning?id='+value)
-        .then(function(result) {
-            if (result.data.data != "") {
-                commit(types.CITYS, result.data.data);
-            }
-        })
-        .catch(function(result) {
-            console.log('请求错误了')
-        })
-    },
     //购物车列表
     cartList({ commit, state },value){
         axios.get('/static/json/cartList.json')
@@ -126,7 +102,7 @@ export default {
         })
     },
     //订单列表
-    orderList({ commit, state },value){
+    orderList({ commit, state }){
         axios.get('/static/json/orderList.json')
         .then(function(result) {
             if (result.data.data.orders != "") {
@@ -138,11 +114,23 @@ export default {
         })
     },
     //优惠券列表
-    cuponeList({ commit, state },value){
+    cuponeList({ commit, state }){
         axios.get('/static/json/cuponeList.json')
         .then(function(result) {
             if (result.data.coupons != "") {
                 commit(types.CUPONE_LISTS, result.data.coupons)
+            }
+        })
+        .catch(function(result) {
+            console.log('请求错误了')
+        })
+    },
+    //地址列表
+    addressList({ commit, state }){
+        axios.get('/static/json/addressList.json')
+        .then(function(result) {
+            if (result.data.data != "") {
+                commit(types.ADDRESS_LISTS, result.data.data)
             }
         })
         .catch(function(result) {

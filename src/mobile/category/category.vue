@@ -36,13 +36,13 @@
   .category_list ul li{
     display: inline-block;
     width: 33.3%;
-    height: 2.5rem;
+    height: 2.2rem;
     padding: 0 0.1rem;
     margin: 0.1rem 0;
   }
   .category_list a{
     display: block;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
     text-align: center;
     color: #4a4a4a;
     font-size: 0.6rem;

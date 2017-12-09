@@ -20,6 +20,7 @@ const state = {
   cartLists:[],//购物车列表
   orderLists:[],//订单列表
   cuponeLists:[],//优惠券列表
+  addressLists:[],//地址列表 
   isFixedHeader: false,
   isShowSearchBar: false,
   isShowMask: false,

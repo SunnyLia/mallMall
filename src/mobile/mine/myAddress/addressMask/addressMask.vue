@@ -15,9 +15,9 @@
         <div class="Uzk2mMNz _1hXzVb0s noborder flex required">
           <!-- 选择省 -->
           <div class="_2k7DI6oJ">
-            <select class="_14JMJHXz" name="province_id" @click="checkPro">
+            <select class="_14JMJHXz" name="province_id">
               <option value="">选择省</option>
-              <option  v-for="pro in provinces" :data-code="pro.code" :value="pro.id">{{pro.name}}</option>
+              <option  data-code="11" value="1">广东省</option>
             </select>
             <i class="_1NsvL34K"></i>
           </div>
@@ -25,7 +25,7 @@
           <div class="_2k7DI6oJ">
             <select class="_14JMJHXz pending" name="city_id">
               <option>选择市</option>
-              <option  data-code="11" value="1">天津市</option>
+              <option  data-code="11" value="1">深圳市</option>
             </select>
             <i class="_1NsvL34K"></i>
           </div>
@@ -33,7 +33,7 @@
           <div class="_2k7DI6oJ">
             <select class="_14JMJHXz pending" name="district_id">
               <option>选择区</option>
-              <option  data-code="11" value="1">天津市</option>
+              <option  data-code="11" value="1">南山区</option>
             </select>
             <i class="_1NsvL34K"></i>
           </div>
@@ -48,29 +48,15 @@
   </div>
 </template>
 <script>
-  import {mapState,mapActions} from 'vuex'
-  import MineHeader from '@/mobile/mine/mineHeader/mineHeader.vue'
   export default {
     data() {
       return {
       }
-    },
-    computed: {
-      ...mapState(['provinces'])
-    },
-    mounted() {  
-
     },    
     methods: {
       close(){
         this.$emit("closeMask");
-      },
-      checkPro(){
-        this.$store.dispatch('province');
       }
-    },
-    components: {
-      MineHeader
     }
   }
 </script>

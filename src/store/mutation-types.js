@@ -24,6 +24,8 @@ export const ORDER_LISTS = 'ORDER_LISTS'//订单列表
 
 export const CUPONE_LISTS = 'CUPONE_LISTS'//优惠券列表
 
+export const ADDRESS_LISTS = 'ADDRESS_LISTS'//地址列表
+
 export const IS_FIXED_HEADER = 'IS_FIXED_HEADER'
 
 export const IS_SHOW_SEARCH_BAR = 'IS_SHOW_SEARCH_BAR'

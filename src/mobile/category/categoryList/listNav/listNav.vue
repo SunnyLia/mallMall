@@ -37,7 +37,7 @@
     overflow: hidden;
   }
   .list_nav ul{
-    background-color: #17AA52;
+    background-color: #0aa082;
     width: auto;
     height: 1.6rem;
     line-height: 1.6rem;

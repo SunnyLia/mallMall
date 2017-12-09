@@ -68,7 +68,7 @@
     width: auto;
     margin: 0 auto;
     text-align: center;
-    color: #3ba94d;
+    color: #0aa082;
   }
   .list_header .category_box{
     position: fixed;
