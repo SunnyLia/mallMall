@@ -19,6 +19,8 @@ export const districts = state => state.districts //区DISTRICTS
 
 export const cartLists = state => state.cartLists //购物车列表
 
+export const cuponeLists = state => state.cuponeLists //优惠券列表
+
 export const isFixedHeader = state => state.isFixedHeader
 
 export const isShowSearchBar = state => state.isShowSearchBar
@@ -30,6 +32,8 @@ export const sliders = state => state.sliders
 export const hotProducts = state => state.hotProducts//热门商品
 
 export const hotShops = state => state.hotShops//热门店铺
+
+export const orderLists = state => state.orderLists//订单列表
 
 export const products = state => state.products
 

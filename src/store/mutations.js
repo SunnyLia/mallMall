@@ -11,12 +11,14 @@ import {
   CITYS,//市
   DISTRICTS,//区
   CART_lISTS,//购物车列表
+  CUPONE_LISTS,//优惠券列表
   IS_FIXED_HEADER,
   IS_SHOW_SEARCH_BAR,
   IS_SHOW_MASK,
   GET_SLIDERS,
   GET_HOT_PRODUCTS,//热门商品
   GET_HOT_SHOPS,//热门店铺
+  ORDER_LISTS,//订单列表
   GET_PRODUCTS,
   IS_SHOW_LOADING_TIPS,
   IS_SHOW_LOADED_TIPS
@@ -55,6 +57,9 @@ export default{
   [CART_lISTS](state,list){//购物车列表
     state.cartLists = list;
   },
+  [CUPONE_LISTS](state,list){//优惠券列表
+    state.cuponeLists = list;
+  },
   [IS_FIXED_HEADER](state,flag){
     state.isFixedHeader = flag;
   },
@@ -72,6 +77,9 @@ export default{
   },
   [GET_HOT_SHOPS](state,list){//热门店铺
     state.hotShops = list;
+  },
+  [ORDER_LISTS](state,list){//订单列表
+    state.orderLists = list;
   },
   [GET_PRODUCTS](state,list){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     state.products = state.products.concat(list);

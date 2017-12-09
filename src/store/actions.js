@@ -109,7 +109,7 @@ export default {
     cartList({ commit, state },value){
         axios.get('/static/json/cartList.json')
         .then(function(result) {
-            if (result.data.data != "") {
+            if (result.data.data.shops != "") {
                 // 为了方便做购物车全选反选，在每条数据下添加一条checked属性值
                 //在这里写的目的是因为我写在组件里面老是报错，哎
                 $.each(result.data.data.shops,function(index,el){
@@ -124,6 +124,29 @@ export default {
         .catch(function(result) {
             console.log('请求错误了')
         })
+    },
+    //订单列表
+    orderList({ commit, state },value){
+        axios.get('/static/json/orderList.json')
+        .then(function(result) {
+            if (result.data.data.orders != "") {
+                commit(types.ORDER_LISTS, result.data.data.orders)
+            }
+        })
+        .catch(function(result) {
+            console.log('请求错误了')
+        })
+    },
+    //优惠券列表
+    cuponeList({ commit, state },value){
+        axios.get('/static/json/cuponeList.json')
+        .then(function(result) {
+            if (result.data.coupons != "") {
+                commit(types.CUPONE_LISTS, result.data.coupons)
+            }
+        })
+        .catch(function(result) {
+            console.log('请求错误了')
+        })
     }
-
 }

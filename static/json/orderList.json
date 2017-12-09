@@ -5,16 +5,98 @@
         "num_not_paid": 1,
         "orders": [
             {
-                "id": "2667159807",
-                "state": 10,
+                "id": "1470544424",
+                "state": 1,
                 "state_display": "待付款",
                 "items": [
                     {
-                        "id": "2219876",
+                        "id": "2220018",
+                        "title": "S925纯银耳环耳钉 | 方圆线款女款 | 東長手工设计方圆系列",
+                        "price": "389.00",
+                        "quantity": 1,
+                        "amount": "389.00",
+                        "sku": {
+                            "id": "57076",
+                            "url": "https://market.douban.com/item/57076/",
+                            "color": "",
+                            "color_name": "颜色",
+                            "size": "",
+                            "size_name": "尺寸",
+                            "master_photo": {
+                                "large_url": "https://img3.doubanio.com/view/dianpu_product_item/large/public/p155091.jpg",
+                                "id": 155091,
+                                "original_filename": "方圆线银耳针大号.jpg",
+                                "normal_url": "https://img3.doubanio.com/view/dianpu_product_item/small/public/p155091.jpg"
+                            },
+                            "shop": {
+                                "id": "11185",
+                                "sid": "dongchang",
+                                "name": "东长",
+                                "services_doumail": "60187187",
+                                "is_self_supported": false
+                            },
+                            "is_pre_sale": false,
+                            "pre_sale_display": ""
+                        }
+                    },
+                    {
+                        "id": "2220017",
+                        "title": "S925纯银手链 | 知了象征高洁与默契 | 東長首饰知音系列",
+                        "price": "189.00",
+                        "quantity": 1,
+                        "amount": "189.00",
+                        "sku": {
+                            "id": "59679",
+                            "url": "https://market.douban.com/item/59679/",
+                            "color": "",
+                            "color_name": "颜色",
+                            "size": "",
+                            "size_name": "尺寸",
+                            "master_photo": {
+                                "large_url": "https://img1.doubanio.com/view/dianpu_product_item/large/public/p305697.jpg",
+                                "id": 305697,
+                                "original_filename": "修图手链-高清.jpg",
+                                "normal_url": "https://img1.doubanio.com/view/dianpu_product_item/small/public/p305697.jpg"
+                            },
+                            "shop": {
+                                "id": "11185",
+                                "sid": "dongchang",
+                                "name": "东长",
+                                "services_doumail": "60187187",
+                                "is_self_supported": false
+                            },
+                            "is_pre_sale": false,
+                            "pre_sale_display": ""
+                        }
+                    }
+                ],
+                "url": "/people/order_detail?deal_id=1470544424",
+                "remark": null,
+                "can_delete": false,
+                "total_amount": "578.00",
+                "total_offset_amount": "0.00",
+                "real_amount": "590.00",
+                "freight_amount": "12.00",
+                "customer_name": "fqafa",
+                "customer_phone": "13111111111",
+                "customer_address": "北京市 北京市 东城区 wq倒计时导师",
+                "shop_invoices": {},
+                "commit_time": "2017-12-09 14:12:25",
+                "paid_time": null,
+                "cancel_time": null,
+                "timeout_seconds": 1728
+            },
+            {
+                "id": "5279800258",
+                "state": 2,
+                "state_display": "交易关闭",
+                "items": [
+                    {
+                        "id": "2219975",
                         "title": "潮潮wetware音乐周官方周边—帆布包",
                         "price": "50.00",
-                        "quantity": 1,
-                        "amount": "50.00",
+                        "quantity": 2,
+                        "amount": "100.00",
                         "sku": {
                             "id": "194315",
                             "url": "https://market.douban.com/item/194315/",
@@ -40,25 +122,25 @@
                         }
                     }
                 ],
-                "url": "/people/order_detail?deal_id=2667159807",
+                "url": "/people/order_detail?deal_id=5279800258",
                 "remark": null,
-                "can_delete": false,
-                "total_amount": "50.00",
+                "can_delete": true,
+                "total_amount": "100.00",
                 "total_offset_amount": "0.00",
-                "real_amount": "60.00",
+                "real_amount": "110.00",
                 "freight_amount": "10.00",
                 "customer_name": "fqafa",
                 "customer_phone": "13111111111",
                 "customer_address": "北京市 北京市 东城区 wq倒计时导师",
                 "shop_invoices": {},
-                "commit_time": "2017-12-09 13:01:40",
+                "commit_time": "2017-12-09 13:57:54",
                 "paid_time": null,
-                "cancel_time": null,
-                "timeout_seconds": 1734
+                "cancel_time": "2017-12-09 14:12:59",
+                "timeout_seconds": 0
             },
             {
                 "id": "1941191603",
-                "state": 99,
+                "state": 2,
                 "state_display": "交易关闭",
                 "items": [
                     {
@@ -106,58 +188,6 @@
                 "commit_time": "2017-12-09 12:55:54",
                 "paid_time": null,
                 "cancel_time": "2017-12-09 13:02:24",
-                "timeout_seconds": 0
-            },
-            {
-                "id": "1920071805",
-                "state": 99,
-                "state_display": "交易关闭",
-                "items": [
-                    {
-                        "id": "2188987",
-                        "title": "领峰山黑茶新年暖心礼",
-                        "price": "1280.00",
-                        "quantity": 1,
-                        "amount": "1280.00",
-                        "sku": {
-                            "id": "112606",
-                            "url": "https://market.douban.com/item/112606/",
-                            "color": "",
-                            "color_name": "颜色",
-                            "size": "",
-                            "size_name": "尺寸",
-                            "master_photo": {
-                                "large_url": "https://img1.doubanio.com/view/dianpu_product_item/large/public/p559467.jpg",
-                                "id": 559467,
-                                "original_filename": "13.png",
-                                "normal_url": "https://img1.doubanio.com/view/dianpu_product_item/small/public/p559467.jpg"
-                            },
-                            "shop": {
-                                "id": "12640",
-                                "sid": "lingfengshan",
-                                "name": "领峰山黑茶",
-                                "services_doumail": "154162093",
-                                "is_self_supported": false
-                            },
-                            "is_pre_sale": false,
-                            "pre_sale_display": ""
-                        }
-                    }
-                ],
-                "url": "/people/order_detail?deal_id=1920071805",
-                "remark": null,
-                "can_delete": true,
-                "total_amount": "1280.00",
-                "total_offset_amount": "50.00",
-                "real_amount": "1230.00",
-                "freight_amount": "0.00",
-                "customer_name": "daf",
-                "customer_phone": "13111111111",
-                "customer_address": "天津市 天津市 河西区 123haowododa",
-                "shop_invoices": {},
-                "commit_time": "2017-11-30 15:05:47",
-                "paid_time": null,
-                "cancel_time": "2017-11-30 15:40:05",
                 "timeout_seconds": 0
             }
         ],

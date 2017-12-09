@@ -22,7 +22,7 @@
       // CartEnpty,
       CartList
     },
-    mounted:function(){
+    mounted(){
       this.$store.dispatch('cartList');     
     }
   }
