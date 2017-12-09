@@ -15,7 +15,7 @@
             <ul>
               <li class="listBot clearfix" v-for="(item,i) in cart.items">
                 <div class="checkPos">
-                  <input type="checkbox" name="checkList" :checked="item.checked" :id="'checkList'+item.id"  @click="checkList(i,index)">
+                  <input type="checkbox" name="checkList" :checked="item.checked" :id="'checkList'+item.id"  @click="checkList(index,i)">
                   <label :for="'checkList'+item.id"></label>
                 </div>
                 <a :href="item.product_sku.url">
@@ -40,7 +40,7 @@
       </div>
       <div class="footer">
         <div class="fl allAll">
-          <input type="checkbox" name="checkAll" :checked="isAllAll" id="allAll"  @click="allAll()">
+          <input type="checkbox" name="allsAll" :checked="isAllAll" id="allAll"  @click="allAll()">
           <label for="allAll"></label>全选
         </div>
         <div class="fr choice">
@@ -76,69 +76,67 @@
       },
 
       // 全部总选
-      allAll : function() {
+      allAll() {
         var flag = true;
         if ( this.isAllAll ) {
           flag = false;
         }
-        for ( var i = 0, len = this.cartLists.length; i < len; i++ ) {
-          this.cartLists[i]['checked'] = flag;
-          var list = this.cartLists[i]['items'];
-          for ( var j = 0, len1 = list.length; j < len1; j++ ) {
-            list[j]['checked'] = flag;
+        for ( var i = 0, len = this.cartLists.length; i < len; i++ ) {//遍历店铺数量
+          this.cartLists[i].checked = flag;//店铺checked
+          var list = this.cartLists[i].items;
+          for ( var j = 0, len1 = list.length; j < len1; j++ ) {//遍历店铺商品
+            list[j].checked = flag;
           }
         }
         this.isAllAll = !this.isAllAll;
       },
 
       // 店铺全选
-      checkAll : function( index) {
-        var list = this.cartLists[index]['items'],
-        len = list.length;
-        if ( this.cartLists[index]['checked'] ) {
-          for (var i = 0; i < len; i++ ) {
-            list[i]['checked'] = false;
+      checkAll(index) {
+        var list = this.cartLists[index].items;
+        if ( this.cartLists[index].checked ) {//当前店铺未中
+          for (var i = 0; i < list.length; i++ ) {//遍历当前店铺商品
+            list[i].checked = false;
           }
-        } else {
-          for (var i = 0; i < len; i++ ) {
-            list[i]['checked'] = true;
+        } else {//当前店铺选中
+          for (var i = 0; i < list.length; i++ ) {//遍历当前店铺商品
+            list[i].checked = true;
           }
         }
-        this.cartLists[index]['checked'] = !this.cartLists[index]['checked'];
+        this.cartLists[index].checked = !this.cartLists[index].checked;
         // 判断是否选择所有商品的全选
         this.isChooseAll();
       },
 
       // 单个选择
-      checkList : function( i, index) {
-        var list = this.cartLists[i]['items'],
-        len = list.length;
-        if ( list[index]['checked'] ) {
-          this.cartLists[i]['checked'] = false;
-          this.isAllAll = false;
-          list[index]['checked'] = !list[index]['checked'];
-        } else {
-          list[index]['checked'] = !list[index]['checked'];
+      checkList(index,i) {
+        var list = this.cartLists[index].items;
+        if ( list[i].checked ) {//当前商品未中
+          this.cartLists[index].checked = false;//当前店铺未中
+          this.isAllAll = false;//总选未中
+          list[i].checked = !list[i].checked;
+        } else {//当前商品选中
+          list[i].checked = !list[i].checked;
           // 判断是否选择当前店铺的全选
           var flag = true;
-          for (var i = 0; i < len; i++ ) {
-            if ( list[i]['checked'] == false ) {
-              flag = false;
+          for (var i = 0; i < list.length; i++ ) {//遍历当前店铺商品
+            if ( list[i].checked == false ) {//当前商品未中
+              flag = false;//只要有一个商品没选，不成立
               break;
             }
           }
-          flag == true ? this.cartLists[i]['checked'] = true : this.cartLists[i]['checked'] = false;
+          flag == true ? this.cartLists[index].checked = true : this.cartLists[index].checked = false;
         }
         // 判断是否选择所有商品的全选
         this.isChooseAll();
       },
 
       // 判断是否选择所有商品的全选
-      isChooseAll : function() {
+      isChooseAll() {
         var flag1 = true;
-        for ( var i = 0, len = this.cartLists.length; i < len; i++ ) {
-          if ( this.cartLists[i]['checked'] == false ) {
-            flag1 = false;
+        for ( var i = 0; i < this.cartLists.length; i++ ) {//遍历店铺数量
+          if ( this.cartLists[i].checked == false ) {//店铺未中
+            flag1 = false;//只要有一个店铺没选，不成立
             break;
           }
         }
