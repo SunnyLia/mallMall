@@ -1,47 +1,60 @@
 <template>
   <div class="orderAll">
     <ul>
-      <li>
+      <li v-for="order in orderLists" v-if="order.state == 1">
         <div class="order clearfix">
-          <div class="fl">订单号：<span>4916500269</span></div>
-          <div class="fr">待付款</div>
+          <div class="fl">订单号：<span>{{order.id}}</span></div>
+          <div class="fr">{{order.state_display}}</div>
         </div>
-        <div class="infoms">
+        <div class="infoms" v-for="list in order.items">
           <a href="#" class="clearfix">
             <div class="photo fl">
-              <img src="../../../../assets/imgs/search_no.png" alt="">
+              <a :href="list.sku.url">
+                <img :src="list.sku.master_photo.normal_url" alt="">
+              </a>
             </div>
             <div class="depict">
-              <h4>已枯倦的情怀  踏碎成年代已枯倦的情怀  踏碎成年代已枯倦的情怀  踏碎成年代已枯倦的情怀</h4>
-              <p>黑色单里 <span> 34</span></p>
+              <h4>{{list.title}}</h4>
+              <p>{{list.sku.color}} <span> {{list.sku.size}}</span></p>
             </div>
             <div class="price fr">
-              <p>￥288.00 <span>× 1</span></p>
+              <p>￥{{list.price}} <span>× {{list.quantity}}</span></p>
             </div>
           </a>
         </div>
         <div class="quality">
-          <span>共1件商品</span>
-          <span>运费：￥12.00</span>
-          <span>总计：<i class="red">￥300.00</i></span>
+          <span>共{{order.items.length}}件商品</span>
+          <span>运费：￥{{order.freight_amount}}</span>
+          <span>总计：<i class="red">￥{{order.real_amount}}</i></span>
         </div>
+        <!-- 待付款 -->
         <div class="button">
           <a href="#">取消订单</a>
           <a href="#" class="red">立即支付</a>
         </div>
+
       </li>
     </ul>
   </div>
 </template>
-
+<script type="text/javascript">
+  import {mapState,mapActions} from 'vuex'
+  export default {
+    data() {
+      return {
+      }
+    },
+    computed: mapState(['orderLists'])
+  }
+</script>
 <style scoped>
   .orderAll ul li .button a{
     width: 3.5rem;
-    height: 1.2rem;
+    height: 1.1rem;
     display: inline-block;
     border-radius: 0.2rem;
     border: 1px solid #e4e4e4;
-    line-height: 1.2rem;
+    line-height: 1.1rem;
     text-align: center;
     margin-left: 0.3rem;
   }
@@ -74,7 +87,7 @@
     height: 1.8rem;
     line-height: 1.8rem;
     border-bottom: 1px solid #eeeeee;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     color: #5c5c5c;
   }
   .orderAll ul li .order .fr{
@@ -87,7 +100,7 @@
   }
   .orderAll ul li .infoms a{
     color: #9a9a9a;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -105,7 +118,7 @@
 
   .orderAll ul li .infoms .photo img{
     width: 2.8rem;
-    height: auto;
+    height: 2.8rem;
   }
   .orderAll ul li .infoms .depict h4{
     color: #000;
@@ -120,5 +133,5 @@
   .orderAll ul li .infoms .price p{
     margin-top: 1.95rem;
   }
-  
+
 </style>

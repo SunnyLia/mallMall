@@ -17,15 +17,16 @@
       }
     },
     mounted() {  
-    },    
-    methods: {
-    },
-    components: {
-      OrderNav,
-      MineHeader,
-      OrderNone
-    }
+     this.$store.dispatch('orderList'); 
+   },    
+   methods: {
+   },
+   components: {
+    OrderNav,
+    MineHeader,
+    OrderNone
   }
+}
 </script>
 <style scoped>
   .order{
