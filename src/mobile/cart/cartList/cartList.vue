@@ -40,11 +40,12 @@
       </div>
       <div class="footer">
         <div class="fl allAll">
-          <input type="checkbox" name="allsAll" :checked="isAllAll" id="allAll"  @click="allAll()">
+          <input type="checkbox" name="allAll" :checked="isAllAll" id="allAll"  @click="allAll()">
           <label for="allAll"></label>全选
         </div>
         <div class="fr choice">
-          <a href="javascript:;" :class="{'choAll':isAllAll}">{{isAllAll?cartLists.total_amount:'请选择'}}</a>
+          <!-- <a href="javascript:;" :class="{'choAll':isAllAll}">{{isAllAll?cartLists.total_amount:'请选择'}}</a> -->
+          <a href="javascript:;" :class="{'choAll':totalMoney>0}">{{totalMoney>0?totalMoney+".00":"请选择"}}</a>
         </div>
       </div>
     </div>
@@ -57,7 +58,7 @@
     data() {
       return {
         isAllAll:false,//是否总选
-        checkListNum:0
+        totalMoney:0//总价钱
       }
     },
     computed: mapState(['cartLists']),
@@ -74,14 +75,18 @@
         }
         this.cartLists[index].items[i].quantity = count;
       },
-
-      // 全部总选
-      allAll() {
+      allAll() {// 全部总选
         var flag = true;
         if ( this.isAllAll ) {
           flag = false;
         }
-        for ( var i = 0, len = this.cartLists.length; i < len; i++ ) {//遍历店铺数量
+        for ( var i = 0; i < this.cartLists.length; i++ ) {//遍历店铺数量
+          //计算所有店铺商品总价钱
+          if (flag == true) {
+            this.totalMoney=this.totalMoney+parseInt(this.cartLists[i].total_amount);
+          }else{
+            this.totalMoney=0;
+          }
           this.cartLists[i].checked = flag;//店铺checked
           var list = this.cartLists[i].items;
           for ( var j = 0, len1 = list.length; j < len1; j++ ) {//遍历店铺商品
@@ -89,16 +94,18 @@
           }
         }
         this.isAllAll = !this.isAllAll;
-      },
-
-      // 店铺全选
-      checkAll(index) {
+      },      
+      checkAll(index) {// 店铺全选
         var list = this.cartLists[index].items;
         if ( this.cartLists[index].checked ) {//当前店铺未中
+          if (this.totalMoney>0) {
+            this.totalMoney=this.totalMoney-parseInt(this.cartLists[index].total_amount);//计算店铺总价钱
+          };
           for (var i = 0; i < list.length; i++ ) {//遍历当前店铺商品
             list[i].checked = false;
           }
         } else {//当前店铺选中
+          this.totalMoney=this.totalMoney+parseInt(this.cartLists[index].total_amount);//计算店铺总价钱
           for (var i = 0; i < list.length; i++ ) {//遍历当前店铺商品
             list[i].checked = true;
           }
@@ -107,15 +114,17 @@
         // 判断是否选择所有商品的全选
         this.isChooseAll();
       },
-
-      // 单个选择
-      checkList(index,i) {
+      checkList(index,i) { // 单个选择
         var list = this.cartLists[index].items;
         if ( list[i].checked ) {//当前商品未中
+          if (this.totalMoney>0) {
+            this.totalMoney=this.totalMoney-parseInt(this.cartLists[index].items[i].amount);//计算当前总价钱
+          };
           this.cartLists[index].checked = false;//当前店铺未中
           this.isAllAll = false;//总选未中
           list[i].checked = !list[i].checked;
         } else {//当前商品选中
+          this.totalMoney=this.totalMoney+parseInt(this.cartLists[index].items[i].amount);//计算当前总价钱
           list[i].checked = !list[i].checked;
           // 判断是否选择当前店铺的全选
           var flag = true;
@@ -130,9 +139,7 @@
         // 判断是否选择所有商品的全选
         this.isChooseAll();
       },
-
-      // 判断是否选择所有商品的全选
-      isChooseAll() {
+      isChooseAll() { // 判断是否选择所有商品的全选
         var flag1 = true;
         for ( var i = 0; i < this.cartLists.length; i++ ) {//遍历店铺数量
           if ( this.cartLists[i].checked == false ) {//店铺未中
@@ -161,7 +168,7 @@
   }
   .footer .choice a{
     display: inline-block;;
-    height: 100%;
+    height: 1.7rem;
     width: 4.5rem;
     background-color: #9a9a9a;
     text-align: center;

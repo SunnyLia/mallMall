@@ -6,7 +6,7 @@ textarea {outline:none;/*取消右下角可拖曳放大*/ resize:none;}
 button{background:none; border:0;font-size: 100%;outline: none;text-transform: none;}
 select{font-size: 100%;vertical-align:middle;outline:none;text-transform: none;}
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/select::-ms-expand { display: none; }
-a {/*去掉a标签下划线*/text-decoration: none; outline:none;color: #494949;cursor:pointer;}
+a {/*去掉a标签下划线*/text-decoration: none; outline:none;color: #494949;cursor:pointer;/*设置a标签点击高亮问题*/-webkit-tap-highlight-color:rgba(0,0,0,0);}
 /*四个“状态”的先后过程是：a:link ->a:hover ->a:active ->a:visited。*/
 a:hover, a:visited, a:link, a:active {text-decoration: none;color: #494949;}
 ul,li,ol {list-style: none;list-style-type:none;}

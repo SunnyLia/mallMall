@@ -63,12 +63,12 @@
     .db_goodsList .pdt_img{
       display: block;
       width: 100%;
-      height: 7rem;
+      height: 7.5rem;
       position: relative;
     }
     .db_goodsList .pdt_img img{
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
     }
     .db_goodsList .pdt_detail{
       padding:0.2rem;
