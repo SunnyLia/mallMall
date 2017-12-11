@@ -141,30 +141,4 @@
     component:Register
   }
   ]
-  // routes: [
-  // {
-  //   path: '/router-1',
-  //   name: 'Router_1',
-  //   component: Router_1,
-  //   children:[
-  //   {
-  //     path: 'zhangsan',
-  //     name: 'Zhangsan',
-  //     component: Router_1_child_1,
-  //   }
-  //   ]
-  // },{
-  //   path: '/router-2',
-  //   name: 'Router_2',
-  //   component: Router_2
-  // },{
-  //   path: '/router-3',
-  //   name: 'Router_3',
-  //   component: Router_3
-  // },{
-  //   path: '/tab',
-  //   name: 'Tab',
-  //   component: Tab
-  // }
-  // ]
 })

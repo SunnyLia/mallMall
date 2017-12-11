@@ -2,7 +2,7 @@
   <div class="db_detail">
     <!-- 返回 -->
     <div class="db_detail_back" @click="goBack"><span class="fl fa fa-chevron-left"></span>商品详情</div>
-
+    <swiper></swiper>
     <!-- 名称,价格,其它 -->
     <div class="db_detail_info">
       <div class="title">PISN2016冬季新品  超Q弹加绒打底裤</div>
@@ -42,7 +42,7 @@
 </template>
 <script type="text/javascript">
   import axios from 'axios'
-  
+  import Swiper from '@/mobile/home/swiper/swiper.vue'
   import Type from './type.vue'
   import Tab from '../tab/tab.vue'
 
@@ -59,7 +59,8 @@
     },
     components: {
       Type,
-      Tab
+      Tab,
+      Swiper
     }
   }
 </script>
