@@ -136,5 +136,20 @@ export default {
         .catch(function(result) {
             console.log('请求错误了')
         })
+    },
+    //商品详情
+    detailInfo({ commit, state }){
+        axios.get('/static/json/detail.json')
+        .then(function(result) {
+            //异步请求没有做类型说明，或者以字符串方式接受，
+            //用eval()方法(后端教我的方法)转换为json对象，但是网上说有性能问题
+            var obj = eval("("+result.data+")");
+            if (obj.data != "") {
+                commit(types.DETAIL_INFO, obj.data)
+            }
+        })
+        .catch(function(result) {
+            console.log('请求错误了')
+        })
     }
 }

@@ -21,6 +21,7 @@ const state = {
   orderLists:[],//订单列表
   cuponeLists:[],//优惠券列表
   addressLists:[],//地址列表 
+  detailInfos:[],//商品详情 
   isFixedHeader: false,
   isShowSearchBar: false,
   isShowMask: false,

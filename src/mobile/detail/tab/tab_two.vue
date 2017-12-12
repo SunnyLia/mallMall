@@ -4,7 +4,7 @@
     <!-- 一条讨论 -->
     <div class="comment_item">
       <div class="comment_infos">
-        <img src="../../../static/test_hot_product.jpg" class="u_photo">
+        <img src="../../../../static/test_hot_product.jpg" class="u_photo">
         <span class="u_name">张三</span>
         <span class="u_time">2016-07-07 16:23:44</span>
       </div>
@@ -14,21 +14,21 @@
     <!-- 一条讨论 -->
     <div class="comment_item">
       <div class="comment_infos">
-        <img src="../../../static/test_hot_product.jpg" class="u_photo">
+        <img src="../../../../static/test_hot_product.jpg" class="u_photo">
         <span class="u_name">李四</span>
         <span class="u_time">2016-07-07 16:23:44</span>
       </div>
       <div class="comment_text">可不可以防水防火防电</div>
       <div class="comment_picture">
-        <!-- <img src="../../../static/test_hot_product.jpg" alt="">
-        <img src="../../../static/test_hot_product.jpg" alt=""> -->
+        <!-- <img src="../../../../static/test_hot_product.jpg" alt="">
+        <img src="../../../../static/test_hot_product.jpg" alt=""> -->
       </div>
     </div>
 
     <!-- 一条讨论 -->
     <div class="comment_item">
       <div class="comment_infos">
-        <img src="../../../static/test_hot_product.jpg" class="u_photo">
+        <img src="../../../../static/test_hot_product.jpg" class="u_photo">
         <span class="u_name">王五</span>
         <span class="u_time">2016-07-07 16:23:44</span>
       </div>

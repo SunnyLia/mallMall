@@ -5,13 +5,15 @@
       <div class="choice_style">
         <label class="choice_title">颜色</label>
         <div class="choice_items">
-          <span v-for="(item,index) in colors" :class="{active:index==isColors}" @click="isColors=index">{{item}}</span>
+          <span v-for="(item,index) in detailInfos.sku_info" :class="{active:index==isColors}" @click="isColors=index">{{item.color}}</span>
         </div>
       </div>
       <div class="choice_style">
         <label class="choice_title">尺寸</label>
         <div class="choice_items">
-          <span v-for="(item,index) in size" :class="{active:index==isSize}" @click="isSize=index">{{item}}</span>
+          <div v-for="(item,index) in detailInfos.sku_info">
+            <span :class="{active:index==isSize}" @click="isSize=index" v-for="sizes in item.items">{{sizes.size}}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -27,6 +29,7 @@
   </div>
 </template>
 <script type="text/javascript">
+  import {mapState,mapActions} from 'vuex'
   export default {
     data() {
       return {
@@ -36,6 +39,9 @@
         colors:['白色','青色','紫色'],
         size: ['S','M',"L","Xl"]
       }
+    },
+    computed: {
+      ...mapState(['detailInfos'])
     },
     watch: {
       // 监听数量的值
@@ -94,7 +100,7 @@
 
   .choice_items span{
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 0.7rem;
     text-align: center;
     margin: 0 0.2rem;
     color: #fff;
@@ -104,7 +110,7 @@
   }
   .choice_items span.active{
     color: #fff;
-    background-color: #68cb78;
+    background-color: #0aa082;
   }
 
   .db_detail_num{
@@ -143,7 +149,7 @@
   }
 
   .num_option span.active{
-    background-color: #68cb78;
+    background-color: #0aa082;
   }
   
   .num_option .number{

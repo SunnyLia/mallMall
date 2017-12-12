@@ -23,6 +23,8 @@ export const cuponeLists = state => state.cuponeLists //优惠券列表
 
 export const addressLists = state => state.addressLists //地址列表
 
+export const detailInfos = state => state.detailInfos //商品详情
+
 export const isFixedHeader = state => state.isFixedHeader
 
 export const isShowSearchBar = state => state.isShowSearchBar

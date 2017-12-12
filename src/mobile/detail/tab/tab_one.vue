@@ -1,12 +1,13 @@
 <template>
   <div class="tabs_detail">
-    <img src="../../../static/test_hot_product.jpg">
-    <img src="../../../static/test_hot_product.jpg">
-    <img src="../../../static/test_hot_product.jpg">
-    <img src="../../../static/test_hot_product.jpg">
-    <img src="../../../static/test_hot_product.jpg">
-    <img src="../../../static/test_hot_product.jpg">
-    <img src="../../../static/test_hot_product.jpg">
+    <img src="../../../../static/test_hot_product.jpg" height="300" width="300">
+    <img src="../../../../static/test_hot_product.jpg">
+    <img src="../../../../static/test_hot_product.jpg">
+    <img src="../../../../static/test_hot_product.jpg">
+    <img src="../../../../static/test_hot_product.jpg">
+    <img src="../../../../static/test_hot_product.jpg">
+    <img src="../../../../static/test_hot_product.jpg">
+    <img src="../../../../static/test_hot_product.jpg">
     <div class="bottom_bar">
       <a href="#" class="explain">购物说明</a>
       <a href="#" class="help">帮助</a>

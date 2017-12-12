@@ -1,0 +1,140 @@
+{
+    "r": 0,
+    "data": {
+        "services_doumail": 136005375,
+        "shop_url": "https: //market.douban.com/shop/bblxdz/",
+        "sku_id": 224888,
+        "sku_info": [
+            {
+                "color": "黑色单里",
+                "price": "288.00",
+                "items": [
+                    {
+                        "size": "34",
+                        "stock": 5,
+                        "id": 224888
+                    },
+                    {
+                        "size": "35",
+                        "stock": 5,
+                        "id": 224889
+                    },
+                    {
+                        "size": "36",
+                        "stock": 4,
+                        "id": 224890
+                    },
+                    {
+                        "size": "37",
+                        "stock": 5,
+                        "id": 224891,
+                        
+                    },
+                    {
+                        "size": "38",
+                        "stock": 2,
+                        "id": 224892
+                    },
+                    {
+                        "size": "39",
+                        "stock": 5,
+                        "id": 224893
+                    }
+                ]
+            },
+            {
+                "color": "黑色加绒",
+                "price": "298.00",
+                "items": [
+                    {
+                        "size": "34",
+                        "stock": 5,
+                        "id": 224894
+                    },
+                    {
+                        "size": "35",
+                        "stock": 2,
+                        "id": 224895
+                    },
+                    {
+                        "size": "36",
+                        "stock": 4,
+                        "id": 224896
+                    },
+                    {
+                        "size": "37",
+                        "stock": 5,
+                        "id": 224897
+                    },
+                    {
+                        "size": "38",
+                        "stock": 5,
+                        "id": 224898
+                    },
+                    {
+                        "size": "39",
+                        "stock": 5,
+                        "id": 224899
+                    }
+                ]
+            }
+        ],
+        "pre_sale_display": "",
+        "color_name": "颜色",
+        "size_name": "尺寸",
+        "current_coupons": [],
+        "market_price": "428.00",
+        "promote_price": "288.00",
+        "is_onsale": true,
+        "description": "",
+        "title": "已枯倦的情怀  踏碎成年代",
+        "product_id": 127849,
+        "info_photos": [
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009010.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009011.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009012.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009013.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009014.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009015.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009016.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009017.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009018.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009019.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009020.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009021.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009022.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009023.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009024.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009025.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009026.jpg"
+        ],
+        "pics": [
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009009.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009007.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009008.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009023.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009024.jpg"
+        ],
+        "delivery_detail":{
+            "send_type": 0,
+            "add_standards": "1",
+            "start_fees": "0.00",
+            "template_id": 1460,
+            "start_standards": "1",
+            "dests": "ALL",
+            "add_fees": "0.00",
+            "id": 2182,
+            "place_name": "全国"
+        },
+        "tags": [
+            "短靴",
+            "真皮短靴",
+            "粗跟短靴"
+        ],
+        "total_quantity": "0",
+        "liked": false,
+        "item_receipt_id": "",
+        "wechat_config": null,
+        "is_self_supported": false
+    }
+}

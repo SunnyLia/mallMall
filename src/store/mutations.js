@@ -13,6 +13,7 @@ import {
   CART_lISTS,//购物车列表
   CUPONE_LISTS,//优惠券列表
   ADDRESS_LISTS,//地址列表
+  DETAIL_INFO,//商品详情
   IS_FIXED_HEADER,
   IS_SHOW_SEARCH_BAR,
   IS_SHOW_MASK,
@@ -63,6 +64,9 @@ export default{
   },
   [ADDRESS_LISTS](state,list){//地址列表
     state.addressLists = list;
+  },
+  [DETAIL_INFO](state,list){//商品详情
+    state.detailInfos = list;
   },
   [IS_FIXED_HEADER](state,flag){
     state.isFixedHeader = flag;

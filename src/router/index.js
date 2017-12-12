@@ -6,7 +6,7 @@
  import Router from 'vue-router'
 
  import Search from '@/mobile/search/search.vue'
- import Tab from '../mobile/tab/tab.vue'
+ import Tab from '@/mobile/detail/tab/tab.vue'
  import Category from '@/mobile/category/category.vue'
  import Home from '@/mobile/home/home.vue'
  import Mine from '@/mobile/mine/mine.vue'

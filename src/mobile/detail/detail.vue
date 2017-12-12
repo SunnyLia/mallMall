@@ -5,19 +5,19 @@
     <swiper></swiper>
     <!-- 名称,价格,其它 -->
     <div class="db_detail_info">
-      <div class="title">PISN2016冬季新品  超Q弹加绒打底裤</div>
+      <div class="title">{{detailInfos.title}}</div>
       <div class="price">
-        <span class="now_price">￥199</span>
-        <del class="old_price">￥259</del>
+      <span class="now_price">￥{{detailInfos.promote_price}}</span>
+        <del class="old_price">￥{{detailInfos.market_price}}</del>
       </div>
       <div class="freight">
         <div class="fre_lt">
-          <span class="fre_price">运费：￥8.00 </span>
+          <span class="fre_price">运费：￥{{detailInfos.delivery_detail.start_fees}} </span>
           <span class="fre_tips"> 非包邮区域</span>
         </div>
         <div class="fre_rt">
-          <span class="fa fa-heart-o"></span>
-          <span class="fa fa-envelope-o"></span>
+          <span :class="{'fa fa-heart':detailInfos.liked,'fa fa-heart-o':!detailInfos.liked}" @click="onHeart();"></span>
+          <span class="message"></span>
         </div>
       </div>
     </div>
@@ -41,20 +41,30 @@
   </div>
 </template>
 <script type="text/javascript">
-  import axios from 'axios'
+  import {mapState,mapActions} from 'vuex'
   import Swiper from '@/mobile/home/swiper/swiper.vue'
-  import Type from './type.vue'
-  import Tab from '../tab/tab.vue'
+  import Type from './type/type.vue'
+  import Tab from './tab/tab.vue'
 
   export default {
     data() {
       return {
       }
     },
-    methods: {
+    computed: {
+      ...mapState(['detailInfos'])
+    },
+    mounted() {
+     this.$store.dispatch('detailInfo');
+   },
+   methods: {
+      // ...mapActions(['detailInfo']),
       //返回
       goBack(){
         this.$router.go(-1);
+      },
+      onHeart(){
+        this.detailInfos.liked = !this.detailInfos.liked;
       }
     },
     components: {
@@ -96,7 +106,7 @@
     font-size: 0.7rem;
   }
   .db_detail .db_detail_info .price{
-    margin: 0.2rem 0;
+    margin: 0.25rem 0;
   }
   .db_detail .db_detail_info .now_price{
     color: #e17c72;
@@ -104,6 +114,7 @@
   }
   .db_detail .db_detail_info .old_price{
     color: #ccc;
+    margin-left: 0.2rem;
   }
   .db_detail .db_detail_info .freight{
     height: 0.6rem;
@@ -123,12 +134,21 @@
   .db_detail .db_detail_info .fre_tips{
     color: #e17c72;
   }
-  .db_detail .db_detail_info .fa-heart-o{
+  .db_detail .db_detail_info .fa{
     padding-right: 0.4rem;
     color: #e17c72;
+        font-size: 0.7rem;
   }
-  .db_detail .db_detail_info .fa-envelope-o{
-    color:#68cb78;
+  .db_detail .db_detail_info .message{
+    width: 26px;
+    height: 24px;
+    display: inline-block;
+    background-image: url(../../assets/imgs/message.png);
+    padding-right: 0;
+    padding-right: 0;
+    background-size: cover;
+    vertical-align: middle;
+    margin-bottom: 5px;
   }
 
   .db_detail_promise {

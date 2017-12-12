@@ -25,7 +25,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -42,7 +42,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -59,7 +59,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -76,7 +76,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -93,7 +93,7 @@
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -107,16 +107,16 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
         </div>
       </div>
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -130,16 +130,16 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
         </div>
       </div>
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -153,16 +153,16 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
         </div>
       </div>
       <!-- 一条评论 -->
       <div class="comment_item">
         <div class="comment_infos">
-          <img src="../../../static/test_hot_product.jpg" class="u_photo">
+          <img src="../../../../static/test_hot_product.jpg" class="u_photo">
           <span class="u_name">张三</span>
           <span class="u_time">2016-07-07 16:23:44</span>
           <span class="u_rated">
@@ -176,10 +176,10 @@
           总体感觉性价比挺高
         </div>
         <div class="comment_picture">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
-          <img src="../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
+          <img src="../../../../static/test_hot_product.jpg">
         </div>
       </div>
 
