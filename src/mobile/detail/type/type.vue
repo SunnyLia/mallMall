@@ -5,14 +5,14 @@
       <div class="choice_style">
         <label class="choice_title">颜色</label>
         <div class="choice_items">
-          <span v-for="(item,index) in detailInfos.sku_info" :class="{active:index==isColors}" @click="isColors=index">{{item.color}}</span>
+          <span v-for="(item,index) in detailInfos.sku_info" :class="{active:index==isColors}" @click="isColors=index;isSize=0">{{item.color}}</span>
         </div>
       </div>
       <div class="choice_style">
         <label class="choice_title">尺寸</label>
         <div class="choice_items">
-          <div v-for="(item,index) in detailInfos.sku_info">
-            <span :class="{active:index==isSize}" @click="isSize=index" v-for="sizes in item.items">{{sizes.size}}</span>
+          <div v-for="(item,index) in detailInfos.sku_info" v-if="index==isColors">
+            <span v-for="(sizes,i) in item.items" :class="{active:i==isSize}" @click="isSize=i;number=1;">{{sizes.size}}</span>
           </div>
         </div>
       </div>
@@ -20,10 +20,13 @@
     <!-- 选择数量 -->
     <div class="db_detail_num">
       <label class="num_title">数量</label>
-      <div class="num_option">
-        <span class="minus" :class="{active:number>1}" @click="minus">-</span>
-        <input type="number" name="number" class="number" v-model="number">
-        <span class="addition" :class="{active:number>0}" @click="addition">+</span>
+      <div class="num_option" v-for="(item,index) in detailInfos.sku_info" v-if="index==isColors">
+        <div v-for="(stocks,i) in item.items" v-if="i==isSize">
+          <span class="minus" :class="{active:number>1}" @click="minus">-</span>
+          <input type="number" name="number" class="number" v-model="number" :class="{grayColor:stocks.stock<1}" :disabled="stocks.stock<1">
+          <span class="addition" :class="{active:number<stocks.stock}" @click="addition">+</span>
+          <span class="num_stock" :data="stocks.stock">库存{{stocks.stock}}件</span>
+        </div>
       </div>
     </div>
   </div>
@@ -33,11 +36,9 @@
   export default {
     data() {
       return {
-        isColors:0,
-        isSize:0,
-        number:1,
-        colors:['白色','青色','紫色'],
-        size: ['S','M',"L","Xl"]
+        isColors:0,//颜色索引
+        isSize:0,//尺寸索引
+        number:1//数量
       }
     },
     computed: {
@@ -46,31 +47,45 @@
     watch: {
       // 监听数量的值
       number: function(val,oldVal){
-        if(val<0){
+        var stockNum = $('.num_stock').attr('data');
+        if(val<1){
           this.number = 1;
+        }else if(val>stockNum){
+          this.number = stockNum;
         }else{
           this.number = parseInt(val);
         }
       }
     },
     methods:{
-       //数量减函数
-       minus() {
-        if(this.number>0){
+      //数量减函数
+      minus() {
+        if(this.number>1){
           this.number--;
         }
       },
       //数量加函数
       addition() {
+        var stockNum = $('.num_stock').attr('data');
+        console.log(stockNum)
         if(isNaN(this.number)){
-          this.number = 0;
+          this.number = 1;
+        }else if(this.number < stockNum){
+          this.number++;
         }
-        this.number++;
       }
     }
   }
 </script>
 <style scoped>
+.grayColor{
+  color:#fff!important;
+}
+  .db_detail_num .num_stock{
+    font-size: 0.55rem;
+    color: #ccc;
+    margin-left: 0.5rem;
+  }
   .db_detail_choice{
     padding: 0.3rem 0.5rem;
     border-bottom: 1px solid #f0f0f0;

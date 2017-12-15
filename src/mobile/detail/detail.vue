@@ -7,7 +7,7 @@
     <div class="db_detail_info">
       <div class="title">{{detailInfos.title}}</div>
       <div class="price">
-      <span class="now_price">￥{{detailInfos.promote_price}}</span>
+        <span class="now_price">￥{{detailInfos.promote_price}}</span>
         <del class="old_price">￥{{detailInfos.market_price}}</del>
       </div>
       <div class="freight">
@@ -115,6 +115,7 @@
   .db_detail .db_detail_info .old_price{
     color: #ccc;
     margin-left: 0.2rem;
+    font-size: 0.55rem;
   }
   .db_detail .db_detail_info .freight{
     height: 0.6rem;
@@ -133,11 +134,13 @@
   }
   .db_detail .db_detail_info .fre_tips{
     color: #e17c72;
+    font-size: 0.55rem;
+    margin-left: 0.2rem;
   }
   .db_detail .db_detail_info .fa{
     padding-right: 0.4rem;
     color: #e17c72;
-        font-size: 0.7rem;
+    font-size: 0.7rem;
   }
   .db_detail .db_detail_info .message{
     width: 26px;
