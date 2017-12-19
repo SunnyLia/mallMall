@@ -1,0 +1,740 @@
+{
+    "total": 3,
+    "r": 0,
+    "data": {
+        "discuss": [
+            {
+                "kind": 8004,
+                "is_owner": false,
+                "product_id": 112870,
+                "author": {
+                    "url": "https://www.douban.com/people/98730706/",
+                    "create_time": "2017-04-03 12:28:24",
+                    "uid": 98730706,
+                    "avatar": "https://img3.doubanio.com/icon/u98730706-3.jpg",
+                    "name": "咖啡的Lr"
+                },
+                "text": "12",
+                "ref_user": {
+                    "url": "https://www.douban.com/people/98730706/",
+                    "create_time": "2017-04-03 12:28:24",
+                    "uid": 98730706,
+                    "avatar": "https://img3.doubanio.com/icon/u98730706-3.jpg",
+                    "name": "咖啡的Lr"
+                },
+                "update_time": "2017-08-29 16:51:01",
+                "ref_id": 25920,
+                "n_comments": 0,
+                "item_id": 206192,
+                "id": 25921,
+                "ref_text": "21"
+            },
+            {
+                "kind": 8004,
+                "is_owner": false,
+                "product_id": 112870,
+                "author": {
+                    "url": "https://www.douban.com/people/98730706/",
+                    "create_time": "2017-04-03 12:28:24",
+                    "uid": 98730706,
+                    "avatar": "https://img3.doubanio.com/icon/u98730706-3.jpg",
+                    "name": "咖啡的Lr"
+                },
+                "text": "21",
+                "update_time": "2017-08-29 16:50:56",
+                "ref_id": null,
+                "n_comments": 1,
+                "item_id": 206192,
+                "id": 25920
+            }
+        ],
+        "comment": [
+            {
+                "kind": 8015,
+                "is_owner": false,
+                "product_id": 10956,
+                "author": {
+                    "url": "https://www.douban.com/people/zhangpengcheng/",
+                    "create_time": "2015-01-27 19:00:08",
+                    "uid": 40013917,
+                    "avatar": "https://img3.doubanio.com/icon/u40013917-62.jpg",
+                    "name": "张煮茶"
+                },
+                "text": "第一次在豆瓣购物，还挺高兴的。确认收货比较晚，早就到了，由于收件人填的和以前不一样，又恰巧有另一个快件，所以漏拿了不知道到货了。说说鞋子，我平时高跟鞋一般穿38，属于脚比较胖，这个还挺显瘦的哈哈。给大家做个参考：通常38码会有点挤脚穿一穿慢慢就合脚了的那种，这个穿39码很合适不挤脚不磨脚，也不掉鞋，很轻快，2cm很合适，走了大半天也不累脚，就是底子确实有点滑~很好看！店主也很好沟通，总之满意~",
+                "album_photos": [
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p567463.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p567463.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p567463.jpg",
+                        "photo_id": 567463,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p567463.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p567464.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p567464.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p567464.jpg",
+                        "photo_id": 567464,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p567464.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p567465.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p567465.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p567465.jpg",
+                        "photo_id": 567465,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p567465.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p567466.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p567466.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p567466.jpg",
+                        "photo_id": 567466,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p567466.jpg"
+                    }
+                ],
+                "reply_num": 1,
+                "update_time": "2016-06-14 15:01:52",
+                "product_url": "https://market.douban.com/product/10956/",
+                "item": {
+                    "shop": {
+                        "status": "",
+                        "services_phone": "18680640401（只接受退货填号码，不接私人电话）",
+                        "order_notice": "",
+                        "refund_address": "广东省东莞市莞城区寺前街10号（万寿路附近），花与爱丽斯（请将全套包装在两天之内尽快寄回，并保证鞋子不影响二次销售，附上一张纸条写上豆瓣订单号以及退货退款。）",
+                        "sid": "hanalice",
+                        "intro": "从想法到成品，我们经历了一年；每双鞋的制作周期是7-15天；满满诚意，原创品牌。hanalice。",
+                        "is_unpublished": false,
+                        "services_doumail": "131812689",
+                        "id": 11147,
+                        "tags": "芭蕾 平底鞋 hanalice",
+                        "name": "花与爱丽斯",
+                        "url": "https://market.douban.com/shop/hanalice/",
+                        "picture_url": "https://img1.doubanio.com/view/dianpu_shop_icon/large/public/6403123cbd8d897.jpg",
+                        "is_douban_book_shop": false,
+                        "creator_id": 53404397,
+                        "create_time": "2015-07-22 11:55:34",
+                        "services_name": "花与爱丽斯",
+                        "notice_code": "<dl>\n  <dt>销售与配送</dt>\n  <dd>\n    在售商品全部由每个店铺的商家独立进行销售与配送。豆瓣仅提供销售平台服务。\n  </dd>\n  <dd\">\n    如果针对售后问题，购买者无法与商家达成一致的，可以向豆瓣提出申诉，豆瓣将秉持公正公平的原则，依照相关法律法规进行处理。\n  </dd>\n</dl>\n<dl>\n  <dt>正品保证</dt>\n  <dd>\n    商家对在售商品100%享有正品官方授权。\n  </dd>\n  <dd>\n    每一件手工制作的产品，都是独一无二的，即使是同一款式，每件商品间也会略有差异。\n  </dd>\n</dl>\n<dl>\n  <dt>配送时间与范围</dt>\n  <dd>\n    每日16:00前完成的订单将于当日发出，16:00后完成的订单将于次日发出\n  </dd>\n  <dd>\n    周六/日的订单延顺至周一发出\n  </dd>\n  <dd>\n    支持全国范围配送\n  </dd>\n</dl>\n<dl>\n  <dt>退换货说明</dt>\n  <dd>\n    商家接受7天无理由退换货，非质量问题的退换货带来的运费支出，由客户自行承担；\n  </dd>\n  <dd>\n    以下情况不接受7天无理由退换货（有质量问题除外）：\n  </dd>\n  <dd>\n    1、定制类产品；\n  </dd>\n  <dd>\n    2、食品、饮料；\n  </dd>\n  <dd>\n    3、鲜活易腐产品；\n  </dd>\n  <dd>\n    4、内衣；\n  </dd>\n  <dd>\n    5、珠宝首饰类产品；\n  </dd>\n  <dd>\n    6、客户原因造成的商品或包装残损、吊牌或者配件缺失；\n  </dd>\n  <dd>\n    温馨提示：如果所购产品有赠品，须将赠品一并退回，若赠品已经使用或者损坏，则从商品退款金额中依据赠品价格相应扣除。\n  </dd>\n</dl>\n<dl>\n  <dt>支付</dt>\n  <dd>\n    客户的货款将由豆瓣代收，豆瓣会在客户确认收到商品，并在收到商品后7天内无售后纠纷后，将货款支付给商家。\n  </dd>\n  <dd>\n    如客户在收到商品后未及时确认收货，且没有提交售后申请，豆瓣将在商家发货之日起的第15天默认为客户已收货并在收到商品后7天内无任何售后纠纷，将向该商家支付货款。\n  </dd>\n</dl>\n",
+                        "cargo_id": 185
+                    },
+                    "color_name": "颜色",
+                    "color": "蓝色（礼盒包装，鞋跟3cm）",
+                    "brand": "Hanalice Arabesque",
+                    "status_desc": "不可用",
+                    "is_default": 0,
+                    "market_price": "399.00",
+                    "item_id": "",
+                    "is_hidden": 0,
+                    "is_pre_sale": false,
+                    "id": 30007,
+                    "size": "39",
+                    "is_onsale": false,
+                    "product_id": 10956,
+                    "title": "hanalice 小珍珠金絲絨平底鞋（當忧郁蓝遇上珍珠白）",
+                    "url": "https://market.douban.com/item/30007/",
+                    "freight_id": 0,
+                    "size_name": "尺寸",
+                    "pre_sale_display": "",
+                    "is_package": 0,
+                    "price_couple": [
+                        "239.00",
+                        "399.00"
+                    ],
+                    "stock": 0,
+                    "cargo_id": 185,
+                    "price": "239.00",
+                    "promote_price": "239.00"
+                },
+                "score": 5,
+                "create_time": "2016-05-11 12:57:43",
+                "replies": [
+                    {
+                        "reply_author": {},
+                        "author": {
+                            "url": "https://www.douban.com/people/zhangpengcheng/",
+                            "create_time": "2015-01-27 19:00:08",
+                            "uid": 40013917,
+                            "avatar": "https://img3.doubanio.com/icon/u40013917-62.jpg",
+                            "name": "张煮茶"
+                        },
+                        "text": "我拍的颜色暗 实际蓝丝绒颜色很好看",
+                        "target_kind": 8015,
+                        "target_id": 4630,
+                        "create_time": "2016-05-11 12:59:27",
+                        "service_id": "",
+                        "id": 2175
+                    }
+                ],
+                "service_id": "",
+                "id": 4630,
+                "is_other": true
+            },
+            {
+                "kind": 8015,
+                "is_owner": false,
+                "product_id": 18092,
+                "author": {
+                    "url": "https://www.douban.com/people/mayichun/",
+                    "create_time": "2015-03-30 15:01:42",
+                    "uid": 51359773,
+                    "avatar": "https://img1.doubanio.com/icon/u51359773-18.jpg",
+                    "name": "乙醇"
+                },
+                "text": "超赞啊！！我因为要赶回家，客服非常nice给我提前发货了， 隔天就到很好。没有鞋袋换的手提袋也超赞，都很好搭，我会一直支持的！！！！！",
+                "album_photos": [
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p567212.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p567212.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p567212.jpg",
+                        "photo_id": 567212,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p567212.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p567213.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p567213.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p567213.jpg",
+                        "photo_id": 567213,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p567213.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p567214.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p567214.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p567214.jpg",
+                        "photo_id": 567214,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p567214.jpg"
+                    }
+                ],
+                "reply_num": 0,
+                "update_time": "2016-06-14 15:01:53",
+                "product_url": "https://market.douban.com/product/18092/",
+                "item": {
+                    "shop": {
+                        "status": "",
+                        "services_phone": "18680640401（只接受退货填号码，不接私人电话）",
+                        "order_notice": "",
+                        "refund_address": "广东省东莞市莞城区寺前街10号（万寿路附近），花与爱丽斯（请将全套包装在两天之内尽快寄回，并保证鞋子不影响二次销售，附上一张纸条写上豆瓣订单号以及退货退款。）",
+                        "sid": "hanalice",
+                        "intro": "从想法到成品，我们经历了一年；每双鞋的制作周期是7-15天；满满诚意，原创品牌。hanalice。",
+                        "is_unpublished": false,
+                        "services_doumail": "131812689",
+                        "id": 11147,
+                        "tags": "芭蕾 平底鞋 hanalice",
+                        "name": "花与爱丽斯",
+                        "url": "https://market.douban.com/shop/hanalice/",
+                        "picture_url": "https://img1.doubanio.com/view/dianpu_shop_icon/large/public/6403123cbd8d897.jpg",
+                        "is_douban_book_shop": false,
+                        "creator_id": 53404397,
+                        "create_time": "2015-07-22 11:55:34",
+                        "services_name": "花与爱丽斯",
+                        "notice_code": "<dl>\n  <dt>销售与配送</dt>\n  <dd>\n    在售商品全部由每个店铺的商家独立进行销售与配送。豆瓣仅提供销售平台服务。\n  </dd>\n  <dd\">\n    如果针对售后问题，购买者无法与商家达成一致的，可以向豆瓣提出申诉，豆瓣将秉持公正公平的原则，依照相关法律法规进行处理。\n  </dd>\n</dl>\n<dl>\n  <dt>正品保证</dt>\n  <dd>\n    商家对在售商品100%享有正品官方授权。\n  </dd>\n  <dd>\n    每一件手工制作的产品，都是独一无二的，即使是同一款式，每件商品间也会略有差异。\n  </dd>\n</dl>\n<dl>\n  <dt>配送时间与范围</dt>\n  <dd>\n    每日16:00前完成的订单将于当日发出，16:00后完成的订单将于次日发出\n  </dd>\n  <dd>\n    周六/日的订单延顺至周一发出\n  </dd>\n  <dd>\n    支持全国范围配送\n  </dd>\n</dl>\n<dl>\n  <dt>退换货说明</dt>\n  <dd>\n    商家接受7天无理由退换货，非质量问题的退换货带来的运费支出，由客户自行承担；\n  </dd>\n  <dd>\n    以下情况不接受7天无理由退换货（有质量问题除外）：\n  </dd>\n  <dd>\n    1、定制类产品；\n  </dd>\n  <dd>\n    2、食品、饮料；\n  </dd>\n  <dd>\n    3、鲜活易腐产品；\n  </dd>\n  <dd>\n    4、内衣；\n  </dd>\n  <dd>\n    5、珠宝首饰类产品；\n  </dd>\n  <dd>\n    6、客户原因造成的商品或包装残损、吊牌或者配件缺失；\n  </dd>\n  <dd>\n    温馨提示：如果所购产品有赠品，须将赠品一并退回，若赠品已经使用或者损坏，则从商品退款金额中依据赠品价格相应扣除。\n  </dd>\n</dl>\n<dl>\n  <dt>支付</dt>\n  <dd>\n    客户的货款将由豆瓣代收，豆瓣会在客户确认收到商品，并在收到商品后7天内无售后纠纷后，将货款支付给商家。\n  </dd>\n  <dd>\n    如客户在收到商品后未及时确认收货，且没有提交售后申请，豆瓣将在商家发货之日起的第15天默认为客户已收货并在收到商品后7天内无任何售后纠纷，将向该商家支付货款。\n  </dd>\n</dl>\n",
+                        "cargo_id": 185
+                    },
+                    "color_name": "颜色",
+                    "color": "159福袋（不能退货）",
+                    "brand": "Hanalice Arabesque",
+                    "status_desc": "可用",
+                    "is_default": 0,
+                    "market_price": "399.00",
+                    "item_id": "",
+                    "is_hidden": 0,
+                    "is_pre_sale": false,
+                    "id": 55991,
+                    "size": "38",
+                    "is_onsale": false,
+                    "product_id": 18092,
+                    "title": "hanalice2017福袋",
+                    "url": "https://market.douban.com/item/55991/",
+                    "freight_id": 1320,
+                    "size_name": "尺寸",
+                    "pre_sale_display": "",
+                    "is_package": 0,
+                    "price_couple": [
+                        "159.00",
+                        "399.00"
+                    ],
+                    "stock": 4,
+                    "cargo_id": 185,
+                    "price": "159.00",
+                    "promote_price": "159.00"
+                },
+                "score": 5,
+                "create_time": "2016-01-30 19:37:00",
+                "replies": [],
+                "service_id": "",
+                "id": 3022,
+                "is_other": true
+            },
+            {
+                "kind": 8015,
+                "is_owner": false,
+                "product_id": 10956,
+                "author": {
+                    "url": "https://www.douban.com/people/luorui/",
+                    "create_time": "2015-01-31 17:32:24",
+                    "uid": 2096695,
+                    "avatar": "https://img1.doubanio.com/icon/u2096695-39.jpg",
+                    "name": "大象用鼻子洗澡"
+                },
+                "text": "鞋子很漂亮，可能是我见过最小的39码，大概只有37码那么大。用撑鞋器撑着了，可能过两天会大一点。鞋面比较肥，不是痩型的，如果大小合适了，可能也会有另一个客人反应的那种不跟脚的情况吧。",
+                "album_photos": [
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566945.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566945.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566945.jpg",
+                        "photo_id": 566945,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566945.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566946.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566946.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566946.jpg",
+                        "photo_id": 566946,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566946.jpg"
+                    },
+                    {
+                        "medium_url": "https://img1.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566947.jpg",
+                        "large_url": "https://img1.doubanio.com/view/dianpu_trade_comment/large/public/p566947.jpg",
+                        "raw_url": "https://img1.doubanio.com/view/dianpu_trade_comment/raw/public/p566947.jpg",
+                        "photo_id": 566947,
+                        "small_url": "https://img1.doubanio.com/view/dianpu_trade_comment/square_small/public/p566947.jpg"
+                    }
+                ],
+                "reply_num": 0,
+                "update_time": "2016-06-14 15:01:52",
+                "product_url": "https://market.douban.com/product/10956/",
+                "item": {
+                    "shop": {
+                        "status": "",
+                        "services_phone": "18680640401（只接受退货填号码，不接私人电话）",
+                        "order_notice": "",
+                        "refund_address": "广东省东莞市莞城区寺前街10号（万寿路附近），花与爱丽斯（请将全套包装在两天之内尽快寄回，并保证鞋子不影响二次销售，附上一张纸条写上豆瓣订单号以及退货退款。）",
+                        "sid": "hanalice",
+                        "intro": "从想法到成品，我们经历了一年；每双鞋的制作周期是7-15天；满满诚意，原创品牌。hanalice。",
+                        "is_unpublished": false,
+                        "services_doumail": "131812689",
+                        "id": 11147,
+                        "tags": "芭蕾 平底鞋 hanalice",
+                        "name": "花与爱丽斯",
+                        "url": "https://market.douban.com/shop/hanalice/",
+                        "picture_url": "https://img1.doubanio.com/view/dianpu_shop_icon/large/public/6403123cbd8d897.jpg",
+                        "is_douban_book_shop": false,
+                        "creator_id": 53404397,
+                        "create_time": "2015-07-22 11:55:34",
+                        "services_name": "花与爱丽斯",
+                        "notice_code": "<dl>\n  <dt>销售与配送</dt>\n  <dd>\n    在售商品全部由每个店铺的商家独立进行销售与配送。豆瓣仅提供销售平台服务。\n  </dd>\n  <dd\">\n    如果针对售后问题，购买者无法与商家达成一致的，可以向豆瓣提出申诉，豆瓣将秉持公正公平的原则，依照相关法律法规进行处理。\n  </dd>\n</dl>\n<dl>\n  <dt>正品保证</dt>\n  <dd>\n    商家对在售商品100%享有正品官方授权。\n  </dd>\n  <dd>\n    每一件手工制作的产品，都是独一无二的，即使是同一款式，每件商品间也会略有差异。\n  </dd>\n</dl>\n<dl>\n  <dt>配送时间与范围</dt>\n  <dd>\n    每日16:00前完成的订单将于当日发出，16:00后完成的订单将于次日发出\n  </dd>\n  <dd>\n    周六/日的订单延顺至周一发出\n  </dd>\n  <dd>\n    支持全国范围配送\n  </dd>\n</dl>\n<dl>\n  <dt>退换货说明</dt>\n  <dd>\n    商家接受7天无理由退换货，非质量问题的退换货带来的运费支出，由客户自行承担；\n  </dd>\n  <dd>\n    以下情况不接受7天无理由退换货（有质量问题除外）：\n  </dd>\n  <dd>\n    1、定制类产品；\n  </dd>\n  <dd>\n    2、食品、饮料；\n  </dd>\n  <dd>\n    3、鲜活易腐产品；\n  </dd>\n  <dd>\n    4、内衣；\n  </dd>\n  <dd>\n    5、珠宝首饰类产品；\n  </dd>\n  <dd>\n    6、客户原因造成的商品或包装残损、吊牌或者配件缺失；\n  </dd>\n  <dd>\n    温馨提示：如果所购产品有赠品，须将赠品一并退回，若赠品已经使用或者损坏，则从商品退款金额中依据赠品价格相应扣除。\n  </dd>\n</dl>\n<dl>\n  <dt>支付</dt>\n  <dd>\n    客户的货款将由豆瓣代收，豆瓣会在客户确认收到商品，并在收到商品后7天内无售后纠纷后，将货款支付给商家。\n  </dd>\n  <dd>\n    如客户在收到商品后未及时确认收货，且没有提交售后申请，豆瓣将在商家发货之日起的第15天默认为客户已收货并在收到商品后7天内无任何售后纠纷，将向该商家支付货款。\n  </dd>\n</dl>\n",
+                        "cargo_id": 185
+                    },
+                    "color_name": "颜色",
+                    "color": "蓝色（普通包装，鞋跟1cm）",
+                    "brand": "Hanalice Arabesque",
+                    "status_desc": "不可用",
+                    "is_default": 0,
+                    "market_price": "399.00",
+                    "item_id": "",
+                    "is_hidden": 0,
+                    "is_pre_sale": false,
+                    "id": 29989,
+                    "size": "39",
+                    "is_onsale": false,
+                    "product_id": 10956,
+                    "title": "hanalice 小珍珠金絲絨平底鞋（當忧郁蓝遇上珍珠白）",
+                    "url": "https://market.douban.com/item/29989/",
+                    "freight_id": 1225,
+                    "size_name": "尺寸",
+                    "pre_sale_display": "",
+                    "is_package": 0,
+                    "price_couple": [
+                        "239.00",
+                        "399.00"
+                    ],
+                    "stock": 0,
+                    "cargo_id": 185,
+                    "price": "239.00",
+                    "promote_price": "239.00"
+                },
+                "score": 4,
+                "create_time": "2015-10-27 09:42:46",
+                "replies": [],
+                "service_id": "",
+                "id": 1282,
+                "is_other": true
+            },
+            {
+                "kind": 8015,
+                "is_owner": false,
+                "product_id": 10954,
+                "author": {
+                    "url": "https://www.douban.com/people/xkjjj/",
+                    "create_time": "2015-09-23 09:58:15",
+                    "uid": 44674472,
+                    "avatar": "https://img3.doubanio.com/icon/u44674472-21.jpg",
+                    "name": "锄禾日当午"
+                },
+                "text": "包装挺好的很用心 在路上说是有问题要赶工重新给我发 鞋子质量挺不错的 也不打脚 我36码刚刚好 就是有一点，容易有折痕 原来我的黑腿",
+                "album_photos": [
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566934.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566934.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566934.jpg",
+                        "photo_id": 566934,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566934.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566935.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566935.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566935.jpg",
+                        "photo_id": 566935,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566935.jpg"
+                    }
+                ],
+                "reply_num": 0,
+                "update_time": "2016-06-14 15:01:52",
+                "product_url": "https://market.douban.com/product/10954/",
+                "item": {
+                    "shop": {
+                        "status": "",
+                        "services_phone": "18680640401（只接受退货填号码，不接私人电话）",
+                        "order_notice": "",
+                        "refund_address": "广东省东莞市莞城区寺前街10号（万寿路附近），花与爱丽斯（请将全套包装在两天之内尽快寄回，并保证鞋子不影响二次销售，附上一张纸条写上豆瓣订单号以及退货退款。）",
+                        "sid": "hanalice",
+                        "intro": "从想法到成品，我们经历了一年；每双鞋的制作周期是7-15天；满满诚意，原创品牌。hanalice。",
+                        "is_unpublished": false,
+                        "services_doumail": "131812689",
+                        "id": 11147,
+                        "tags": "芭蕾 平底鞋 hanalice",
+                        "name": "花与爱丽斯",
+                        "url": "https://market.douban.com/shop/hanalice/",
+                        "picture_url": "https://img1.doubanio.com/view/dianpu_shop_icon/large/public/6403123cbd8d897.jpg",
+                        "is_douban_book_shop": false,
+                        "creator_id": 53404397,
+                        "create_time": "2015-07-22 11:55:34",
+                        "services_name": "花与爱丽斯",
+                        "notice_code": "<dl>\n  <dt>销售与配送</dt>\n  <dd>\n    在售商品全部由每个店铺的商家独立进行销售与配送。豆瓣仅提供销售平台服务。\n  </dd>\n  <dd\">\n    如果针对售后问题，购买者无法与商家达成一致的，可以向豆瓣提出申诉，豆瓣将秉持公正公平的原则，依照相关法律法规进行处理。\n  </dd>\n</dl>\n<dl>\n  <dt>正品保证</dt>\n  <dd>\n    商家对在售商品100%享有正品官方授权。\n  </dd>\n  <dd>\n    每一件手工制作的产品，都是独一无二的，即使是同一款式，每件商品间也会略有差异。\n  </dd>\n</dl>\n<dl>\n  <dt>配送时间与范围</dt>\n  <dd>\n    每日16:00前完成的订单将于当日发出，16:00后完成的订单将于次日发出\n  </dd>\n  <dd>\n    周六/日的订单延顺至周一发出\n  </dd>\n  <dd>\n    支持全国范围配送\n  </dd>\n</dl>\n<dl>\n  <dt>退换货说明</dt>\n  <dd>\n    商家接受7天无理由退换货，非质量问题的退换货带来的运费支出，由客户自行承担；\n  </dd>\n  <dd>\n    以下情况不接受7天无理由退换货（有质量问题除外）：\n  </dd>\n  <dd>\n    1、定制类产品；\n  </dd>\n  <dd>\n    2、食品、饮料；\n  </dd>\n  <dd>\n    3、鲜活易腐产品；\n  </dd>\n  <dd>\n    4、内衣；\n  </dd>\n  <dd>\n    5、珠宝首饰类产品；\n  </dd>\n  <dd>\n    6、客户原因造成的商品或包装残损、吊牌或者配件缺失；\n  </dd>\n  <dd>\n    温馨提示：如果所购产品有赠品，须将赠品一并退回，若赠品已经使用或者损坏，则从商品退款金额中依据赠品价格相应扣除。\n  </dd>\n</dl>\n<dl>\n  <dt>支付</dt>\n  <dd>\n    客户的货款将由豆瓣代收，豆瓣会在客户确认收到商品，并在收到商品后7天内无售后纠纷后，将货款支付给商家。\n  </dd>\n  <dd>\n    如客户在收到商品后未及时确认收货，且没有提交售后申请，豆瓣将在商家发货之日起的第15天默认为客户已收货并在收到商品后7天内无任何售后纠纷，将向该商家支付货款。\n  </dd>\n</dl>\n",
+                        "cargo_id": 185
+                    },
+                    "color_name": "颜色",
+                    "color": "灰色（礼盒包装，鞋跟1cm）",
+                    "brand": "Hanalice Arabesque",
+                    "status_desc": "不可用",
+                    "is_default": 0,
+                    "market_price": "399.00",
+                    "item_id": "",
+                    "is_hidden": 0,
+                    "is_pre_sale": true,
+                    "id": 29958,
+                    "size": "36",
+                    "is_onsale": false,
+                    "product_id": 10954,
+                    "title": "hanalice 小珍珠金絲絨平底鞋（當古典灰遇上珍珠白）",
+                    "url": "https://market.douban.com/item/29958/",
+                    "freight_id": 1320,
+                    "size_name": "尺寸",
+                    "pre_sale_display": "小码数有现货，大码数付款后10天发货",
+                    "is_package": 0,
+                    "price_couple": [
+                        "239.00",
+                        "399.00"
+                    ],
+                    "stock": 0,
+                    "cargo_id": 185,
+                    "price": "239.00",
+                    "promote_price": "239.00"
+                },
+                "score": 5,
+                "create_time": "2015-10-18 23:11:45",
+                "replies": [],
+                "service_id": "",
+                "id": 1250,
+                "is_other": true
+            },
+            {
+                "kind": 8015,
+                "is_owner": false,
+                "product_id": 10956,
+                "author": {
+                    "url": "https://www.douban.com/people/patience/",
+                    "create_time": "2015-06-21 22:17:34",
+                    "uid": 1376395,
+                    "avatar": "https://img3.doubanio.com/icon/u1376395-23.jpg",
+                    "name": "泠风"
+                },
+                "text": "非常满意，鞋子显瘦，蓝色很好看。鞋面的绒布看着很高档。唯一的小遗憾就是鞋跟是塑料的，踩在地上会响，会滑。以后可以去换一个不响的跟。另外，包装赞一个，鞋子里有香草，整个鞋子香香的，购物体验非常好，会回购！",
+                "album_photos": [
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566933.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566933.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566933.jpg",
+                        "photo_id": 566933,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566933.jpg"
+                    }
+                ],
+                "reply_num": 1,
+                "update_time": "2017-11-20 22:19:19",
+                "product_url": "https://market.douban.com/product/10956/",
+                "item": {
+                    "shop": {
+                        "status": "",
+                        "services_phone": "18680640401（只接受退货填号码，不接私人电话）",
+                        "order_notice": "",
+                        "refund_address": "广东省东莞市莞城区寺前街10号（万寿路附近），花与爱丽斯（请将全套包装在两天之内尽快寄回，并保证鞋子不影响二次销售，附上一张纸条写上豆瓣订单号以及退货退款。）",
+                        "sid": "hanalice",
+                        "intro": "从想法到成品，我们经历了一年；每双鞋的制作周期是7-15天；满满诚意，原创品牌。hanalice。",
+                        "is_unpublished": false,
+                        "services_doumail": "131812689",
+                        "id": 11147,
+                        "tags": "芭蕾 平底鞋 hanalice",
+                        "name": "花与爱丽斯",
+                        "url": "https://market.douban.com/shop/hanalice/",
+                        "picture_url": "https://img1.doubanio.com/view/dianpu_shop_icon/large/public/6403123cbd8d897.jpg",
+                        "is_douban_book_shop": false,
+                        "creator_id": 53404397,
+                        "create_time": "2015-07-22 11:55:34",
+                        "services_name": "花与爱丽斯",
+                        "notice_code": "<dl>\n  <dt>销售与配送</dt>\n  <dd>\n    在售商品全部由每个店铺的商家独立进行销售与配送。豆瓣仅提供销售平台服务。\n  </dd>\n  <dd\">\n    如果针对售后问题，购买者无法与商家达成一致的，可以向豆瓣提出申诉，豆瓣将秉持公正公平的原则，依照相关法律法规进行处理。\n  </dd>\n</dl>\n<dl>\n  <dt>正品保证</dt>\n  <dd>\n    商家对在售商品100%享有正品官方授权。\n  </dd>\n  <dd>\n    每一件手工制作的产品，都是独一无二的，即使是同一款式，每件商品间也会略有差异。\n  </dd>\n</dl>\n<dl>\n  <dt>配送时间与范围</dt>\n  <dd>\n    每日16:00前完成的订单将于当日发出，16:00后完成的订单将于次日发出\n  </dd>\n  <dd>\n    周六/日的订单延顺至周一发出\n  </dd>\n  <dd>\n    支持全国范围配送\n  </dd>\n</dl>\n<dl>\n  <dt>退换货说明</dt>\n  <dd>\n    商家接受7天无理由退换货，非质量问题的退换货带来的运费支出，由客户自行承担；\n  </dd>\n  <dd>\n    以下情况不接受7天无理由退换货（有质量问题除外）：\n  </dd>\n  <dd>\n    1、定制类产品；\n  </dd>\n  <dd>\n    2、食品、饮料；\n  </dd>\n  <dd>\n    3、鲜活易腐产品；\n  </dd>\n  <dd>\n    4、内衣；\n  </dd>\n  <dd>\n    5、珠宝首饰类产品；\n  </dd>\n  <dd>\n    6、客户原因造成的商品或包装残损、吊牌或者配件缺失；\n  </dd>\n  <dd>\n    温馨提示：如果所购产品有赠品，须将赠品一并退回，若赠品已经使用或者损坏，则从商品退款金额中依据赠品价格相应扣除。\n  </dd>\n</dl>\n<dl>\n  <dt>支付</dt>\n  <dd>\n    客户的货款将由豆瓣代收，豆瓣会在客户确认收到商品，并在收到商品后7天内无售后纠纷后，将货款支付给商家。\n  </dd>\n  <dd>\n    如客户在收到商品后未及时确认收货，且没有提交售后申请，豆瓣将在商家发货之日起的第15天默认为客户已收货并在收到商品后7天内无任何售后纠纷，将向该商家支付货款。\n  </dd>\n</dl>\n",
+                        "cargo_id": 185
+                    },
+                    "color_name": "颜色",
+                    "color": "蓝色（普通包装，鞋跟3cm）",
+                    "brand": "Hanalice Arabesque",
+                    "status_desc": "不可用",
+                    "is_default": 0,
+                    "market_price": "399.00",
+                    "item_id": "",
+                    "is_hidden": 0,
+                    "is_pre_sale": false,
+                    "id": 29995,
+                    "size": "39",
+                    "is_onsale": false,
+                    "product_id": 10956,
+                    "title": "hanalice 小珍珠金絲絨平底鞋（當忧郁蓝遇上珍珠白）",
+                    "url": "https://market.douban.com/item/29995/",
+                    "freight_id": 1225,
+                    "size_name": "尺寸",
+                    "pre_sale_display": "",
+                    "is_package": 0,
+                    "price_couple": [
+                        "239.00",
+                        "399.00"
+                    ],
+                    "stock": 0,
+                    "cargo_id": 185,
+                    "price": "239.00",
+                    "promote_price": "239.00"
+                },
+                "score": 5,
+                "create_time": "2015-10-18 20:56:06",
+                "replies": [],
+                "service_id": "",
+                "id": 1249,
+                "is_other": true
+            },
+            {
+                "kind": 8015,
+                "is_owner": false,
+                "product_id": 8314,
+                "author": {
+                    "url": "https://www.douban.com/people/zhangyang1220/",
+                    "create_time": "2015-01-31 11:30:17",
+                    "uid": 37916053,
+                    "avatar": "https://img1.doubanio.com/icon/u37916053-7.jpg",
+                    "name": "Linus"
+                },
+                "text": "网上买鞋子很忐忑就怕不合适，但是这双真的合适！感天动地！样子好看，做工也好，太开心了。。。包装很精美，还有赠送小礼物，看到送的小干花我都惊呼了。。希望多出一些低跟鞋，会持续关注，谢谢！（晚上光线不好色差略严重就不拍照片啦）",
+                "album_photos": [],
+                "reply_num": 1,
+                "update_time": "2017-11-20 22:19:19",
+                "product_url": "https://market.douban.com/product/8314/",
+                "item": {
+                    "shop": {
+                        "status": "",
+                        "services_phone": "18680640401（只接受退货填号码，不接私人电话）",
+                        "order_notice": "",
+                        "refund_address": "广东省东莞市莞城区寺前街10号（万寿路附近），花与爱丽斯（请将全套包装在两天之内尽快寄回，并保证鞋子不影响二次销售，附上一张纸条写上豆瓣订单号以及退货退款。）",
+                        "sid": "hanalice",
+                        "intro": "从想法到成品，我们经历了一年；每双鞋的制作周期是7-15天；满满诚意，原创品牌。hanalice。",
+                        "is_unpublished": false,
+                        "services_doumail": "131812689",
+                        "id": 11147,
+                        "tags": "芭蕾 平底鞋 hanalice",
+                        "name": "花与爱丽斯",
+                        "url": "https://market.douban.com/shop/hanalice/",
+                        "picture_url": "https://img1.doubanio.com/view/dianpu_shop_icon/large/public/6403123cbd8d897.jpg",
+                        "is_douban_book_shop": false,
+                        "creator_id": 53404397,
+                        "create_time": "2015-07-22 11:55:34",
+                        "services_name": "花与爱丽斯",
+                        "notice_code": "<dl>\n  <dt>销售与配送</dt>\n  <dd>\n    在售商品全部由每个店铺的商家独立进行销售与配送。豆瓣仅提供销售平台服务。\n  </dd>\n  <dd\">\n    如果针对售后问题，购买者无法与商家达成一致的，可以向豆瓣提出申诉，豆瓣将秉持公正公平的原则，依照相关法律法规进行处理。\n  </dd>\n</dl>\n<dl>\n  <dt>正品保证</dt>\n  <dd>\n    商家对在售商品100%享有正品官方授权。\n  </dd>\n  <dd>\n    每一件手工制作的产品，都是独一无二的，即使是同一款式，每件商品间也会略有差异。\n  </dd>\n</dl>\n<dl>\n  <dt>配送时间与范围</dt>\n  <dd>\n    每日16:00前完成的订单将于当日发出，16:00后完成的订单将于次日发出\n  </dd>\n  <dd>\n    周六/日的订单延顺至周一发出\n  </dd>\n  <dd>\n    支持全国范围配送\n  </dd>\n</dl>\n<dl>\n  <dt>退换货说明</dt>\n  <dd>\n    商家接受7天无理由退换货，非质量问题的退换货带来的运费支出，由客户自行承担；\n  </dd>\n  <dd>\n    以下情况不接受7天无理由退换货（有质量问题除外）：\n  </dd>\n  <dd>\n    1、定制类产品；\n  </dd>\n  <dd>\n    2、食品、饮料；\n  </dd>\n  <dd>\n    3、鲜活易腐产品；\n  </dd>\n  <dd>\n    4、内衣；\n  </dd>\n  <dd>\n    5、珠宝首饰类产品；\n  </dd>\n  <dd>\n    6、客户原因造成的商品或包装残损、吊牌或者配件缺失；\n  </dd>\n  <dd>\n    温馨提示：如果所购产品有赠品，须将赠品一并退回，若赠品已经使用或者损坏，则从商品退款金额中依据赠品价格相应扣除。\n  </dd>\n</dl>\n<dl>\n  <dt>支付</dt>\n  <dd>\n    客户的货款将由豆瓣代收，豆瓣会在客户确认收到商品，并在收到商品后7天内无售后纠纷后，将货款支付给商家。\n  </dd>\n  <dd>\n    如客户在收到商品后未及时确认收货，且没有提交售后申请，豆瓣将在商家发货之日起的第15天默认为客户已收货并在收到商品后7天内无任何售后纠纷，将向该商家支付货款。\n  </dd>\n</dl>\n",
+                        "cargo_id": 185
+                    },
+                    "color_name": "颜色",
+                    "color": "粉色",
+                    "brand": "Hanalice Arabesque",
+                    "status_desc": "可用",
+                    "is_default": 0,
+                    "market_price": "399.00",
+                    "item_id": "",
+                    "is_hidden": 0,
+                    "is_pre_sale": false,
+                    "id": 22398,
+                    "size": "36",
+                    "is_onsale": false,
+                    "product_id": 8314,
+                    "title": "Hanalice蛇皮芭蕾手工鞋（内增高款）",
+                    "url": "https://market.douban.com/item/22398/",
+                    "freight_id": 0,
+                    "size_name": "尺寸",
+                    "pre_sale_display": "",
+                    "is_package": 0,
+                    "price_couple": [
+                        "199.00",
+                        "399.00"
+                    ],
+                    "stock": 0,
+                    "cargo_id": 185,
+                    "price": "199.00",
+                    "promote_price": "199.00"
+                },
+                "score": 5,
+                "create_time": "2015-08-24 20:21:07",
+                "replies": [],
+                "service_id": "",
+                "id": 103,
+                "is_other": true
+            },
+            {
+                "kind": 8015,
+                "is_owner": false,
+                "product_id": 8207,
+                "author": {
+                    "url": "https://www.douban.com/people/66188929/",
+                    "create_time": "2015-06-02 14:33:10",
+                    "uid": 66188929,
+                    "avatar": "https://img3.doubanio.com/icon/u66188929-11.jpg",
+                    "name": "桔子"
+                },
+                "text": "从包装到鞋子的样式、舒适度，都没话说，很棒。只是我是平时穿40的大脚，试穿这双40号的时候就觉得鞋头的位置左右方向挺挤的，希望穿一穿可以松些~",
+                "album_photos": [
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566862.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566862.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566862.jpg",
+                        "photo_id": 566862,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566862.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566863.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566863.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566863.jpg",
+                        "photo_id": 566863,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566863.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566864.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566864.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566864.jpg",
+                        "photo_id": 566864,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566864.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566866.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566866.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566866.jpg",
+                        "photo_id": 566866,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566866.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566870.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566870.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566870.jpg",
+                        "photo_id": 566870,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566870.jpg"
+                    },
+                    {
+                        "medium_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_medium/public/p566872.jpg",
+                        "large_url": "https://img3.doubanio.com/view/dianpu_trade_comment/large/public/p566872.jpg",
+                        "raw_url": "https://img3.doubanio.com/view/dianpu_trade_comment/raw/public/p566872.jpg",
+                        "photo_id": 566872,
+                        "small_url": "https://img3.doubanio.com/view/dianpu_trade_comment/square_small/public/p566872.jpg"
+                    }
+                ],
+                "reply_num": 1,
+                "update_time": "2017-11-20 22:19:19",
+                "product_url": "https://market.douban.com/product/8207/",
+                "item": {
+                    "shop": {
+                        "status": "",
+                        "services_phone": "18680640401（只接受退货填号码，不接私人电话）",
+                        "order_notice": "",
+                        "refund_address": "广东省东莞市莞城区寺前街10号（万寿路附近），花与爱丽斯（请将全套包装在两天之内尽快寄回，并保证鞋子不影响二次销售，附上一张纸条写上豆瓣订单号以及退货退款。）",
+                        "sid": "hanalice",
+                        "intro": "从想法到成品，我们经历了一年；每双鞋的制作周期是7-15天；满满诚意，原创品牌。hanalice。",
+                        "is_unpublished": false,
+                        "services_doumail": "131812689",
+                        "id": 11147,
+                        "tags": "芭蕾 平底鞋 hanalice",
+                        "name": "花与爱丽斯",
+                        "url": "https://market.douban.com/shop/hanalice/",
+                        "picture_url": "https://img1.doubanio.com/view/dianpu_shop_icon/large/public/6403123cbd8d897.jpg",
+                        "is_douban_book_shop": false,
+                        "creator_id": 53404397,
+                        "create_time": "2015-07-22 11:55:34",
+                        "services_name": "花与爱丽斯",
+                        "notice_code": "<dl>\n  <dt>销售与配送</dt>\n  <dd>\n    在售商品全部由每个店铺的商家独立进行销售与配送。豆瓣仅提供销售平台服务。\n  </dd>\n  <dd\">\n    如果针对售后问题，购买者无法与商家达成一致的，可以向豆瓣提出申诉，豆瓣将秉持公正公平的原则，依照相关法律法规进行处理。\n  </dd>\n</dl>\n<dl>\n  <dt>正品保证</dt>\n  <dd>\n    商家对在售商品100%享有正品官方授权。\n  </dd>\n  <dd>\n    每一件手工制作的产品，都是独一无二的，即使是同一款式，每件商品间也会略有差异。\n  </dd>\n</dl>\n<dl>\n  <dt>配送时间与范围</dt>\n  <dd>\n    每日16:00前完成的订单将于当日发出，16:00后完成的订单将于次日发出\n  </dd>\n  <dd>\n    周六/日的订单延顺至周一发出\n  </dd>\n  <dd>\n    支持全国范围配送\n  </dd>\n</dl>\n<dl>\n  <dt>退换货说明</dt>\n  <dd>\n    商家接受7天无理由退换货，非质量问题的退换货带来的运费支出，由客户自行承担；\n  </dd>\n  <dd>\n    以下情况不接受7天无理由退换货（有质量问题除外）：\n  </dd>\n  <dd>\n    1、定制类产品；\n  </dd>\n  <dd>\n    2、食品、饮料；\n  </dd>\n  <dd>\n    3、鲜活易腐产品；\n  </dd>\n  <dd>\n    4、内衣；\n  </dd>\n  <dd>\n    5、珠宝首饰类产品；\n  </dd>\n  <dd>\n    6、客户原因造成的商品或包装残损、吊牌或者配件缺失；\n  </dd>\n  <dd>\n    温馨提示：如果所购产品有赠品，须将赠品一并退回，若赠品已经使用或者损坏，则从商品退款金额中依据赠品价格相应扣除。\n  </dd>\n</dl>\n<dl>\n  <dt>支付</dt>\n  <dd>\n    客户的货款将由豆瓣代收，豆瓣会在客户确认收到商品，并在收到商品后7天内无售后纠纷后，将货款支付给商家。\n  </dd>\n  <dd>\n    如客户在收到商品后未及时确认收货，且没有提交售后申请，豆瓣将在商家发货之日起的第15天默认为客户已收货并在收到商品后7天内无任何售后纠纷，将向该商家支付货款。\n  </dd>\n</dl>\n",
+                        "cargo_id": 185
+                    },
+                    "color_name": "颜色",
+                    "color": "",
+                    "brand": "Hanalice Arabesque",
+                    "status_desc": "可用",
+                    "is_default": 1,
+                    "market_price": "599.00",
+                    "item_id": "",
+                    "is_hidden": 0,
+                    "is_pre_sale": false,
+                    "id": 21922,
+                    "size": "40",
+                    "is_onsale": false,
+                    "product_id": 8207,
+                    "title": "Hanalice芭蕾手工小红鞋（经典款）",
+                    "url": "https://market.douban.com/item/21922/",
+                    "freight_id": 0,
+                    "size_name": "尺寸",
+                    "pre_sale_display": "",
+                    "is_package": 0,
+                    "price_couple": [
+                        "219.00",
+                        "599.00"
+                    ],
+                    "stock": 0,
+                    "cargo_id": 185,
+                    "price": "219.00",
+                    "promote_price": "219.00"
+                },
+                "score": 5,
+                "create_time": "2015-08-10 10:44:41",
+                "replies": [],
+                "service_id": "",
+                "id": 53,
+                "is_other": true
+            }
+        ],
+        "info_photos": [
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009010.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009011.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009012.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009013.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009014.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009015.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009016.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009017.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009018.jpg",
+            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009019.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009020.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009021.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009022.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009023.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009024.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009025.jpg",
+            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009026.jpg"
+        ]
+    }
+}

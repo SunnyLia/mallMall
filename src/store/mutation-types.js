@@ -28,6 +28,8 @@ export const ADDRESS_LISTS = 'ADDRESS_LISTS'//地址列表
 
 export const DETAIL_INFO = 'DETAIL_INFO'//商品详情
 
+export const DETAIL_TABS = 'DETAIL_TABS'//商品详情/评论/讨论
+
 export const IS_FIXED_HEADER = 'IS_FIXED_HEADER'
 
 export const IS_SHOW_SEARCH_BAR = 'IS_SHOW_SEARCH_BAR'

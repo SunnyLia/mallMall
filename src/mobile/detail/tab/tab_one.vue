@@ -1,13 +1,8 @@
 <template>
   <div class="tabs_detail">
-    <img src="../../../../static/test_hot_product.jpg" height="300" width="300">
-    <img src="../../../../static/test_hot_product.jpg">
-    <img src="../../../../static/test_hot_product.jpg">
-    <img src="../../../../static/test_hot_product.jpg">
-    <img src="../../../../static/test_hot_product.jpg">
-    <img src="../../../../static/test_hot_product.jpg">
-    <img src="../../../../static/test_hot_product.jpg">
-    <img src="../../../../static/test_hot_product.jpg">
+    <div v-for="urls in detailTabs.info_photos">
+      <img :src="urls">
+    </div>
     <div class="bottom_bar">
       <a href="#" class="explain">购物说明</a>
       <a href="#" class="help">帮助</a>
@@ -16,7 +11,14 @@
     <div class="bottom_link">逛逛<a href="#">豆瓣市集</a></div>
   </div>
 </template>
-
+<script type="text/javascript">
+  import {mapState} from "vuex"
+  export default{
+    computed: {
+      ...mapState(['detailTabs'])
+    }
+  }
+</script>
 <style scoped>
   .tabs_detail img{
     display: block;

@@ -2,9 +2,9 @@
   <div>
     <!-- 选项卡 -->
     <div class="db_detail_tabs">
-      <span @click="toggleTabs('TabOne',$event)" data-id="0" :class="{active:0==isActive}">商品详情</span>
-      <span @click="toggleTabs('TabThree',$event)" data-id="1" :class="{active:1==isActive}">评价<i>2</i></span>
-      <span @click="toggleTabs('TabTwo',$event)" data-id="2" :class="{active:2==isActive}">讨论</span>
+      <span @click="toggleTabs('TabOne',$event)" data-id="0" :class="{active:isActive==0}">商品详情</span>
+      <span @click="toggleTabs('TabThree',$event)" data-id="1" :class="{active:isActive==1}">评价<i>2</i></span>
+      <span @click="toggleTabs('TabTwo',$event)" data-id="2" :class="{active:isActive==2}">讨论<i>2</i></span>
     </div>
 
     <!-- tabs内容块-->
@@ -14,6 +14,7 @@
   </div>
 </template>
 <script type="text/javascript">
+  import {mapActions} from 'vuex'
   import TabOne from './tab_one.vue'
   import TabTwo from './tab_two.vue'
   import TabThree from './tab_three.vue'
@@ -24,6 +25,9 @@
         componentId:'TabOne',
         isActive:0
       }
+    },
+    mounted() {
+      this.$store.dispatch('detailtab');
     },
     methods: {
       toggleTabs(componentId,e){

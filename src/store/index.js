@@ -22,6 +22,7 @@ const state = {
   cuponeLists:[],//优惠券列表
   addressLists:[],//地址列表 
   detailInfos:[],//商品详情 
+  detailTabs:[],//商品详情/评论/讨论 DETAIL_TABS
   isFixedHeader: false,
   isShowSearchBar: false,
   isShowMask: false,

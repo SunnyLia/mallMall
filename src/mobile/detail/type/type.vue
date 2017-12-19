@@ -5,7 +5,7 @@
       <div class="choice_style">
         <label class="choice_title">颜色</label>
         <div class="choice_items">
-          <span v-for="(item,index) in detailInfos.sku_info" :class="{active:index==isColors}" @click="isColors=index;isSize=0">{{item.color}}</span>
+          <span v-for="(item,index) in detailInfos.sku_info" :class="{active:index==isColors}" @click="isColors=index;isSize=0;passData(index);">{{item.color}}</span>
         </div>
       </div>
       <div class="choice_style">
@@ -73,6 +73,9 @@
         }else if(this.number < stockNum){
           this.number++;
         }
+      },
+      passData(index){//传给detail组件的数据
+        this.$emit('typeDate',index);
       }
     }
   }

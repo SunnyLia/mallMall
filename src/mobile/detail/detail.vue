@@ -2,13 +2,12 @@
   <div class="db_detail">
     <!-- 返回 -->
     <div class="db_detail_back" @click="goBack"><span class="fl fa fa-chevron-left"></span>商品详情</div>
-    <swiper></swiper>
+    <swiper swiperData="swiperData"></swiper>
     <!-- 名称,价格,其它 -->
     <div class="db_detail_info">
-      <div class="title">{{detailInfos.title}}</div>
-      <div class="price">
-        <span class="now_price">￥{{detailInfos.promote_price}}</span>
-        <del class="old_price">￥{{detailInfos.market_price}}</del>
+      <div class="price" v-for="(item,index) in detailInfos.sku_info" v-if="index == childData">
+        <span class="now_price">￥{{item.promote_price}}</span>
+        <del class="old_price">￥{{item.market_price}}</del>
       </div>
       <div class="freight">
         <div class="fre_lt">
@@ -22,7 +21,7 @@
       </div>
     </div>
 
-    <Type></Type>
+    <Type @typeDate="typeDetail"></Type>
 
     <!-- 承诺 -->
     <div class="db_detail_promise">
@@ -49,6 +48,8 @@
   export default {
     data() {
       return {
+        childData:0,
+        swiperData:[]
       }
     },
     computed: {
@@ -59,12 +60,14 @@
    },
    methods: {
       // ...mapActions(['detailInfo']),
-      //返回
       goBack(){
         this.$router.go(-1);
       },
       onHeart(){
         this.detailInfos.liked = !this.detailInfos.liked;
+      },
+      typeDetail(value){//type组件传过来的数据
+        this.childData = value;
       }
     },
     components: {

@@ -14,6 +14,7 @@ import {
   CUPONE_LISTS,//优惠券列表
   ADDRESS_LISTS,//地址列表
   DETAIL_INFO,//商品详情
+  DETAIL_TABS,//商品详情/评论/讨论
   IS_FIXED_HEADER,
   IS_SHOW_SEARCH_BAR,
   IS_SHOW_MASK,
@@ -67,6 +68,9 @@ export default{
   },
   [DETAIL_INFO](state,list){//商品详情
     state.detailInfos = list;
+  },
+  [DETAIL_TABS](state,list){//商品详情/评论/讨论
+    state.detailTabs = list;
   },
   [IS_FIXED_HEADER](state,flag){
     state.isFixedHeader = flag;

@@ -25,6 +25,8 @@ export const addressLists = state => state.addressLists //地址列表
 
 export const detailInfos = state => state.detailInfos //商品详情
 
+export const detailTabs = state => state.detailTabs //商品详情/评论/讨论
+
 export const isFixedHeader = state => state.isFixedHeader
 
 export const isShowSearchBar = state => state.isShowSearchBar

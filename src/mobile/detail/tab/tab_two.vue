@@ -1,48 +1,117 @@
 <template>
   <!-- 讨论列表 -->
   <div class="db_comments">
-    <!-- 一条讨论 -->
-    <div class="comment_item">
-      <div class="comment_infos">
-        <img src="../../../../static/test_hot_product.jpg" class="u_photo">
-        <span class="u_name">张三</span>
-        <span class="u_time">2016-07-07 16:23:44</span>
+    <div v-for="(discuss,index) in detailTabs.discuss">
+      <div class="comment_item">
+        <div class="comment_infos">
+          <img :src="discuss.author.avatar" class="u_photo">
+          <span class="u_name">{{discuss.author.name}}</span>
+          <span class="u_time">{{discuss.author.create_time}}</span>
+          <div class="u_reply">
+            <span @click="reply_show=!reply_show">...</span>
+            <div class="u_reply_rep" v-show="reply_show" @click="reply();">回复</div>
+          </div>
+        </div>
+        <div class="comment_text">{{discuss.text}}</div>
       </div>
-      <div class="comment_text">180偏瘦的人买XL的还是XXL的？180偏瘦的人买XL的还是XXL的？180偏瘦的人买XL的还是XXL的？180偏瘦的人买XL的还是XXL的？</div>
-    </div>
-
-    <!-- 一条讨论 -->
-    <div class="comment_item">
-      <div class="comment_infos">
-        <img src="../../../../static/test_hot_product.jpg" class="u_photo">
-        <span class="u_name">李四</span>
-        <span class="u_time">2016-07-07 16:23:44</span>
+      <!-- 回复弹出框 -->
+      <div class="reply_mask" v-if="mask_show" @click="mask(index);">
+        <div class="r_mask_input">
+          <div class="at">@
+            <i>{{discuss.author.name}}</i>
+            <span>{{discuss.text}}</span>
+          </div>
+          <div class="input">
+            <input type="text">
+            <a href="javascript:;">发送</a>
+          </div>
+        </div>
       </div>
-      <div class="comment_text">可不可以防水防火防电</div>
-      <div class="comment_picture">
-        <!-- <img src="../../../../static/test_hot_product.jpg" alt="">
-        <img src="../../../../static/test_hot_product.jpg" alt=""> -->
+      <div class="comment_item" v-if="detailTabs.discuss.length<1" style="text-align: center;border-bottom:0;">
+        <span class="none">没有更多了~</span>
       </div>
-    </div>
-
-    <!-- 一条讨论 -->
-    <div class="comment_item">
-      <div class="comment_infos">
-        <img src="../../../../static/test_hot_product.jpg" class="u_photo">
-        <span class="u_name">王五</span>
-        <span class="u_time">2016-07-07 16:23:44</span>
-      </div>
-      <div class="comment_text">过几年会升值吗?</div>
-    </div>
-
-    <div class="comment_item" style="text-align: center;border-bottom:0;">
-      <span class="none">没有更多了~</span>
     </div>
   </div>
 </template>
+<script type="text/javascript">
+  import {mapState} from "vuex"
+  export default{
+    data(){
+      return{
+        reply_show:false,
+        mask_show:false
+      }
+    },
+    computed: {
+      ...mapState(['detailTabs'])
+    },
+    methods:{
+      reply(){
+        this.reply_show = false;
+        this.mask_show = true;
+      },
+      mask(index){ 
+        this.mask_show = false
+      }
+    }
+  }
+</script>
 <style type="text/css">
   .red{color: #eba887;}
-  .db_comments {}
+  .reply_mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+  }
+  .r_mask_input{
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 100001;
+  }
+  .r_mask_input .input{
+    height: 1.7rem;
+    color: #5c5c5c;
+    padding: 0.2rem 0.5rem;
+    padding-right: 4rem;
+    position: relative;
+  }
+  .r_mask_input .input input{
+    height: 100%;
+    width: 100%;
+    border:  1px solid #e4e4e4;
+    color: #5c5c5c;
+    padding: 0 0.2rem;
+  }
+  .r_mask_input .input a{
+    font-size: 0.55rem;
+    width: 3rem;
+    height: 1.3rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.25rem;
+    background-color: #0aa082;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3rem;
+  }
+  .r_mask_input .at{
+    padding: 0.3rem 0.5rem;
+    font-size: 0.55rem;
+    color: #5c5c5c;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .r_mask_input .at i{
+    color: #0aa082;
+    margin-right: 0.2rem;
+  }
   .db_comments .comment_item {
     padding: 0.5rem;
     border-bottom: 1px solid #f0f0f0;
@@ -63,6 +132,23 @@
     color: #9d9d9d;
     font-size: 0.6rem;
     padding:0 0.3rem;
+  }
+  .db_comments .comment_item .u_reply{
+    float: right;
+    color: #9d9d9d;
+    position: relative;
+  }
+  .comment_item .u_reply .u_reply_rep{
+    position: absolute;
+    bottom: -1.2rem;
+    right: 0;
+    width: 2.3rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    text-align: center;
+    border:1px solid #9a9a9a;
+    font-size: 0.5rem;
+    border-radius: 0.15rem;
   }
   .db_comments .comment_item .u_time{
     color: #ccc;

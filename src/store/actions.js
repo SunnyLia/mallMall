@@ -151,5 +151,15 @@ export default {
         .catch(function(result) {
             console.log('请求错误了')
         })
+    },
+    //商品详情/评论/讨论
+    detailtab({ commit, state }){
+        axios.get('/static/json/detail_tab.json')
+        .then(function(result) {   
+            commit(types.DETAIL_TABS,result.data.data)
+        })
+        .catch(function(result) {
+            console.log('请求错误了')
+        })
     }
 }

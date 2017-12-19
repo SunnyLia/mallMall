@@ -7,7 +7,8 @@
         "sku_info": [
             {
                 "color": "黑色单里",
-                "price": "288.00",
+                "promote_price": "288.00",
+                "market_price":"408.00",
                 "items": [
                     {
                         "size": "34",
@@ -16,7 +17,7 @@
                     },
                     {
                         "size": "35",
-                        "stock": 5,
+                        "stock": 1,
                         "id": 224889
                     },
                     {
@@ -32,7 +33,7 @@
                     },
                     {
                         "size": "38",
-                        "stock": 2,
+                        "stock": 0,
                         "id": 224892
                     },
                     {
@@ -44,13 +45,9 @@
             },
             {
                 "color": "黑色加绒",
-                "price": "298.00",
+                "promote_price": "298.00",
+                "market_price":"428.00",
                 "items": [
-                    {
-                        "size": "34",
-                        "stock": 5,
-                        "id": 224894
-                    },
                     {
                         "size": "35",
                         "stock": 2,
@@ -83,31 +80,10 @@
         "color_name": "颜色",
         "size_name": "尺寸",
         "current_coupons": [],
-        "market_price": "428.00",
-        "promote_price": "288.00",
         "is_onsale": true,
         "description": "",
         "title": "已枯倦的情怀  踏碎成年代",
         "product_id": 127849,
-        "info_photos": [
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009010.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009011.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009012.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009013.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009014.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009015.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009016.jpg",
-            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009017.jpg",
-            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009018.jpg",
-            "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009019.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009020.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009021.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009022.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009023.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009024.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009025.jpg",
-            "https://img3.doubanio.com/view/dianpu_product_item/large/public/p2009026.jpg"
-        ],
         "pics": [
             "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009009.jpg",
             "https://img1.doubanio.com/view/dianpu_product_item/large/public/p2009007.jpg",
