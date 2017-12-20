@@ -2,24 +2,18 @@
   <div class="tabs_rated">
     <!-- 评论结果 -->
     <div class="rated_result">
-    <div v-for="(comment,index) in detailTabs.comment">
-        <div class="overall">
-          <span class="overall_lt">综合评分<i class="red">4.2</i></span>
-          <span class="overall_rt">
-            <i class="fa fa-star red"></i>
-            <i class="fa fa-star red"></i>
-            <i class="fa fa-star red"></i>
-            <i class="fa fa-star red"></i>
-            <i class="fa fa-star red"></i>
-          </span>
-        </div>
-        <div class="ruler">
-          <span>很好<i class="red" v-if="comment.score==5">7</i></span>
-          <span>较好<i class="red">3</i></span>
-          <span>一般<i class="red">2</i></span>
-          <span>差<i class="red">1</i></span>
-          <span>极差<i class="red">0</i></span>
-        </div>
+      <div class="overall">
+        <span class="overall_lt">综合评分<i class="red">{{starCount}}</i></span>
+        <span class="overall_rt">
+          <i class="fa fa-star red" v-for="n in (Math.round(starCount))"></i>
+        </span>
+      </div>
+      <div class="ruler">
+        <span>很好<i class="red">{{starNum.veryGood}}</i></span>
+        <span>较好<i class="red">{{starNum.preferably}}</i></span>
+        <span>一般<i class="red">{{starNum.juetSoSo}}</i></span>
+        <span>差<i class="red">{{starNum.aBitBad}}</i></span>
+        <span>极差<i class="red">{{starNum.veryBad}}</i></span>
       </div>
     </div>
     <!-- 评论列表 -->
@@ -58,13 +52,38 @@
   export default{
     data(){
       return{
+        starNum:{
+          veryGood:0,//很好
+          preferably:0,//较好
+          juetSoSo:0,//一般
+          aBitBad:0,//差的
+          veryBad:0//极差
+        },
+        starCount:0
       }
     },
     computed: {
       ...mapState(['detailTabs'])
     },
-    methods:{
-
+    mounted() {
+      var that = this;
+      var data = this.$store.state.detailTabs.comment;
+      $.each(data,function(index, el) {
+        if (el.score == 5) {
+          that.starNum.veryGood = that.starNum.veryGood+1;
+        }else if (el.score == 4) {
+          that.starNum.preferably = that.starNum.preferably+1;
+        }else if (el.score == 3) {
+          that.starNum.juetSoSo = that.starNum.juetSoSo+1;
+        }else if (el.score == 2) {
+          that.starNum.aBitBad = that.starNum.aBitBad+1;
+        }else if (el.score == 1) {
+          that.starNum.veryBad = that.starNum.veryBad+1;
+        }
+      })
+      // 求平均分
+      var starsCount = (this.starNum.veryGood*5+this.starNum.preferably*4+this.starNum.juetSoSo*3+this.starNum.aBitBad*2+this.starNum.veryBad*1)/(this.starNum.veryGood+this.starNum.preferably+this.starNum.juetSoSo+this.starNum.aBitBad+this.starNum.veryBad);
+      this.starCount = Math.round(starsCount*10)/10;
     }
   }
 </script>

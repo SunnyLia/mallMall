@@ -56,9 +56,9 @@
       ...mapState(['detailInfos'])
     },
     mounted() {
-     this.$store.dispatch('detailInfo');
-   },
-   methods: {
+      this.$store.dispatch('detailInfo');
+    },
+    methods: {
       // ...mapActions(['detailInfo']),
       goBack(){
         this.$router.go(-1);
