@@ -3,8 +3,8 @@
     <!-- 选项卡 -->
     <div class="db_detail_tabs">
       <span @click="toggleTabs('TabOne',$event)" data-id="0" :class="{active:isActive==0}">商品详情</span>
-      <span @click="toggleTabs('TabThree',$event)" data-id="1" :class="{active:isActive==1}">评价<i>2</i></span>
-      <span @click="toggleTabs('TabTwo',$event)" data-id="2" :class="{active:isActive==2}">讨论<i>2</i></span>
+      <span @click="toggleTabs('TabThree',$event)" data-id="1" :class="{active:isActive==1}">评价<i v-if="detailTabs.comment.length>0">{{detailTabs.comment.length}}</i></span>
+      <span @click="toggleTabs('TabTwo',$event)" data-id="2" :class="{active:isActive==2}">讨论<i v-if="detailTabs.discuss.length>0">{{detailTabs.discuss.length}}</i></span>
     </div>
 
     <!-- tabs内容块-->
@@ -14,13 +14,13 @@
   </div>
 </template>
 <script type="text/javascript">
-  import {mapActions} from 'vuex'
+  import {mapActions,mapState} from 'vuex'
   import TabOne from './tab_one.vue'
   import TabTwo from './tab_two.vue'
   import TabThree from './tab_three.vue'
 
   export default{
-    data:function(){
+    data(){
       return{
         componentId:'TabOne',
         isActive:0
@@ -28,6 +28,9 @@
     },
     mounted() {
       this.$store.dispatch('detailtab');
+    },
+    computed:{
+      ...mapState(['detailTabs'])
     },
     methods: {
       toggleTabs(componentId,e){
