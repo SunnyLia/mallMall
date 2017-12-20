@@ -12,6 +12,9 @@
             <div class="u_reply_rep" v-show="reply_show" @click="reply();">回复</div>
           </div>
         </div>
+        <div class="comment_reply" v-if="discuss.ref_user">
+          <i>|</i> 回复:<span>{{discuss.ref_user.name}}</span> {{discuss.ref_text}}
+        </div>
         <div class="comment_text">{{discuss.text}}</div>
       </div>
       <!-- 回复弹出框 -->
@@ -28,7 +31,7 @@
         </div>
       </div>
       <div class="comment_item" v-if="detailTabs.discuss.length<1" style="text-align: center;border-bottom:0;">
-        <span class="none">没有更多了~</span>
+        <span class="none">还没有人参加讨论哦~</span>
       </div>
     </div>
   </div>
@@ -58,6 +61,18 @@
 </script>
 <style type="text/css">
   .red{color: #eba887;}
+  .comment_reply{
+    font-size: 0.5rem;
+    color: #5c5c5c;
+    margin-left: 2.55rem;
+    padding-top: 0.2rem;
+  }
+  .comment_reply span{
+    color: #0aa082;
+  }
+  .comment_reply i{
+    font-size: 0.7rem;
+  }
   .reply_mask{
     position: fixed;
     width: 100%;
@@ -114,7 +129,7 @@
   }
   .db_comments .comment_item {
     padding: 0.5rem;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #eaeaea;
     box-sizing: border-box;
   }
   .db_comments .comment_item .comment_infos{
@@ -149,6 +164,7 @@
     border:1px solid #9a9a9a;
     font-size: 0.5rem;
     border-radius: 0.15rem;
+    background-color: #fff;
   }
   .db_comments .comment_item .u_time{
     color: #ccc;
@@ -161,7 +177,7 @@
   .db_comments .comment_item .comment_text{
     color: #4a4a4a;
     font-size: 0.6rem;
-    line-height: 1rem;
+    line-height: 0.8rem;
     padding: 0.3rem 0 0 2.5rem;
     box-sizing: border-box;
     text-overflow:clip;
@@ -171,18 +187,5 @@
   .comment_item .none{
     font-size: 0.6rem;
     color: #9d9d9d;
-
-  }
-  .db_comments .comment_item .comment_picture{
-    font-size: 0;
-    padding-left: 2.5rem;
-    box-sizing: border-box;
-  }
-  .db_comments .comment_item .comment_picture img{
-    display:inline-block;
-    width: 2.85rem;
-    height: 2.85rem;
-    margin: 0.2rem 0.2rem 0 0;
-    border: 1px solid #ccc;
   }
 </style>
