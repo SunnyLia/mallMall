@@ -4,7 +4,8 @@
       <li v-for="product in searchLists">
         <div class="pdt_item">
         <router-link :to="{path:'/detail'}" class="pdt_img">
-          <img :src="product.cover_url">
+          <!-- <img :src="product.cover_url"> -->
+          <img src="../../../../static/imgs/default.png">
           <i class="fa fa-heart-o" v-on:click="onHeart($event)"></i>
         </router-link>
         <div class="pdt_detail">
