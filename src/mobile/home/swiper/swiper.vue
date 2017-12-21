@@ -55,12 +55,12 @@
 <style scoped>
   .db_swiper,.swiper-container,.swiper-slide{
     width: 100%;
-    height: 8rem;
+    height: auto;
   }
   .db_swiper .swiper-slide a,.db_swiper .swiper-slide img{
     display: inline-block;
     width: 100%;
-    height: 8rem;
+    height: auto;
   }
   .db_swiper .swiper-slide .swiper-pagination .swiper-pagination-bullet-active{
     background: #0aa082!important;

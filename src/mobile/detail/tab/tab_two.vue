@@ -8,8 +8,8 @@
           <span class="u_name">{{discuss.author.name}}</span>
           <span class="u_time">{{discuss.author.create_time}}</span>
           <div class="u_reply">
-            <span @click="reply_show=!reply_show">...</span>
-            <div class="u_reply_rep" v-show="reply_show" @click="reply();">回复</div>
+            <span @click="tank(index)">...</span>
+            <div class="u_reply_rep" style="display:none;" @click="reply(index);">回复</div>
           </div>
         </div>
         <div class="comment_reply" v-if="discuss.ref_user">
@@ -17,21 +17,21 @@
         </div>
         <div class="comment_text">{{discuss.text}}</div>
       </div>
-      <!-- 回复弹出框 -->
-      <div class="reply_mask" v-if="mask_show" @click="mask(index);">
-        <div class="r_mask_input">
-          <div class="at">@
-            <i>{{discuss.author.name}}</i>
-            <span>{{discuss.text}}</span>
-          </div>
-          <div class="input">
-            <input type="text">
-            <a href="javascript:;">发送</a>
-          </div>
-        </div>
-      </div>
       <div class="comment_item" v-if="detailTabs.discuss.length<1" style="text-align: center;border-bottom:0;">
         <span class="none">还没有人参加讨论哦~</span>
+      </div>
+    </div>
+    <!-- 回复弹出框 -->
+    <div class="reply_mask" v-if="mask_show" @click="mask();">
+      <div class="r_mask_input" @click.stop="">
+        <div class="at">@
+          <i>{{detailTabs.discuss[currentIndex].author.name}}</i>
+          <span>{{detailTabs.discuss[currentIndex].text}}</span>
+        </div>
+        <div class="input">
+          <input type="text">
+          <a href="javascript:;">发送</a>
+        </div>
       </div>
     </div>
   </div>
@@ -41,19 +41,23 @@
   export default{
     data(){
       return{
-        reply_show:false,
-        mask_show:false
+        mask_show:false,
+        currentIndex:0
       }
     },
     computed: {
       ...mapState(['detailTabs'])
     },
     methods:{
-      reply(){
-        this.reply_show = false;
-        this.mask_show = true;
+      tank(index){//点击...
+        $('.u_reply_rep').eq(index).show();
       },
-      mask(index){ 
+      reply(index){//点击回复
+        $('.u_reply_rep').eq(index).hide();
+        this.mask_show = true;
+        this.currentIndex = index;
+      },
+      mask(){//点击遮罩层
         this.mask_show = false
       }
     }
