@@ -33,20 +33,18 @@
   }
 </script>
 <style scoped>
-  .list_nav{
-    overflow: hidden;
-  }
+  .list_nav{overflow: hidden;}
   .list_nav ul{
     background-color: #0aa082;
     width: auto;
-    height: 1.6rem;
-    line-height: 1.6rem;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
   }
   .list_nav ul li{
     display: inline-block;
+    height: 1.6rem;
+    line-height: 1.6rem;
     padding: 0 0.6rem;
     color: #333;
     font-size: 0.6rem;
