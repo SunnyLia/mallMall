@@ -4,21 +4,21 @@
     <!-- 店铺名称和简介 -->
       <div class="shop_info">
         <h3 class="shop_top">
-          <a :href="shop.url" class="shop_img"><img :src="shop.picture_url" ></a>
-          <a :href="shop.url" class="shop_name">{{shop.name}}</a>
+          <a class="shop_img"><img :src="shop.icon" ></a>
+          <a class="shop_name">{{shop.name}}</a>
         </h3>
-        <p class="shop_intrduction">{{shop.intro}}</p>
+        <p class="shop_intrduction">{{shop.intrduction}}</p>
       </div>
     <div class="db_swiper">
       <swiper :options="swiperOption" ref="myS">
-        <swiper-slide v-for="slide in shop.skus">
-            <a :href="slide.url" target="_blank">
+        <swiper-slide v-for="slide in shop.products">
+            <a :href="slide.url">
           <div class="db_img">
-            <img :src="slide.photo_url">
+            <img :src="slide.src">
           </div>
           <div class="db_word">
           <p>{{slide.title}}</p>
-          <h5><span>￥{{slide.promote_price}}</span><del>￥{{slide.market_price}}</del></h5>
+          <h5><span>￥{{slide.newPrice}}</span><del>￥{{slide.oldPrice}}</del></h5>
           </div>
             </a>
         </swiper-slide>

@@ -3,7 +3,7 @@
     <ul class="clearfix">
       <li v-for="product in searchLists">
         <div class="pdt_item">
-        <router-link :to="{path:'/detail/'+product.id}" class="pdt_img">
+        <router-link :to="{path:'/detail'}" class="pdt_img">
           <img :src="product.cover_url">
           <i class="fa fa-heart-o" v-on:click="onHeart($event)"></i>
         </router-link>

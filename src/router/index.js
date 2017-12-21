@@ -7,12 +7,12 @@
 
  import Search from '@/mobile/search/search.vue'
  import Tab from '@/mobile/detail/tab/tab.vue'
- import Category from '@/mobile/category/category.vue'
- import Home from '@/mobile/home/home.vue'
+ import Category from '@/mobile/category/category.vue'//分类
+ import Home from '@/mobile/home/home.vue'//首页
  import Mine from '@/mobile/mine/mine.vue'
  import Cart from '../mobile/cart/cart.vue'
- import List from '@/mobile/category/categoryList/categoryList.vue'
- import Detail from '../mobile/detail/detail.vue'
+ import List from '@/mobile/category/categoryList/categoryList.vue'//分类列表/搜索列表
+ import Detail from '../mobile/detail/detail.vue'//商品详情页
  import Login from '../mobile/login/login.vue'
  import Order from '@/mobile/order/order.vue'
  import OrderAll from '@/mobile/order/orderList/orderAll/orderAll.vue'
@@ -32,12 +32,12 @@
   linkActiveClass:'active',
   routes:[
   {
-    path: '/',
+    path: '/',//首页
     name: 'Home',
     component: Home
   },
   {
-    path:'/home',
+    path:'/home',//首页
     name:'Home',
     component:Home
   },
@@ -57,7 +57,7 @@
     component:Mine
   },
   {
-    path:'/category',
+    path:'/category',//分类
     name:'Category',
     component:Category
   },
@@ -121,12 +121,12 @@
     component: ReturnExchange,
   },
   {
-    path:'/list/:id',
+    path:'/list/:id',//分类列表/搜索列表
     name:'List',
     component:List
   },
   {
-    path:'/detail/:id',
+    path:'/detail',//商品详情
     name:'Detail',
     component:Detail
   },

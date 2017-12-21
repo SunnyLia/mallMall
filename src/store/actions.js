@@ -32,10 +32,10 @@ export default {
     },
     //热门店铺
     hotShop({ commit, state }) {
-        axios.get('/api/home/shops?page=1&page_size=10')
+        axios.get('/static/json/hotshops.json')
         .then(function(result) {
-            if (result.data.data.shops != "") {
-                commit(types.GET_HOT_SHOPS, result.data.data.shops);
+            if (result.data.list != "") {
+                commit(types.GET_HOT_SHOPS, result.data.list);
             }
         })
         .catch(function(result) {
