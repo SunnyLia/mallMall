@@ -33,7 +33,8 @@ const state = {
   pageNum: 1,//加载页码
   busy: false,//是否加载
   isShowLoadingTips: false,//正在加载
-  isShowLoadedTips: false//加载完毕
+  isShowLoadedTips: false,//加载完毕
+  shopInfo:{}//店铺信息 
 }
 export default new Vuex.Store({
   state,

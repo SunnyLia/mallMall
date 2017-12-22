@@ -18,9 +18,6 @@
             }
         },
         computed: mapState(['isResults']),
-        mounted(){
-           console.log("我进入了搜索页面了")
-        },
         methods:{
             getData(){
                 var val = this.$route.query.val;

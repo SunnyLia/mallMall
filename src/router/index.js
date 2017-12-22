@@ -5,12 +5,12 @@
  import Vue from 'vue'
  import Router from 'vue-router'
 
- import Search from '@/mobile/search/search.vue'
+ import Search from '@/mobile/search/search.vue'//搜索
  import Category from '@/mobile/category/category.vue'//分类
  import Home from '@/mobile/home/home.vue'//首页
  import Mine from '@/mobile/mine/mine.vue'//我的
  import Cart from '../mobile/cart/cart.vue'//购物车
- import List from '@/mobile/category/categoryList/categoryList.vue'//分类列表/搜索列表
+ import List from '@/mobile/category/categoryList/categoryList.vue'//分类列表
  import Detail from '../mobile/detail/detail.vue'//商品详情页
  import Login from '../mobile/login/login.vue'//登录
  import Register from '../mobile/login/register/register.vue'//注册
@@ -25,6 +25,7 @@
  import HasUsed from '@/mobile/mine/myCupones/cuponesList/hasUsed.vue'//优惠券已使用
  import HasExpire from '@/mobile/mine/myCupones/cuponesList/hasExpire.vue'//优惠券已过期
  import MyAddress from '@/mobile/mine/myAddress/myAddress.vue'//收货地址
+ import Shop from '@/mobile/shops/shops.vue'//收货地址
 
  Vue.use(Router)
  export default new Router({
@@ -138,6 +139,11 @@
     path:'/register',//注册
     name:'Register',
     component:Register
+  },
+  {
+    path:'/shop',//商铺
+    name:'Shop',
+    component:Shop
   }
   ]
 })

@@ -40,7 +40,6 @@
                 this.$router.push({'path':'/search',query:{val:val}});
             },
             checkInfo:function(event){
-                console.log('搜索被点击了')
                 if (event.keyCode == 13) {
                     window.location.reload();//先要刷新页面，因为在搜索页面点击搜索按钮时，路由跳了，内容会没反应
                     var val = $('.ipt_search').val();

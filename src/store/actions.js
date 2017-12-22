@@ -11,7 +11,6 @@ export default {
         axios.get('/api/search?text=' + value + '&page='+state.pageNum+'&page_size=16&search_type=market_product')
         .then(function(result) {
             commit(types.IS_SHOW_LOADING_TIPS,false);
-            console.log('我成功获取数据了')
             if (result.data.data != "") {
                 commit(types.GET_SEARCH_LISTS, result.data.data);
                 state.busy = false;
@@ -171,6 +170,16 @@ export default {
         axios.get('/static/json/detail_tab.json')
         .then(function(result) {   
             commit(types.DETAIL_TABS,result.data.data)
+        })
+        .catch(function(result) {
+            console.log('请求错误了')
+        })
+    },
+    //店铺详情
+    getShopInfo({ commit, state }){
+        axios.get('/static/json/shop.json')
+        .then(function(result) {   
+            commit(types.SHOP_INFO,result.data.data)
         })
         .catch(function(result) {
             console.log('请求错误了')

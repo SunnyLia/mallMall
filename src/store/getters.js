@@ -50,3 +50,5 @@ export const busy = state => state.busy//是否加载
 export const isShowLoadingTips = state => state.isShowLoadingTips//正在加载
 
 export const isShowLoadedTips = state => state.isShowLoadedTips//加载完毕
+
+export const shopInfo = state => state.shopInfo//店铺信息

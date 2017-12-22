@@ -51,3 +51,5 @@ export const BUSY = 'BUSY'//是否加载
 export const IS_SHOW_LOADING_TIPS = 'IS_SHOW_LOADING_TIPS'//正在加载
 
 export const IS_SHOW_LOADED_TIPS = 'IS_SHOW_LOADED_TIPS'//加载完毕
+
+export const SHOP_INFO = 'SHOP_INFO'//店铺信息

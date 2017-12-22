@@ -19,7 +19,7 @@
                   <label :for="'checkList'+item.id"></label>
                 </div>
                 <a :href="item.product_sku.url">
-                  <img :src="item.product_sku.master_photo.normal_url" alt="">
+                  <img v-lazy="item.product_sku.master_photo.normal_url" alt="">
                 </a>
                 <div class="botWord">
                   <h4>{{item.product_sku.title}}</h4>

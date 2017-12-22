@@ -26,7 +26,8 @@ import {
   PAGE_NUM,//加载页码  
   BUSY,//是否加载  
   IS_SHOW_LOADING_TIPS,//正在加载
-  IS_SHOW_LOADED_TIPS//加载完毕
+  IS_SHOW_LOADED_TIPS,//加载完毕
+  SHOP_INFO//店铺信息
 } from './mutation-types.js'
 export default{
   [GET_SEARCH_LISTS](state,list){//搜索列表
@@ -109,5 +110,8 @@ export default{
   },
   [IS_SHOW_LOADED_TIPS](state,flag){//加载完毕
     state.isShowLoadedTips = flag;
+  },
+  [SHOP_INFO](state,obj){//店铺信息
+    state.shopInfo = obj;
   }
 }

@@ -1,20 +1,26 @@
 <template>
   <div class="db_swiper">
     <swiper :options="swiperOption">
-      <!-- 首页轮播 -->
-      <swiper-slide v-if="!swiperData" v-for="slide in sliders">
-        <a :href="slide.url" target="_blank">
-          <img :src="slide.src">
-        </a>
-      </swiper-slide>
       <!-- 商品详情轮播 -->
-      <swiper-slide v-if="swiperData" v-for="slide in swiperData">
-        <a href="javascript:;">
-          <img :src="slide">
-        </a>
-      </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
-  </swiper>
+      <swiper-slide v-if="detailData" v-for="slide in detailData">
+      <a href="javascript:;">
+        <img v-lazy="slide">
+      </a>
+    </swiper-slide>
+    <!-- 商铺详情轮播 -->
+    <swiper-slide v-if="shopsData" v-for="slide in shopsData">
+    <a href="javascript:;">
+      <img v-lazy="slide.url">
+    </a>
+  </swiper-slide>
+  <!-- 首页轮播 -->
+  <swiper-slide v-else v-for="slide in sliders">
+  <a :href="slide.url" target="_blank">
+    <img v-lazy="slide.src">
+  </a>
+</swiper-slide>
+<div class="swiper-pagination" slot="pagination"></div>
+</swiper>
 </div>
 </template>
 <script type="text/javascript">
@@ -45,7 +51,7 @@
         ]
       }
     },
-    props:['swiperData'],
+    props:['detailData','shopsData'],
     components: {
       swiper,
       swiperSlide
@@ -64,6 +70,6 @@
   }
   .db_swiper .swiper-container .swiper-pagination-clickable .swiper-pagination-bullet-active {
     background: #0aa082!important;
-}
+  }
 </style>
 

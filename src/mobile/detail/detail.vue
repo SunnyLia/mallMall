@@ -2,7 +2,7 @@
   <div class="db_detail">
     <!-- 返回 -->
     <div class="db_detail_back" @click="goBack"><span class="fl fa fa-chevron-left"></span>商品详情</div>
-    <swiper :swiperData="detailInfos.pics"></swiper>
+    <swiper :detailData="detailInfos.pics"></swiper>
     <!-- 名称,价格,其它 -->
     <div class="db_detail_info">
       <div class="price" v-for="(item,index) in detailInfos.sku_info" v-if="index == childData">
