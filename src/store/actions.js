@@ -11,7 +11,7 @@ export default {
         axios.get('/api/search?text=' + value + '&page='+state.pageNum+'&page_size=16&search_type=market_product')
         .then(function(result) {
             commit(types.IS_SHOW_LOADING_TIPS,false);
-            console.log(result)
+            console.log('我成功获取数据了')
             if (result.data.data != "") {
                 commit(types.GET_SEARCH_LISTS, result.data.data);
                 state.busy = false;

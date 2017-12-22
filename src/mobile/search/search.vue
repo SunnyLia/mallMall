@@ -2,7 +2,7 @@
     <div class="db_search">
         <headers></headers>
         <screen-nav v-show="!isResults"></screen-nav>
-        <no-results v-show="isResults"></no-results>
+        <!-- <no-results v-show="isResults"></no-results> -->
         <search-list v-infinite-scroll="getData" infinite-scroll-disabled="busy" infinite-scroll-distance="10"></search-list>
     </div>
 </template>
@@ -18,6 +18,9 @@
             }
         },
         computed: mapState(['isResults']),
+        mounted(){
+           console.log("我进入了搜索页面了")
+        },
         methods:{
             getData(){
                 var val = this.$route.query.val;
