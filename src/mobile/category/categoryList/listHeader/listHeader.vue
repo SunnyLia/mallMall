@@ -38,6 +38,7 @@
       // 选择商品分类
       onSelect(e) {
         this.$store.state.pageNum = 1;
+        this.$store.state.searchLists = [];
         var val = e.target.getAttribute('data-id');//2、获取当前点击的li的data，
         this.$router.push({path:'/list/'+val,params:{'id':val}});//根据id跳转到响应的路由
         this.$store.dispatch('categoryList',val);

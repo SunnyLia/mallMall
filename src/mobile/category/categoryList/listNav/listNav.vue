@@ -24,6 +24,7 @@
     methods:{
       addClass(e){
         this.$store.state.pageNum = 1;
+        this.$store.state.searchLists = [];
         $(e.target).addClass('cur');
         $(e.target).siblings().removeClass('cur')
         var val = e.target.getAttribute('data');
