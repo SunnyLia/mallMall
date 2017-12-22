@@ -3,7 +3,7 @@
         <headers></headers>
         <screen-nav v-show="!isResults"></screen-nav>
         <no-results v-show="isResults"></no-results>
-        <search-list v-show="!isResults"></search-list>
+        <search-list v-infinite-scroll="getData" infinite-scroll-disabled="busy" infinite-scroll-distance="10"></search-list>
     </div>
 </template>
 <script>
@@ -17,10 +17,12 @@
             return {
             }
         },
-       computed: mapState(['isResults']),
-        mounted() {
-            var val = this.$route.query.val;
-            this.$store.dispatch('searchList',val)
+        computed: mapState(['isResults']),
+        methods:{
+            getData(){
+                var val = this.$route.query.val;
+                this.$store.dispatch('searchList',val);
+            }
         },
         components: {
             Headers,

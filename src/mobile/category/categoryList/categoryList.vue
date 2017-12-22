@@ -3,7 +3,7 @@
     <list-header></list-header>
     <list-nav></list-nav>
     <screen-nav></screen-nav>
-    <List></List>
+    <List v-infinite-scroll="getData" infinite-scroll-disabled="busy" infinite-scroll-distance="10"></List>
   </div>
 </template>
 <script type="text/javascript">
@@ -17,9 +17,13 @@
       }
     },
     mounted() {
-      // var val = this.$route.params.id;
-      // this.$store.dispatch('categoryList',val);
       this.$store.dispatch('category');
+    },
+    methods:{
+      getData(){
+        var val = this.$route.params.id;
+        this.$store.dispatch('categoryList',val);
+      }
     },
     components: {
       ListHeader,

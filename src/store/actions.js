@@ -6,11 +6,18 @@ import * as types from './mutation-types.js'
 export default {
     //搜索列表
     searchList({ commit, state }, value) {
-        axios.get('/api/search?text=' + value + '&page=1&page_size=16&search_type=market_product')
+        state.busy = true;
+        commit(types.IS_SHOW_LOADING_TIPS,true);
+        axios.get('/api/search?text=' + value + '&page='+state.pageNum+'&page_size=16&search_type=market_product')
         .then(function(result) {
+            commit(types.IS_SHOW_LOADING_TIPS,false);
+            console.log(result)
             if (result.data.data != "") {
                 commit(types.GET_SEARCH_LISTS, result.data.data);
+                state.busy = false;
+                state.pageNum++
             } else {
+                // commit(types.IS_SHOW_LOADED_TIPS,true);
                 commit(types.IS_RESULTS, true);
             }
         })

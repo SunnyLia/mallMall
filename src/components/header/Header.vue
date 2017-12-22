@@ -4,7 +4,9 @@
         <div class="db_header_main">
             <!-- logo和搜索icon -->
             <div class="db_logo_box" v-show="!isSearch">
-                <div class="db_logo_text">市集</div>
+                <div class="db_logo_text">
+                    <router-link :to="{path:'/home'}">市集</router-link>
+                </div>
                 <div class="db_search_icon" @click="onSearch"><i class="fa fa-search"></i></div>
             </div>
             <!-- 搜索块 -->
@@ -57,7 +59,7 @@
         height: 2rem;
         line-height: 2rem;
     }
-    .db_header .db_logo_text{
+    .db_header .db_logo_text a,.db_logo_text{
         display: inline-block;
         color: #fff;
         font-size: .8rem;

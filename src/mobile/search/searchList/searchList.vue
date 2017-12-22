@@ -1,5 +1,5 @@
 <template>
-  <div class="db_goodsList" v-infinite-scroll="getData" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
+  <div class="db_goodsList">
     <ul class="clearfix">
       <li v-for="product in searchLists">
         <div class="pdt_item">
@@ -29,6 +29,7 @@
  import Loading from '@/components/loading/loading.vue'
  import None from '@/components/none/none.vue'
  export default {
+
   data:function(){
     return{
       flag: true
@@ -47,10 +48,6 @@
   //   this.$store.dispatch('categoryList',val);
   // },
   methods:{
-    getData(){
-      var val = this.$route.params.id;
-      this.$store.dispatch('categoryList',val);
-    },
     onHeart(e){
       if(this.flag){
         e.target.className="fa fa-heart";

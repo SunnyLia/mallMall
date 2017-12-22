@@ -39,7 +39,7 @@
     -webkit-box-flex: 1;
     text-align: center;
     color: #ccc;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
   }
   .db_list_options .items a.active{
     color: #f67;
