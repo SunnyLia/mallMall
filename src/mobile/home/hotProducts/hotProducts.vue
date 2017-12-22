@@ -4,7 +4,7 @@
       <li v-for="product in hotProducts" :class="{fullLi:product.id==5}">
         <div class="pdt_item">
           <a :href="product.url" class="pdt_img">
-            <img :src="product.src" height="300" width="300">
+            <img v-lazy="product.src" height="300" width="300">
           </a>
           <div class="pdt_detail">
             <h3 class="pdt_title">
@@ -59,13 +59,14 @@
   }
   .db_products .pdt_img img{
     max-width: 100%;
-    max-height: 100%;
+    height: 100%;
   }
   .fullLi{
     width: 100%!important;
   }
    .fullLi .pdt_item .pdt_img{
     height: 12rem;
+    text-align: center;
    }
   .db_products .pdt_detail{
     padding:0.2rem;

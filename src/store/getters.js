@@ -43,10 +43,10 @@ export const orderLists = state => state.orderLists//订单列表
 
 export const products = state => state.products
 
-export const  num = state => state.num
+export const  pageNum = state => state.pageNum//加载页码
 
-export const busy = state => state.num
+export const busy = state => state.busy//是否加载
 
-export const isShowLoadingTips = state => state.isShowLoadingTips
+export const isShowLoadingTips = state => state.isShowLoadingTips//正在加载
 
-export const isShowLoadedTips = state => state.isShowLoadedTips
+export const isShowLoadedTips = state => state.isShowLoadedTips//加载完毕

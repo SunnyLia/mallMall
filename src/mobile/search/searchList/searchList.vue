@@ -1,11 +1,10 @@
 <template>
-  <div class="db_goodsList">
+  <div class="db_goodsList" v-infinite-scroll="getData" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
     <ul class="clearfix">
       <li v-for="product in searchLists">
         <div class="pdt_item">
-        <router-link :to="{path:'/detail'}" class="pdt_img">
-          <!-- <img :src="product.cover_url"> -->
-          <img src="../../../../static/imgs/default.png">
+          <router-link :to="{path:'/detail'}" class="pdt_img">
+          <img v-lazy="product.cover_url">
           <i class="fa fa-heart-o" v-on:click="onHeart($event)"></i>
         </router-link>
         <div class="pdt_detail">
@@ -14,25 +13,45 @@
           </h3>
           <p class="pdt_price">
             <span class="pdt_new_price">{{product.price}}</span>
-            <del class="pdt_old_price">{{product.market_price}}</del>
+            <del class="pdt_old_price" v-if="product.price!=product.market_price">{{product.market_price}}</del>
           </p>
         </div>
       </div>
     </li>
+    <!-- 没有数据了 -->
+    <loading v-show="isShowLoadingTips"></loading>
+    <none v-show="isShowLoadedTips"></none> 
   </ul>
 </div>
 </template>
 <script type="text/javascript">
  import {mapState,mapActions} from 'vuex'
+ import Loading from '@/components/loading/loading.vue'
+ import None from '@/components/none/none.vue'
  export default {
   data:function(){
     return{
       flag: true
     }
   },
-  computed: mapState(['searchLists']),
+  computed: {
+    ...mapState([
+      'searchLists',
+      'isShowLoadingTips',
+      'isShowLoadedTips',
+      'busy'
+      ])
+  },
+  // mounted() {
+  //   var val = this.$route.params.id;
+  //   this.$store.dispatch('categoryList',val);
+  // },
   methods:{
-    onHeart: function(e){
+    getData(){
+      var val = this.$route.params.id;
+      this.$store.dispatch('categoryList',val);
+    },
+    onHeart(e){
       if(this.flag){
         e.target.className="fa fa-heart";
         this.flag = false;
@@ -42,6 +61,10 @@
       }
       e.preventDefault();
     }
+  },
+  components:{
+    Loading,
+    None
   }
 }
 </script>

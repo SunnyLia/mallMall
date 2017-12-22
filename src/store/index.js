@@ -30,10 +30,10 @@ const state = {
   hotProducts: [],//热门商品
   hotShops: [],//热门店铺
   products:[],
-  num: 5,
-  busy: false,
-  isShowLoadingTips: false,
-  isShowLoadedTips: false
+  pageNum: 1,//加载页码
+  busy: false,//是否加载
+  isShowLoadingTips: false,//正在加载
+  isShowLoadedTips: false//加载完毕
 }
 export default new Vuex.Store({
   state,

@@ -44,6 +44,10 @@ export const GET_HOT_SHOPS = 'GET_HOT_SHOPS'//热门店铺
 
 export const GET_PRODUCTS = 'GET_PRODUCTS'
 
-export const IS_SHOW_LOADING_TIPS = 'IS_SHOW_LOADING_TIPS'
+export const PAGE_NUM = 'PAGE_NUM'//加载页码
 
-export const IS_SHOW_LOADED_TIPS = 'IS_SHOW_LOADED_TIPS'
+export const BUSY = 'BUSY'//是否加载
+
+export const IS_SHOW_LOADING_TIPS = 'IS_SHOW_LOADING_TIPS'//正在加载
+
+export const IS_SHOW_LOADED_TIPS = 'IS_SHOW_LOADED_TIPS'//加载完毕

@@ -14,7 +14,7 @@
         <swiper-slide v-for="slide in shop.products">
             <a :href="slide.url">
           <div class="db_img">
-            <img :src="slide.src">
+            <img v-lazy="slide.src">
           </div>
           <div class="db_word">
           <p>{{slide.title}}</p>

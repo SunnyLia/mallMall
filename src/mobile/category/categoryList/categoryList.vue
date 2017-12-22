@@ -17,8 +17,8 @@
       }
     },
     mounted() {
-      var val = this.$route.params.id;
-      this.$store.dispatch('categoryList',val);
+      // var val = this.$route.params.id;
+      // this.$store.dispatch('categoryList',val);
       this.$store.dispatch('category');
     },
     components: {

@@ -44,10 +44,17 @@ export default {
     },
     //分类列表
     categoryList({ commit, state }, value) {
-        axios.get('/api/v2/marketing_category/' + value + '/products?page=1&page_size=10')
+        state.busy = true;
+        commit(types.IS_SHOW_LOADING_TIPS,true);
+        axios.get('/api/v2/marketing_category/' + value + '/products?page='+state.pageNum+'&page_size=10')
         .then(function(result) {
+            commit(types.IS_SHOW_LOADING_TIPS,false);
             if (result.data.data.products != "") {
                 commit(types.GET_SEARCH_LISTS, result.data.data.products);
+                state.busy = false;
+                state.pageNum++
+            }else{
+                commit(types.IS_SHOW_LOADED_TIPS,true);
             }
         })
         .catch(function(result) {
