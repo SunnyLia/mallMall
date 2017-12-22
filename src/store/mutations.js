@@ -30,7 +30,7 @@ import {
 } from './mutation-types.js'
 export default{
   [GET_SEARCH_LISTS](state,list){//搜索列表
-    state.searchLists = list;
+    state.searchLists = state.searchLists.concat(list);
   },
   [IS_RESULTS](state,flag){//有无搜索数据
     state.isResults = flag;

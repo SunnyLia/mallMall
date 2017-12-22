@@ -22,8 +22,8 @@
 
     },
     methods:{
-      addClass:function(e){
-
+      addClass(e){
+        this.$store.state.pageNum = 1;
         $(e.target).addClass('cur');
         $(e.target).siblings().removeClass('cur')
         var val = e.target.getAttribute('data');

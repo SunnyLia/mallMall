@@ -1,12 +1,12 @@
 <template>
   <div class="list_header">
-      <a href="#/home" class="btn_index">首页</a>
-      <div v-for="cate in categorys" v-if="cate.id == currenSelect.id" class="list_category" @click="chooseCategory">{{cate.text}} <i class="fa fa-angle-down"></i></div>
-      <div class="category_box" :class="{slide_down:isShow}">
-        <ul>
-          <li v-for="cate in categorys" :data-id="cate.id" @click="onSelect($event)" :class="[cate.id==currenSelect.id?'active':'']">{{cate.text}}</li>
-        </ul>
-      </div>
+    <a href="#/home" class="btn_index">首页</a>
+    <div v-for="cate in categorys" v-if="cate.id == currenSelect.id" class="list_category" @click="chooseCategory">{{cate.text}} <i class="fa fa-angle-down"></i></div>
+    <div class="category_box" :class="{slide_down:isShow}">
+      <ul>
+        <li v-for="cate in categorys" :data-id="cate.id" @click="onSelect($event)" :class="[cate.id==currenSelect.id?'active':'']">{{cate.text}}</li>
+      </ul>
+    </div>
     <div class="mask" v-show="isShow" @click="onMask"></div>
   </div>
 </template>
@@ -37,6 +37,7 @@
       },
       // 选择商品分类
       onSelect(e) {
+        this.$store.state.pageNum = 1;
         var val = e.target.getAttribute('data-id');//2、获取当前点击的li的data，
         this.$router.push({path:'/list/'+val,params:{'id':val}});//根据id跳转到响应的路由
         this.$store.dispatch('categoryList',val);
