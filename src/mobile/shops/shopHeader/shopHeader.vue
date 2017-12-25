@@ -11,21 +11,20 @@
     </div>
     <div class="shopNav">
       <ul>
-        <li class="active">店铺首页</li>
-        <li>全部商品</li>
-        <li>市集首页</li>
+        <router-link :to="{path:'/shopHome'}" tag="li">店铺首页</router-link>
+        <router-link :to="{path:'/shopAll'}" tag="li">全部商品</router-link>
+        <router-link :to="{path:'/home'}" tag="li">市集首页</router-link>
       </ul>
     </div>
-    
   </div>
 </template>
 <style scoped>
-.shopNav{
+  .shopNav{
    height: 1.6rem;
    line-height: 1.6rem;
    background-color: #fff;   
-}
-.shopNav ul li{
+ }
+ .shopNav ul li{
   float: left;
   width: 33.33%;
   text-align: center;

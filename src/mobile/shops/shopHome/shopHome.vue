@@ -1,5 +1,5 @@
 <template>
-  <div class="shops">
+  <div class="shopHome">
     <shop-header></shop-header>
     <div class="shopCont" v-for="(items,index) in shopInfo.rooms">
       <div class="shopName" v-if="index!=0">{{items.name}}</div>
@@ -13,7 +13,7 @@
             <a href="javascript:;">更多</a>
           </p>
           <ul class="clearfix">
-            <li v-for="product in item.products">
+            <li v-for="product in item.products" :class="{'double':item.products.length%2==1}">
               <div class="pdt_item">
                 <router-link :to="{path:'/detail'}" class="pdt_img">
                 <img v-lazy="product.default_sku.master_photos.large_url">
@@ -36,8 +36,8 @@
 </template>
 <script>
   import {mapState,mapActions} from 'vuex'
-  import ShopHeader from './shopHeader/shopHeader.vue'
   import Swiper from '@/mobile/home/swiper/swiper.vue'
+  import ShopHeader from '../shopHeader/shopHeader.vue'
   export default {
     data(){
       return{
@@ -45,8 +45,8 @@
       }
     },
     components: {
-      ShopHeader,
-      Swiper
+      Swiper,
+      ShopHeader
     },
     computed: {
       ...mapState(['shopInfo'])
@@ -65,49 +65,56 @@
     },
     mounted() {
       this.$store.dispatch('getShopInfo');
-    },
+    }
   }
 </script>
 <style scoped>
-  .shops{
+  .shopHome{
     background-color: #f4f4f4;
   }
-  .shops .shopCont{
+  .shopHome .shopCont{
     padding: 0.4rem;
   }
-  .shops .shopCont .shopName{
+  .shopHome .shopCont .shopName{
     font-size: 0.6rem;
     text-align: center;
     margin-top: 0.5rem;
   }
-  .shops ul li{
+  .shopHome ul li{
     width: 50%;
     float: left;
     padding: 0 0.2rem;
     margin-bottom: 0.4rem;
     box-sizing: border-box;
   }
-  .shops .pdt_item{
+  .shopHome ul li.double:last-child{
+    width: 100%;
+  }
+  .shopHome ul li.double:last-child .pdt_item .pdt_img{
+    height: 12rem;
+    text-align: center;
+  }
+  .shopHome .pdt_item{
     background-color: #fff;
     box-shadow: 0 0 0.4rem #ccc;
   }
-  .shops .pdt_img{
+  .shopHome .pdt_img{
     display: block;
     width: 100%;
     height: 7.5rem;
     position: relative;
   }
-  .shops .pdt_img img{
+  .shopHome .pdt_img img{
     width: 100%;
     height: 100%;
   }
-  .shops .pdt_detail{
+  .shopHome .pdt_detail{
     padding:0.2rem;
     box-sizing: border-box;
     font-size: 0.5rem;
     height: 2rem;
   }
-  .shops .pdt_title a{
+  .shopHome .pdt_title a{
     display: block;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -116,32 +123,32 @@
     font-size: 0.55rem;
     line-height: 0.9rem;
   }
-  .shops .pdt_new_price{
+  .shopHome .pdt_new_price{
     color: #e17c72;
     font-weight: 600;
     font-size: 0.55rem;
   }
-  .shops .pdt_old_price{
+  .shopHome .pdt_old_price{
     color: #ccc;
     font-size: 0.55rem;
   }
-  .shops .pdt_img .fa{
+  .shopHome .pdt_img .fa{
     position: absolute;
     top: 0.4rem;
     right: 0.4rem;
     color: #e17c72;
     font-size: 0.7rem;
   }
-  .shops .catena {
+  .shopHome .catena {
     margin-top: 0.5rem;
   }
-  .shops .catena .c_words{
+  .shopHome .catena .c_words{
     font-size: 0.58rem;
     padding: 0 0.2rem;
     line-height: 1.8rem;
     color: #5c5c5c;
   }
-  .shops .catena .c_words a{
+  .shopHome .catena .c_words a{
     font-size: inherit;
     float: right;
     color: #9a9a9a;

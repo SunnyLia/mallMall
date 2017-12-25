@@ -25,7 +25,8 @@
  import HasUsed from '@/mobile/mine/myCupones/cuponesList/hasUsed.vue'//优惠券已使用
  import HasExpire from '@/mobile/mine/myCupones/cuponesList/hasExpire.vue'//优惠券已过期
  import MyAddress from '@/mobile/mine/myAddress/myAddress.vue'//收货地址
- import Shop from '@/mobile/shops/shops.vue'//收货地址
+ import ShopHome from '@/mobile/shops/shopHome/shopHome.vue'//商铺首页
+ import ShopAll from '@/mobile/shops/shopAll/shopAll.vue'//商铺全部商品
 
  Vue.use(Router)
  export default new Router({
@@ -141,9 +142,14 @@
     component:Register
   },
   {
-    path:'/shop',//商铺
-    name:'Shop',
-    component:Shop
+    path:'/shopHome',//商铺首页
+    name:'ShopHome',
+    component:ShopHome
+  },
+  {
+    path:'/shopAll',//商铺全部商品
+    name:'ShopAll',
+    component:ShopAll
   }
   ]
 })
