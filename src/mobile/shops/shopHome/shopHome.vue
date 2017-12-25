@@ -10,7 +10,7 @@
         <div class="catena" v-else>
           <p class="c_words">
             <span>{{item.title}}</span>
-            <a href="javascript:;">更多</a>
+            <a href="#/shopAll">更多</a>
           </p>
           <ul class="clearfix">
             <li v-for="product in item.products" :class="{'double':item.products.length%2==1}">
