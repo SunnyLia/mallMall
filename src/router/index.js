@@ -25,6 +25,7 @@
  import HasUsed from '@/mobile/mine/myCupones/cuponesList/hasUsed.vue'//优惠券已使用
  import HasExpire from '@/mobile/mine/myCupones/cuponesList/hasExpire.vue'//优惠券已过期
  import MyAddress from '@/mobile/mine/myAddress/myAddress.vue'//收货地址
+ import Shop from '@/mobile/shops/shop.vue'//商铺
  import ShopHome from '@/mobile/shops/shopHome/shopHome.vue'//商铺首页
  import ShopAll from '@/mobile/shops/shopAll/shopAll.vue'//商铺全部商品
 
@@ -141,15 +142,24 @@
     name:'Register',
     component:Register
   },
+
   {
-    path:'/shopHome',//商铺首页
-    name:'ShopHome',
-    component:ShopHome
-  },
-  {
-    path:'/shopAll',//商铺全部商品
-    name:'ShopAll',
-    component:ShopAll
-  }
+    path:'/shop',
+    name:'Shop',
+    component:Shop,
+    children:[
+    {
+      path:'shopHome',//商铺首页
+      name:'ShopHome',
+      component:ShopHome
+    },
+    {
+      path:'shopAll',//商铺全部商品
+      name:'ShopAll',
+      component:ShopAll
+    }
   ]
+}
+
+]
 })

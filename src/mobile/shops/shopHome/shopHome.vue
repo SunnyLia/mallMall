@@ -1,6 +1,5 @@
 <template>
   <div class="shopHome">
-    <shop-header></shop-header>
     <div class="shopCont" v-for="(items,index) in shopInfo.rooms">
       <div class="shopName" v-if="index!=0">{{items.name}}</div>
       <div v-for="(item,i) in items.widgets">
@@ -37,7 +36,6 @@
 <script>
   import {mapState,mapActions} from 'vuex'
   import Swiper from '@/mobile/home/swiper/swiper.vue'
-  import ShopHeader from '../shopHeader/shopHeader.vue'
   export default {
     data(){
       return{
@@ -45,8 +43,7 @@
       }
     },
     components: {
-      Swiper,
-      ShopHeader
+      Swiper
     },
     computed: {
       ...mapState(['shopInfo'])

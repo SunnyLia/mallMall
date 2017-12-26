@@ -1,6 +1,5 @@
 <template>
   <div class="shopAll">
-    <shop-header></shop-header>
     <div class="all">
       <ul>
         <li class="cur">全部</li>
@@ -21,12 +20,10 @@
 </template>
 <script>
   import {mapState,mapActions} from 'vuex'
-  import ShopHeader from '../shopHeader/shopHeader.vue'
   import ScreenNav from '@/components/screenNav/screenNav.vue'
   import List from '@/mobile/search/searchList/searchList.vue'
   export default {
     components: {
-      ShopHeader,
       ScreenNav,
       List
     },
