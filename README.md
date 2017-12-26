@@ -1,22 +1,54 @@
-# jfdigital
-  
+# doubanMarket
 
-> recruitment
+# 项目说明
 
-## Build Setup
+  仿豆瓣市集WEB端开发的一个VUE项目，数据来源于豆瓣市集请求的XHR，由于涉及到权限问题，个人中心及购物车数据直接copy保存到static内
+  主要技术：vue2 + vue-router + vuex + vue-cli + axios + rem + vue-awesome-swiper + vue-infinite-scroll + vue-lazyload等
+  主要模块：市集首页 + 分类 + 购物车 + 个人中心 + 商品详情 + 店铺详情 + 登录注册 + 订单等
 
-``` bash
-# install dependencies
-npm install
+#项目安装
 
-# serve with hot reload at localhost:8080
-npm run dev
+  git clone https://github.com/SunnyLia/mallMall.git  用git将项目clone到本地
+  npm install                                         通过命令安装项目依赖
+  npm run dev                                         运行项目
 
-# build for production with minification
-npm run build
+#项目结构
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# 项目结构
+```javascript
+.
+
+├── build // vue-cli 自带的配置文件
+├── config  // vue-cli 自带的配置文件
+├── dish
+├── node_modules
+├── src
+│   ├──assets
+│   ├──components
+│   ├──mobile
+│   │   ├──cart
+│   │   ├──category
+│   │   ├──detail
+│   │   ├──home
+│   │   ├──login
+│   │   ├──mine
+│   │   ├──order
+│   │   ├──search
+│   │   └──shops
+│   ├──router
+│   ├──store
+│   │   ├──actions.js
+│   │   ├──getters.js
+│   │   ├──index.js
+│   │   ├──mutation-types.js
+│   │   └──mutations.js
+│   ├──App.vue
+│   └──main.js
+├── static
+├── package.json
+├── README.md
+├── index.html
+├── package.json
+│ 
+│ 
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
