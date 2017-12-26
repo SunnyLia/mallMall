@@ -5,7 +5,7 @@
         <img src="../../../../static/imgs/default.png" alt="">
       </div>
       <div class="sh_title">
-        <h4><span>张三</span><i class="fa fa-search fr"></i></h4>
+        <h4><span>三顿半</span><i class="fa fa-search fr"></i></h4>
         <p>探索正餐之外的飲食，捕捉自然的每一道風味捕捉自然的每一道風。</p>
       </div>
     </div>
