@@ -9,7 +9,7 @@
 </template>
 <script>
     export default{
-        data:function(){
+        data(){
             return {
                 navItem:[
                 {text:'首页',url:'/home'},
@@ -20,11 +20,11 @@
                 isActive:false
             }
         },
-        mounted:function(){
+        mounted(){
             this.scroll();
         },
         methods:{
-            scroll:function(){
+            scroll(){
                 var that = this;
                 $(document).scroll(function() {
                     var height = that.$store.state.headerHeight;

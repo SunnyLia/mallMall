@@ -24,7 +24,7 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="shop_entry"><a href="#/shopHome">进入店铺 >></a></div>
+    <div class="shop_entry"><a href="#/shop/shopHome">进入店铺 >></a></div>
   </div>
 </div>
 </template>

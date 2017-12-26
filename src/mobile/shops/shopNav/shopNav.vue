@@ -1,17 +1,19 @@
 <template>
-    <div class="shopNav">
-      <ul>
-        <router-link :to="{path:'shopHome'}" tag="li">店铺首页</router-link>
-        <router-link :to="{path:'shopAll'}" tag="li">全部商品</router-link>
-        <router-link :to="{path:'/home'}" tag="li">市集首页</router-link>
-      </ul>
-    </div>
+  <div class="shopNav">
+    <ul class="clearfix">
+      <router-link :to="{path:'shopHome'}" tag="li">店铺首页</router-link>
+      <router-link :to="{path:'shopAll'}" tag="li">全部商品</router-link>
+      <router-link :to="{path:'/home'}" tag="li">市集首页</router-link>
+    </ul>
+  </div>
 </template>
 <style scoped>
   .shopNav{
    height: 1.6rem;
    line-height: 1.6rem;
    background-color: #fff;   
+   width: 100%;
+   z-index: 2;
  }
  .shopNav ul li{
   float: left;
