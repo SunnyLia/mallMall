@@ -46,8 +46,4 @@
       width:100%;
       background-color:#fff;
     }
-    ul>li{
-      float:left;
-      display: none;
-    }
   </style>

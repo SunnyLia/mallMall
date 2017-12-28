@@ -158,8 +158,7 @@
       name:'ShopAll',
       component:ShopAll
     }
+    ]
+  }
   ]
-}
-
-]
 })
