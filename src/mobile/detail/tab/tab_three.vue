@@ -20,7 +20,7 @@
     <div class="db_comments" v-for="(comment,index) in detailTabs.comment">
       <div class="comment_item">
         <div class="comment_infos">
-          <img :src="comment.author.avatar" class="u_photo">
+          <img v-lazy="comment.author.avatar" class="u_photo">
           <span class="u_name">{{comment.author.name}}</span>
           <span class="u_time">{{comment.author.update_time}}</span>
           <span class="u_rated">
@@ -31,7 +31,7 @@
           {{comment.text}}
         </div>
         <div class="comment_picture clearfix">
-          <img v-for="photos in comment.album_photos" :src="photos.medium_url">
+          <img v-for="photos in comment.album_photos" v-lazy="photos.medium_url">
         </div>
 
         <div class="comment_reply" v-if="comment.replies.length>0">

@@ -9,7 +9,7 @@
         <span class="now_price">￥{{item.promote_price}}</span>
         <del class="old_price">￥{{item.market_price}}</del>
       </div>
-      <div class="freight">
+      <div class="freight clearfix">
         <div class="fre_lt">
           <span class="fre_price">运费：￥{{detailInfos.delivery_detail.start_fees}} </span>
           <span class="fre_tips"> 非包邮区域</span>
@@ -142,18 +142,17 @@
   .db_detail .db_detail_info .fa{
     padding-right: 0.4rem;
     color: #e17c72;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    vertical-align: middle;
   }
   .db_detail .db_detail_info .message{
-    width: 26px;
-    height: 24px;
+    width: 23px;
+    height: 22px;
     display: inline-block;
     background-image: url(../../assets/imgs/message.png);
     padding-right: 0;
-    padding-right: 0;
     background-size: cover;
     vertical-align: middle;
-    margin-bottom: 5px;
   }
 
   .db_detail_promise {
@@ -206,5 +205,12 @@
   }
   .db_fixed_bar .buy{
     background-color: #e17c72;
+  }
+
+  .clearfix::after,
+  .clearfix::before {
+    content: '';
+    display: table;
+    clear: both;
   }
 </style>

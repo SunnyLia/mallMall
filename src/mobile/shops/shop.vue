@@ -23,13 +23,15 @@
     },
     mounted(){
       var that = this;
-      $(document).scroll(function(){
-        var height = that.$refs.shopHeader.$el.clientHeight;
-        if($(document).scrollTop() > height){
-          that.isFixed = true;
-        }else{
-          that.isFixed = false;
-        }
+      $(window).scroll(function(){
+        var height =document.getElementsByClassName('shopHeader')[0];
+        if (height) {
+          if($(window).scrollTop() > height.clientHeight){
+            that.isFixed = true;
+          }else{
+            that.isFixed = false;
+          }
+        };
       })
     }
   }

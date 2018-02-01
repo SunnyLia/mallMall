@@ -1,7 +1,7 @@
 <template>
   <div class="tabs_detail">
     <div v-for="urls in detailTabs.info_photos">
-      <img :src="urls">
+      <img v-lazy="urls">
     </div>
     <div class="bottom_bar">
       <a href="#" class="explain">购物说明</a>
