@@ -18,7 +18,7 @@
           </div>
           <div class="db_word">
           <p>{{slide.title}}</p>
-          <h5><span>￥{{slide.newPrice}}</span><del>￥{{slide.oldPrice}}</del></h5>
+          <h5><span>{{slide.newPrice}}</span><del>{{slide.oldPrice}}</del></h5>
           </div>
             </a>
         </swiper-slide>

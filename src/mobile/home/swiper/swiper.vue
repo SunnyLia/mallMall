@@ -14,9 +14,9 @@
     </a>
   </swiper-slide>
   <!-- 首页轮播 -->
-  <swiper-slide v-else v-for="slide in sliders">
+  <swiper-slide v-for="slide in sliders" v-if="!(shopsData||detailData)">
   <a :href="slide.url" target="_blank">
-    <img v-lazy="slide.src">
+    <img :src="slide.src">
   </a>
 </swiper-slide>
 <div class="swiper-pagination" slot="pagination"></div>
@@ -32,7 +32,7 @@
       return {
         swiperOption: {
           initialSlide:1,
-          autoplay: 300000,
+          autoplay: 3000,
           loop: false,
           setWrapperSize :true,
           pagination: '.swiper-pagination',
@@ -40,14 +40,14 @@
           observeParents:true
         },
         sliders:[
-        {url:'https://shiji.douban.com/campaign/calendar2018/',
-        src:"https://img3.doubanio.com/img/files/file-1508395738-0.jpg"},
-        {url:'https://shiji.douban.com/campaign/canvasbag/',
-        src:"https://img3.doubanio.com/img/files/file-1504231219-0.jpg"},
-        {url:'https://shiji.douban.com/campaign/collection/',
-        src:"https://img3.doubanio.com/img/files/file-1504231276-0.jpg"},
-        {url:'https://shiji.douban.com/campaign/notebook/',
-        src:'https://img3.doubanio.com/img/files/file-1510303015-0.jpg'}
+        {"url":"https://shiji.douban.com/campaign/calendar2018/",
+        "src":"https://img3.doubanio.com/img/files/file-1508395738-0.jpg"},
+        {"url":"https://shiji.douban.com/campaign/canvasbag/",
+        "src":"https://img3.doubanio.com/img/files/file-1504231219-0.jpg"},
+        {"url":"https://shiji.douban.com/campaign/collection/",
+        "src":"https://img3.doubanio.com/img/files/file-1504231276-0.jpg"},
+        {"url":"https://shiji.douban.com/campaign/notebook/",
+        "src":"https://img3.doubanio.com/img/files/file-1510303015-0.jpg"}
         ]
       }
     },
@@ -68,7 +68,7 @@
     width: 100%;
     min-height: 9rem;
   }
-  .db_swiper .swiper-container .swiper-pagination-clickable .swiper-pagination-bullet-active {
+  .swiper-pagination-bullet-active {
     background: #0aa082!important;
   }
 </style>

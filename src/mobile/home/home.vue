@@ -31,10 +31,10 @@
         HotProducts,
         HotShops
       },
-      data:function(){
+      data(){
         return{}
       },
-      mounted:function(){},
+      mounted(){},
       methods:{}
     }
   </script>
