@@ -8,5 +8,7 @@
    line-height: 1.2rem;
    font-size: 0.6rem;
    margin-bottom: 0.5rem;
+   width: 100%;
+   display: inline-block;
  }
 </style>
