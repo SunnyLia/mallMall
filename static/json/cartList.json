@@ -12,7 +12,7 @@
                 "items": [
                     {
                         "can_buy": true,
-                        "amount": "790.00",
+                        "amount": "3160.00",
                         "product_type": 0,
                         "is_flash_sale": false,
                         "product_sku": {
@@ -38,7 +38,7 @@
                         },
                         "id": "951310",
                         "promote_detail": {},
-                        "quantity": 1
+                        "quantity": 4
                     }
                 ],
                 "sid": "5D",

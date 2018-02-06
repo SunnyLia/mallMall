@@ -3,7 +3,7 @@
     <div class="list">
       <div class="content">
         <ul>
-          <li v-for="(cart,index) in cartLists">
+          <li v-for="(cart,index) in cartLists" class="itemLi">
             <div class="listTop clearfix">
               <div class="fl">
                 <input type="checkbox" name="checkAll" :checked="cart.checked" :id="'checkAll'+cart.id" @click="checkAll(index)">
@@ -63,20 +63,22 @@
     computed: mapState(['cartLists']),
     methods: {
       add(index,i,event){//加
-        this.cartLists[index].items[i].quantity++;
+        var price = parseInt($(event.target).parent().prev('.red').text());
+        var number = parseInt($(event.target).siblings('span').text());
+        number++;
+        $('.itemLi').eq(index).find('.listBot').eq(i).attr('data-total',price*number);
+        this.cartLists[index].items[i].quantity = number;
       },
       sub(index,i,event){//减
         var price = parseInt($(event.target).parent().prev('.red').text());
-        console.log(price)
         var number = parseInt($(event.target).siblings('span').text());
-        console.log(number)
-        var count = this.cartLists[index].items[i].quantity;
-        if (count > 1) {
-          count--;
+        if (number > 1) {
+          number--;    
+          $('.itemLi').eq(index).find('.listBot').eq(i).attr('data-total',price*number);                                   
         }else{
-          count = 1;
+          number = 1;
         }
-        this.cartLists[index].items[i].quantity = count;
+        this.cartLists[index].items[i].quantity = number;
       },
       allAll() {// 全部总选
         var flag = true;
@@ -100,15 +102,19 @@
       },      
       checkAll(index) {// 店铺全选
         var list = this.cartLists[index].items;
+        var total = 0;
+        for (var i = $('.itemLi').eq(index).find('.listBot').length - 1; i >= 0; i--) {
+          total = total + parseInt($('.itemLi').eq(index).find('.listBot').eq(i).attr('data-total'));
+        };
         if ( this.cartLists[index].checked ) {//当前店铺未中
           if (this.totalMoney>0) {
-            this.totalMoney=this.totalMoney-parseInt(this.cartLists[index].total_amount);//计算店铺总价钱
+            this.totalMoney=this.totalMoney-total;//计算店铺总价钱
           };
           for (var i = 0; i < list.length; i++ ) {//遍历当前店铺商品
             list[i].checked = false;
           }
         } else {//当前店铺选中
-          this.totalMoney=this.totalMoney+parseInt(this.cartLists[index].total_amount);//计算店铺总价钱
+          this.totalMoney=this.totalMoney+total;//计算店铺总价钱
           for (var i = 0; i < list.length; i++ ) {//遍历当前店铺商品
             list[i].checked = true;
           }
