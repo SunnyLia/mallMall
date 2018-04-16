@@ -29,8 +29,8 @@
           <span>{{detailTabs.discuss[currentIndex].text}}</span>
         </div>
         <div class="input">
-          <input type="text">
-          <a href="javascript:;">发送</a>
+          <input type="text" value="">
+          <a href="javascript:;" @click="sends($event)">发送</a>
         </div>
       </div>
     </div>
@@ -59,6 +59,26 @@
       },
       mask(){//点击遮罩层
         this.mask_show = false
+      },
+      sends(event){//点击发送
+        var ea = $(event.target).siblings('input').val();
+        var obj ='<div>'
+          +'<div class="comment_item">'
+            +'<div class="comment_infos">'
+             +' <img src="https://img1.doubanio.com/icon/user_normal.jpg" class="u_photo">' 
+              +'<span class="u_name">张张大爷爷</span>'
+              +'<span class="u_time">2017-10-01 13:47:50</span>'
+              +'<div class="u_reply">'
+                +'<span>...</span>'
+                +'<div class="u_reply_rep" style="display: none;">回复</div>'
+              +'</div>'
+            +'</div>'
+            +'<div class="comment_reply"><i>|</i> 回复:<span>南瓜马车</span> 感觉挺好的，，个体户还是公司？？？</div>'
+            +'<div class="comment_text">只是在豆瓣上销售吗 淘宝上有吗</div>'
+          +'</div>'
+        +'</div>'
+        console.log(this.common.getFormatDate())
+
       }
     }
   }
